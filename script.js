@@ -1,39 +1,122 @@
 /* =========================================================
    كيان العقارية - KAYAN REAL ESTATE
-   Master Scripts - RTL Interactive Features
+   Master Scripts - High-Performance Mobile & Desktop JS
 ========================================================= */
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    /* ================= MOBILE MENU ================= */
+    /* ================= MOBILE BURGER MENU (TOUCH & DESKTOP) ================= */
     const nav = document.getElementById('kayanNav');
-    const toggleBtn = document.querySelector('.kayan-mobile-toggle');
+    const toggleBtn = document.getElementById('kayanMobileToggle') || document.querySelector('.kayan-mobile-toggle');
+
+    function toggleMobileMenu(e) {
+        if (e && e.cancelable) {
+            e.preventDefault();
+        }
+        if (!nav) return;
+
+        const isOpen = nav.classList.toggle('open');
+        document.body.classList.toggle('kayan-menu-open', isOpen);
+
+        if (toggleBtn) {
+            toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            const icon = toggleBtn.querySelector('i');
+            if (icon) {
+                if (isOpen) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        }
+    }
 
     if (toggleBtn && nav) {
-        toggleBtn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            nav.classList.toggle('open');
+        let lastToggleTime = 0;
+
+        function handleMenuToggle(e) {
+            const now = Date.now();
+            // Prevent synthetic double events (tap -> click within 350ms on mobile)
+            if (now - lastToggleTime < 350) {
+                if (e.cancelable) e.preventDefault();
+                return;
+            }
+            lastToggleTime = now;
+            toggleMobileMenu(e);
+        }
+
+        // Support both tap/touchend and click for zero delay on mobile
+        toggleBtn.addEventListener('click', handleMenuToggle);
+        toggleBtn.addEventListener('touchend', handleMenuToggle, { passive: false });
+
+        // Close on clicking/tapping outside
+        function closeMenuOutside(e) {
+            if (nav.classList.contains('open')) {
+                if (!nav.contains(e.target) && !toggleBtn.contains(e.target)) {
+                    nav.classList.remove('open');
+                    document.body.classList.remove('kayan-menu-open');
+                    toggleBtn.setAttribute('aria-expanded', 'false');
+                    const icon = toggleBtn.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            }
+        }
+        document.addEventListener('click', closeMenuOutside);
+        document.addEventListener('touchend', closeMenuOutside);
+
+        // Close on Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && nav.classList.contains('open')) {
+                nav.classList.remove('open');
+                document.body.classList.remove('kayan-menu-open');
+                toggleBtn.setAttribute('aria-expanded', 'false');
+                const icon = toggleBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            }
         });
 
-        // Close on click outside
-        document.addEventListener('click', function (e) {
-            if (!nav.contains(e.target) && !toggleBtn.contains(e.target)) {
-                nav.classList.remove('open');
-            }
+        // Close when clicking internal links
+        nav.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                const hasSub = this.nextElementSibling && this.nextElementSibling.classList.contains('kayan-dropdown');
+                if (!hasSub) {
+                    nav.classList.remove('open');
+                    document.body.classList.remove('kayan-menu-open');
+                    toggleBtn.setAttribute('aria-expanded', 'false');
+                    const icon = toggleBtn.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            });
         });
     }
 
-    /* ================= SCROLL TOP ================= */
+    // Global fallback for any inline call
+    window.kayanMenu = function (e) {
+        toggleMobileMenu(e);
+    };
+
+    /* ================= SCROLL TOP BUTTON ================= */
     const kayanScrollTop = document.getElementById('kayanScrollTop');
 
     if (kayanScrollTop) {
         window.addEventListener('scroll', function () {
-            if (window.scrollY > 400) {
+            if (window.scrollY > 350) {
                 kayanScrollTop.classList.add('show');
             } else {
                 kayanScrollTop.classList.remove('show');
             }
-        });
+        }, { passive: true });
 
         kayanScrollTop.addEventListener('click', function (e) {
             e.preventDefault();
@@ -70,6 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const filterButtons = document.querySelectorAll('.kayan-filter-btn');
     const projectCards = document.querySelectorAll('.kayan-filterable-project');
     const searchInput = document.getElementById('projectSearchInput');
+    const projectsGrid = document.querySelector('.kayan-project-grid');
 
     function applyProjectFilter() {
         const activeBtn = document.querySelector('.kayan-filter-btn.active');
@@ -89,7 +173,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (matchesCategory && matchesSearch) {
                 card.style.display = 'block';
-                card.style.animation = 'fadeIn .3s ease';
                 visibleCount++;
             } else {
                 card.style.display = 'none';
@@ -98,6 +181,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const countEl = document.getElementById('projectsCount');
         if (countEl) countEl.textContent = visibleCount;
+
+        // No projects placeholder
+        let noResultsEl = document.getElementById('noProjectsMessage');
+        if (visibleCount === 0) {
+            if (!noResultsEl && projectsGrid) {
+                noResultsEl = document.createElement('div');
+                noResultsEl.id = 'noProjectsMessage';
+                noResultsEl.style.cssText = 'grid-column: 1/-1; text-align: center; padding: 60px 20px; background: #111; border: 1px dashed rgba(255,255,255,0.1); border-radius: 12px; margin: 20px 0;';
+                noResultsEl.innerHTML = '<i class="fa-solid fa-magnifying-glass" style="font-size:32px; color:var(--kayan-gold); margin-bottom:12px; display:block;"></i><h3 style="color:#fff; margin-bottom:8px;">لا توجد مشروعات مطابقة للبحث</h3><p style="color:#aaa; font-size:14px; margin:0;">يرجى تجربة كلمات بحث أخرى أو اختيار تصنيف مختلف.</p>';
+                projectsGrid.appendChild(noResultsEl);
+            } else if (noResultsEl) {
+                noResultsEl.style.display = 'block';
+            }
+        } else if (noResultsEl) {
+            noResultsEl.style.display = 'none';
+        }
     }
 
     if (filterButtons.length > 0) {
@@ -133,19 +232,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (mainGalleryImg && galleryThumbs.length > 0) {
         galleryThumbs.forEach(function (thumb) {
-            thumb.addEventListener('click', function () {
+            function activateThumb() {
                 galleryThumbs.forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
+                thumb.classList.add('active');
 
-                const newSrc = this.getAttribute('data-img');
-                if (newSrc) {
-                    mainGalleryImg.style.opacity = '0.4';
+                const newSrc = thumb.getAttribute('data-img');
+                if (newSrc && mainGalleryImg.src !== newSrc) {
+                    mainGalleryImg.style.opacity = '0.35';
                     setTimeout(function () {
                         mainGalleryImg.src = newSrc;
                         mainGalleryImg.style.opacity = '1';
-                    }, 150);
+                    }, 120);
                 }
-            });
+            }
+
+            thumb.addEventListener('click', activateThumb);
         });
     }
 
@@ -209,7 +310,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (calcPriceSlider) {
+        // Both input and change events for mobile slider touch compatibility
         calcPriceSlider.addEventListener('input', calculateInstallments);
+        calcPriceSlider.addEventListener('change', calculateInstallments);
 
         calcDownPaymentOpts.forEach(function (opt) {
             opt.addEventListener('click', function () {
@@ -277,7 +380,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (submitBtn) {
                 submitBtn.disabled = true;
-                submitBtn.innerHTML = 'جاري الإرسال...';
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> جاري الإرسال...';
             }
 
             setTimeout(function () {
@@ -291,10 +394,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-});
+    /* ================= ADVANCED SEARCH BAR (index.html) ================= */
+    const homeSearchBtn = document.querySelector('.kayan-search-btn');
+    if (homeSearchBtn) {
+        homeSearchBtn.removeAttribute('onclick');
+        homeSearchBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.location.href = 'projects.html';
+        });
+    }
 
-// Global fallback for mobile menu if called inline
-function kayanMenu() {
-    const nav = document.getElementById('kayanNav');
-    if (nav) nav.classList.toggle('open');
-}
+});
