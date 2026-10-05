@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشروع فيو ريزيدنس - كيان العقارية | KAYAN REAL ESTATE</title>
+    <meta name="description" content="تعرف على تفاصيل مشروع فيو بالعاصمة الإدارية الجديدة من كيان العقارية: الأسعار، المخططات الهندسية، أنظمة السداد، والموقع الاستراتيجي.">
+    
+    <!-- Google Fonts: El Messiri & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="kayan-home">
+
+<!-- ================= HEADER ================= -->
+<header class="kayan-header">
+    <div class="kayan-container kayan-header-inner">
+        <a href="index.html" class="kayan-logo">
+            <div class="kayan-logo-icon"><i class="fa-solid fa-city"></i></div>
+            <div class="kayan-logo-text">
+                <strong>كيان العقارية</strong>
+                <span>KAYAN REAL ESTATE</span>
+            </div>
+        </a>
+
+        <button class="kayan-mobile-toggle" onclick="kayanMenu()" aria-label="القائمة الرئيسية">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="kayan-nav" id="kayanNav">
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li class="active">
+                    <a href="projects.html">المشروعات <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i></a>
+                    <div class="kayan-dropdown">
+                        <a href="projects.html">جميع المشروعات</a>
+                        <a href="projects.html?status=current">المشروعات الحالية</a>
+                        <a href="projects.html?status=delivered">المشروعات السابقة</a>
+                        <a href="project-single.html">مشروع فيو (نموذج تفصيلي)</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">المعرض <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i></a>
+                    <div class="kayan-dropdown">
+                        <a href="blog.html">المدونة والمقالات</a>
+                        <a href="index.html#events">الفعاليات</a>
+                        <a href="index.html#gallery">الصور والفيديوهات</a>
+                        <a href="contact.html#careers">التوظيف</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="finishing.html">التشطيبات <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i></a>
+                    <div class="kayan-dropdown">
+                        <a href="finishing.html">مواصفات التشطيب</a>
+                        <a href="finishing.html#decor">تشطيبات وديكورات الوحدات</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+
+        <a href="tel:16959" class="kayan-hotline">
+            <i class="fa-solid fa-phone"></i> <span>16959</span>
+        </a>
+    </div>
+</header>
+
+<!-- ================= PAGE HEADER ================= -->
+<section class="kayan-page-header">
+    <div class="kayan-container kayan-page-header-inner">
+        <div class="kayan-breadcrumb">
+            <a href="index.html">الرئيسية</a>
+            <span class="sep">/</span>
+            <a href="projects.html">المشروعات</a>
+            <span class="sep">/</span>
+            <span class="current">مشروع فيو ريزيدنس</span>
+        </div>
+        <h1>مشروع <span>فيو ريزيدنس</span> - العاصمة الإدارية</h1>
+        <p>
+            حيث تلتقي الفخامة المعمارية بصفاء الطبيعة. مجتمع سكني استثنائي يمنحك أرقى أنماط الحياة العصرية بإطلالات ساحرة على النهر الأخضر وأكبر حديقة مركزية.
+        </p>
+        <div class="kayan-header-badges">
+            <span class="kayan-chip green"><i class="fa-solid fa-circle-check"></i> متاح للحجز الفوري</span>
+            <span class="kayan-chip gold"><i class="fa-solid fa-location-dot"></i> الحي السكني R7 - قطعة G4</span>
+            <span class="kayan-chip"><i class="fa-solid fa-key"></i> استلام تعاقدي: 2026</span>
+            <span class="kayan-chip"><i class="fa-solid fa-credit-card"></i> مقدم 10% وتقسيط حتى 8 سنوات</span>
+        </div>
+    </div>
+</section>
+
+<!-- ================= MAIN PROJECT DETAILS ================= -->
+<section class="kayan-section">
+    <div class="kayan-container">
+        <div class="kayan-project-layout">
+
+            <!-- RIGHT COLUMN: MAIN CONTENT -->
+            <div class="kayan-project-main-col">
+
+                <!-- Interactive Gallery -->
+                <div class="kayan-gallery-wrapper">
+                    <div class="kayan-gallery-main">
+                        <img id="mainGalleryImg" src="images/project-view.jpg" alt="مشروع فيو العاصمة الإدارية">
+                    </div>
+                    <div class="kayan-gallery-thumbs">
+                        <div class="kayan-gallery-thumb active" data-img="images/project-view.jpg">
+                            <img src="images/project-view.jpg" alt="الواجهة الرئيسية">
+                        </div>
+                        <div class="kayan-gallery-thumb" data-img="images/gallery-2.jpg">
+                            <img src="images/gallery-2.jpg" alt="حمام السباحة واللاندسكيب">
+                        </div>
+                        <div class="kayan-gallery-thumb" data-img="images/finishing-decor.jpg">
+                            <img src="images/finishing-decor.jpg" alt="التصميم الداخلي والتشطيبات">
+                        </div>
+                        <div class="kayan-gallery-thumb" data-img="images/gallery-1.jpg">
+                            <img src="images/gallery-1.jpg" alt="الحدائق والممرات الليلية">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Strip -->
+                <div class="kayan-project-stats-strip">
+                    <div class="kayan-pstat-item">
+                        <span>المساحة الإجمالية</span>
+                        <strong>25 فدان</strong>
+                    </div>
+                    <div class="kayan-pstat-item">
+                        <span>نسبة المساحات الخضراء</span>
+                        <strong>80% لاندسكيب</strong>
+                    </div>
+                    <div class="kayan-pstat-item">
+                        <span>عدد الوحدات السكنية</span>
+                        <strong>420 وحدة</strong>
+                    </div>
+                    <div class="kayan-pstat-item">
+                        <span>تبدأ الأسعار من</span>
+                        <strong>3.2 مليون ج.م</strong>
+                    </div>
+                </div>
+
+                <!-- Project Story / Overview -->
+                <div class="kayan-content-card">
+                    <h3>رؤية المشروع وفلسفة التصميم</h3>
+                    <p>
+                        تم تصميم مشروع <strong>"فيو ريزيدنس"</strong> ليكون بمثابة ملاذ هادئ وراقي بعيداً عن صخب المدينة، مع الحفاظ على القرب الفوري من كافة المعالم الحيوية بالعاصمة الإدارية. يعتمد المخطط العام على مبدأ الاستدامة وتوزيع المباني بتباعد هندسي ذكي يضمن لكل وحدة أقصى درجات الخصوصية وإطلالة مفتوحة على المساحات الخضراء والبحيرات الصناعية.
+                    </p>
+                    <p>
+                        واجهات زجاجية مزدوجة عازلة للحرارة والصوت، مداخل فندقية فاخرة من الرخام المستورد، ومصاعد ألمانية فائقة السرعة، إضافة إلى بنية تحتية ذكية متوافقة مع متطلبات مدن الجيل الرابع.
+                    </p>
+                </div>
+
+                <!-- Amenities / Facilities -->
+                <div class="kayan-content-card">
+                    <h3>الخدمات والمرافق الاستثنائية</h3>
+                    <p>صُممت كل تفصيلة في المشروع لتوفير تجربة معيشية متكاملة لا تحتاج فيها لمغادرة الكومباوند:</p>
+                    
+                    <div class="kayan-amenities-grid">
+                        <div class="kayan-amenity-item">
+                            <div class="kayan-amenity-icon"><i class="fa-solid fa-person-swimming"></i></div>
+                            <div class="kayan-amenity-info">
+                                <strong>حمامات سباحة وبحيرات</strong>
+                                <span>إنفينيتي بول ومسابح للأطفال</span>
+                            </div>
+                        </div>
+
+                        <div class="kayan-amenity-item">
+                            <div class="kayan-amenity-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="kayan-amenity-info">
+                                <strong>أمن وحراسة ذكية 24/7</strong>
+                                <span>بوابات إلكترونية وكاميرات مراقبة</span>
+                            </div>
+                        </div>
+
+                        <div class="kayan-amenity-item">
+                            <div class="kayan-amenity-icon"><i class="fa-solid fa-dumbbell"></i></div>
+                            <div class="kayan-amenity-info">
+                                <strong>كلوب هاوس ونادي صحي</strong>
+                                <span>جيم متكامل، سبا، وجاكوزي</span>
+                            </div>
+                        </div>
+
+                        <div class="kayan-amenity-item">
+                            <div class="kayan-amenity-icon"><i class="fa-solid fa-person-biking"></i></div>
+                            <div class="kayan-amenity-info">
+                                <strong>تراك للجري والدراجات</strong>
+                                <span>مسارات مخصصة وسط الطبيعة</span>
+                            </div>
+                        </div>
+
+                        <div class="kayan-amenity-item">
+                            <div class="kayan-amenity-icon"><i class="fa-solid fa-square-parking"></i></div>
+                            <div class="kayan-amenity-info">
+                                <strong>جراجات تحت الأرض</strong>
+                                <span>مواقف خاصة مرقمة ومؤمنة</span>
+                            </div>
+                        </div>
+
+                        <div class="kayan-amenity-item">
+                            <div class="kayan-amenity-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+                            <div class="kayan-amenity-info">
+                                <strong>منطقة تجارية وكافيهات</strong>
+                                <span>سوبرماركت، صيدلية ومطاعم</span>
+                            </div>
+                        </div>
+
+                        <div class="kayan-amenity-item">
+                            <div class="kayan-amenity-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <div class="kayan-amenity-info">
+                                <strong>أنظمة سمارت هوم</strong>
+                                <span>تحكم رقمي بالإضاءة والتكييف</span>
+                            </div>
+                        </div>
+
+                        <div class="kayan-amenity-item">
+                            <div class="kayan-amenity-icon"><i class="fa-solid fa-children"></i></div>
+                            <div class="kayan-amenity-info">
+                                <strong>منطقة ألعاب أطفال (Kids Area)</strong>
+                                <span>بيئة آمنة مجهزة بأعلى المعايير</span>
+                            </div>
+                        </div>
+
+                        <div class="kayan-amenity-item">
+                            <div class="kayan-amenity-icon"><i class="fa-solid fa-solar-panel"></i></div>
+                            <div class="kayan-amenity-info">
+                                <strong>طاقة شمسية ومولدات طوارئ</strong>
+                                <span>استدامة وكفاءة تشغيل مستمرة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unit Types & Floor Plans -->
+                <div class="kayan-content-card">
+                    <h3>نماذج الوحدات والمخططات الهندسية</h3>
+                    <p>اختر المساحة والتقسيم الذي يناسب تطلعات عائلتك مع إمكانية التعديل الداخلي قبل التسليم:</p>
+
+                    <div class="kayan-unit-tabs">
+                        <button class="kayan-unit-tab active" data-target="unit-2bed">شقة غرفتين (135م²)</button>
+                        <button class="kayan-unit-tab" data-target="unit-3bed">شقة 3 غرف (185م²)</button>
+                        <button class="kayan-unit-tab" data-target="unit-duplex">دوبلكس بحديقة (265م²)</button>
+                        <button class="kayan-unit-tab" data-target="unit-penthouse">بنتهاوس بروف (320م²)</button>
+                    </div>
+
+                    <!-- Unit 1 -->
+                    <div class="kayan-unit-detail kayan-unit-detail-item" id="unit-2bed">
+                        <div class="kayan-unit-plan-img">
+                            <img src="images/floorplan-1.jpg" alt="مخطط شقة غرفتين">
+                        </div>
+                        <div class="kayan-unit-specs-table">
+                            <div class="kayan-spec-row"><span>نوع الوحدة:</span><strong>شقة فاخرة</strong></div>
+                            <div class="kayan-spec-row"><span>المساحة الإجمالية:</span><strong>135 متر مربع</strong></div>
+                            <div class="kayan-spec-row"><span>عدد غرف النوم:</span><strong>2 غرف (منها ماستر)</strong></div>
+                            <div class="kayan-spec-row"><span>عدد الحمامات:</span><strong>2 حمام</strong></div>
+                            <div class="kayan-spec-row"><span>التراس:</span><strong>تراس واسع يطل على اللاندسكيب</strong></div>
+                            <div class="kayan-spec-row"><span>إجمالي السعر:</span><strong style="color:var(--kayan-gold-light);">3,200,000 ج.م</strong></div>
+                            <div class="kayan-spec-row"><span>المقدم (10%):</span><strong>320,000 ج.م</strong></div>
+                            <div class="kayan-spec-row"><span>القسط الشهري التقريبي:</span><strong style="color:var(--kayan-gold-light);">34,200 ج.م</strong></div>
+                        </div>
+                    </div>
+
+                    <!-- Unit 2 -->
+                    <div class="kayan-unit-detail kayan-unit-detail-item" id="unit-3bed" style="display:none;">
+                        <div class="kayan-unit-plan-img">
+                            <img src="images/floorplan-2.jpg" alt="مخطط شقة 3 غرف">
+                        </div>
+                        <div class="kayan-unit-specs-table">
+                            <div class="kayan-spec-row"><span>نوع الوحدة:</span><strong>شقة عائلية فاخرة</strong></div>
+                            <div class="kayan-spec-row"><span>المساحة الإجمالية:</span><strong>185 متر مربع</strong></div>
+                            <div class="kayan-spec-row"><span>عدد غرف النوم:</span><strong>3 غرف نوم + غرفة مربية</strong></div>
+                            <div class="kayan-spec-row"><span>عدد الحمامات:</span><strong>3 حمامات</strong></div>
+                            <div class="kayan-spec-row"><span>التراس:</span><strong>2 تراس بانورامي</strong></div>
+                            <div class="kayan-spec-row"><span>إجمالي السعر:</span><strong style="color:var(--kayan-gold-light);">4,350,000 ج.م</strong></div>
+                            <div class="kayan-spec-row"><span>المقدم (10%):</span><strong>435,000 ج.م</strong></div>
+                            <div class="kayan-spec-row"><span>القسط الشهري التقريبي:</span><strong style="color:var(--kayan-gold-light);">46,500 ج.م</strong></div>
+                        </div>
+                    </div>
+
+                    <!-- Unit 3 -->
+                    <div class="kayan-unit-detail kayan-unit-detail-item" id="unit-duplex" style="display:none;">
+                        <div class="kayan-unit-plan-img">
+                            <img src="images/floorplan-1.jpg" alt="مخطط دوبلكس">
+                        </div>
+                        <div class="kayan-unit-specs-table">
+                            <div class="kayan-spec-row"><span>نوع الوحدة:</span><strong>دوبلكس أرضي بحديقة خاصة</strong></div>
+                            <div class="kayan-spec-row"><span>المساحة الإجمالية:</span><strong>265م² + 80م² حديقة</strong></div>
+                            <div class="kayan-spec-row"><span>عدد غرف النوم:</span><strong>4 غرف نوم (2 ماستر)</strong></div>
+                            <div class="kayan-spec-row"><span>عدد الحمامات:</span><strong>4 حمامات</strong></div>
+                            <div class="kayan-spec-row"><span>الحديقة:</span><strong>حديقة خاصة مع مسبح خاص اختياري</strong></div>
+                            <div class="kayan-spec-row"><span>إجمالي السعر:</span><strong style="color:var(--kayan-gold-light);">6,100,000 ج.م</strong></div>
+                            <div class="kayan-spec-row"><span>المقدم (10%):</span><strong>610,000 ج.م</strong></div>
+                            <div class="kayan-spec-row"><span>القسط الشهري التقريبي:</span><strong style="color:var(--kayan-gold-light);">65,200 ج.م</strong></div>
+                        </div>
+                    </div>
+
+                    <!-- Unit 4 -->
+                    <div class="kayan-unit-detail kayan-unit-detail-item" id="unit-penthouse" style="display:none;">
+                        <div class="kayan-unit-plan-img">
+                            <img src="images/floorplan-2.jpg" alt="مخطط بنتهاوس">
+                        </div>
+                        <div class="kayan-unit-specs-table">
+                            <div class="kayan-spec-row"><span>نوع الوحدة:</span><strong>بنتهاوس مع روف خاص</strong></div>
+                            <div class="kayan-spec-row"><span>المساحة الإجمالية:</span><strong>320م² (شقة + تراس الروف)</strong></div>
+                            <div class="kayan-spec-row"><span>عدد غرف النوم:</span><strong>4 غرف نوم فاخرة</strong></div>
+                            <div class="kayan-spec-row"><span>عدد الحمامات:</span><strong>4 حمامات</strong></div>
+                            <div class="kayan-spec-row"><span>الروف:</span><strong>روف بانورامي مجهز للشواء وجاكوزي</strong></div>
+                            <div class="kayan-spec-row"><span>إجمالي السعر:</span><strong style="color:var(--kayan-gold-light);">7,400,000 ج.م</strong></div>
+                            <div class="kayan-spec-row"><span>المقدم (10%):</span><strong>740,000 ج.م</strong></div>
+                            <div class="kayan-spec-row"><span>القسط الشهري التقريبي:</span><strong style="color:var(--kayan-gold-light);">79,100 ج.م</strong></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategic Location -->
+                <div class="kayan-content-card">
+                    <h3>الموقع الاستراتيجي وسهولة الوصول</h3>
+                    <p>
+                        يقع المشروع في أكثر بقاع العاصمة الإدارية تميزاً بالحي السكني R7 بالقرب من كافة المحاور الحيوية:
+                    </p>
+                    <div class="kayan-distance-list">
+                        <div class="kayan-distance-item">
+                            <span><i class="fa-solid fa-road" style="color:var(--kayan-gold); margin-left:6px;"></i> الدائري الأوسطي ومحور بن زايد</span>
+                            <strong>3 دقائق</strong>
+                        </div>
+                        <div class="kayan-distance-item">
+                            <span><i class="fa-solid fa-tree" style="color:var(--kayan-gold); margin-left:6px;"></i> النهر الأخضر وفندق الماسة</span>
+                            <strong>5 دقائق</strong>
+                        </div>
+                        <div class="kayan-distance-item">
+                            <span><i class="fa-solid fa-landmark" style="color:var(--kayan-gold); margin-left:6px;"></i> الحي الحكومي ومجمع الوزارات</span>
+                            <strong>7 دقائق</strong>
+                        </div>
+                        <div class="kayan-distance-item">
+                            <span><i class="fa-solid fa-city" style="color:var(--kayan-gold); margin-left:6px;"></i> الحي المالي والبرج الأيقوني</span>
+                            <strong>8 دقائق</strong>
+                        </div>
+                        <div class="kayan-distance-item">
+                            <span><i class="fa-solid fa-plane-departure" style="color:var(--kayan-gold); margin-left:6px;"></i> مطار العاصمة الإدارية الدولي</span>
+                            <strong>15 دقيقة</strong>
+                        </div>
+                        <div class="kayan-distance-item">
+                            <span><i class="fa-solid fa-graduation-cap" style="color:var(--kayan-gold); margin-left:6px;"></i> الجامعة البريطانية والأمريكية بالعاصمة</span>
+                            <strong>4 دقائق</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Payment Calculator -->
+                <div class="kayan-calculator">
+                    <div class="kayan-calc-header">
+                        <span><i class="fa-solid fa-calculator" style="color:var(--kayan-gold); font-size:24px;"></i></span>
+                        <div>
+                            <h3>حاسبة الأقساط وأنظمة السداد التفاعلية</h3>
+                            <div style="font-size:12px; color:var(--kayan-gray);">حدد سعر الوحدة وخطتك المفضلة لحساب الأقساط فورياً</div>
+                        </div>
+                    </div>
+
+                    <div class="kayan-calc-body">
+                        <div class="kayan-calc-inputs">
+                            <div class="kayan-calc-field">
+                                <label>
+                                    <span>سعر الوحدة التقديري:</span>
+                                    <strong id="calcPriceDisplay">3,800,000 ج.م</strong>
+                                </label>
+                                <input type="range" id="calcPriceSlider" min="3000000" max="8500000" step="100000" value="3800000">
+                            </div>
+
+                            <div class="kayan-calc-field">
+                                <label>نسبة الدفعة المقدمة:</label>
+                                <div class="kayan-calc-options">
+                                    <button type="button" class="kayan-calc-opt downpayment-opt active" data-value="10">10% مقدم</button>
+                                    <button type="button" class="kayan-calc-opt downpayment-opt" data-value="15">15% مقدم</button>
+                                    <button type="button" class="kayan-calc-opt downpayment-opt" data-value="20">20% مقدم</button>
+                                </div>
+                            </div>
+
+                            <div class="kayan-calc-field">
+                                <label>مدة التقسيط المريحة:</label>
+                                <div class="kayan-calc-options">
+                                    <button type="button" class="kayan-calc-opt years-opt" data-value="5">5 سنوات</button>
+                                    <button type="button" class="kayan-calc-opt years-opt active" data-value="7">7 سنوات</button>
+                                    <button type="button" class="kayan-calc-opt years-opt" data-value="8">8 سنوات</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="kayan-calc-result-box">
+                            <div class="kayan-calc-result-row">
+                                <span>قيمة الدفعة الأولى (المقدم):</span>
+                                <strong id="resDownPayment">380,000 ج.م</strong>
+                            </div>
+                            <div class="kayan-calc-result-row">
+                                <span>القسط الشهري المتساوي:</span>
+                                <strong id="resMonthly" style="color:#fff; font-size:30px;">40,714 ج.م</strong>
+                            </div>
+                            <div class="kayan-calc-result-row" style="border-top:1px dashed rgba(255,255,255,0.1); padding-top:10px;">
+                                <span>قيمة الخصم عند السداد النقدي (كاش 20%):</span>
+                                <strong id="resCashDiscount" style="font-size:18px; color:var(--kayan-gold);">760,000 ج.م</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.kayan-project-main-col -->
+
+            <!-- LEFT COLUMN: STICKY BOOKING SIDEBAR -->
+            <aside class="kayan-sticky-sidebar">
+
+                <!-- Booking Card -->
+                <div class="kayan-booking-card">
+                    <h3>طلب معاينة وحجز وحدة</h3>
+                    <p>سجل بياناتك للتواصل المباشر مع استشاري المشروع وتحديد موعد زيارة ميدانية للموقع.</p>
+
+                    <form data-kayan-ajax>
+                        <div class="kayan-form-group">
+                            <label>الاسم بالكامل *</label>
+                            <input type="text" required placeholder="مثال: أحمد عبد الله">
+                        </div>
+
+                        <div class="kayan-form-group">
+                            <label>رقم الهاتف / واتساب *</label>
+                            <input type="tel" required placeholder="010xxxxxxxx" dir="ltr">
+                        </div>
+
+                        <div class="kayan-form-group">
+                            <label>نوع الوحدة المفضلة</label>
+                            <select>
+                                <option>شقة غرفتين (135م²)</option>
+                                <option>شقة 3 غرف (185م²)</option>
+                                <option>دوبلكس بحديقة (265م²)</option>
+                                <option>بنتهاوس بروف (320م²)</option>
+                            </select>
+                        </div>
+
+                        <div class="kayan-form-group">
+                            <label>ملاحظات أو أسئلة إضافية</label>
+                            <textarea rows="3" placeholder="هل ترغب بموعد محدد للزيارة؟"></textarea>
+                        </div>
+
+                        <button type="submit" class="kayan-btn kayan-btn-gold kayan-form-submit">
+                            تأكيد طلب المعاينة ←
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Broker Profile Card -->
+                <div class="kayan-sidebar-broker">
+                    <div class="kayan-broker-avatar">
+                        <img src="images/author-2.jpg" alt="المستشار العقاري">
+                    </div>
+                    <div class="kayan-broker-info">
+                        <strong>م. كريم منصور</strong>
+                        <span>مستشار مبيعات مشروع فيو</span>
+                        <div style="font-size:11px; color:var(--kayan-gray); margin-top:2px;">متاح للرد الآن <i class="fa-solid fa-circle" style="color:#25D366; font-size:9px;"></i></div>
+                    </div>
+                </div>
+
+                <!-- Quick Action Buttons -->
+                <a href="https://wa.me/201000000000?text=استفسار بخصوص مشروع فيو ريزيدنس" target="_blank" class="kayan-btn" style="background:var(--kayan-green); color:#fff; text-align:center;">
+                    <i class="fa-brands fa-whatsapp"></i> تواصل عبر واتساب مباشرة
+                </a>
+
+                <a href="tel:16959" class="kayan-btn kayan-btn-outline" style="text-align:center;">
+                    <i class="fa-solid fa-phone"></i> اتصل بالخط الساخن 16959
+                </a>
+
+            </aside>
+
+        </div><!-- /.kayan-project-layout -->
+
+        <!-- Related Projects -->
+        <div style="margin-top:60px; padding-top:40px; border-top:1px solid rgba(255,255,255,0.08);">
+            <div class="kayan-section-title" style="margin-bottom:30px;">
+                <span class="eyebrow">مشروعات أخرى قد تناسبك</span>
+                <h2>مشروعات مشابهة من كيان</h2>
+            </div>
+
+            <div class="kayan-project-grid">
+                <!-- Related 1 -->
+                <article class="kayan-project-card">
+                    <div class="kayan-project-image">
+                        <img src="images/project-green-yard.jpg" alt="مشروع جرين يارد">
+                        <span class="kayan-project-status">متاح الآن</span>
+                    </div>
+                    <div class="kayan-project-content">
+                        <h3>مشروع جرين يارد (Green Yard)</h3>
+                        <div class="kayan-location"><i class="fa-solid fa-location-dot" style="color:var(--kayan-gold);"></i> القاهرة الجديدة - بيت الوطن</div>
+                        <div class="kayan-project-meta">
+                            <div><strong>G+4</strong>أدوار</div>
+                            <div><strong>2 - 4</strong>غرف</div>
+                            <div><strong>150 - 280م²</strong>مساحات</div>
+                        </div>
+                        <a href="project-single.html" class="kayan-btn kayan-btn-outline">تفاصيل المشروع ←</a>
+                    </div>
+                </article>
+
+                <!-- Related 2 -->
+                <article class="kayan-project-card">
+                    <div class="kayan-project-image">
+                        <img src="images/project-zawya.jpg" alt="مشروع زاوية">
+                        <span class="kayan-project-status">متاح الآن</span>
+                    </div>
+                    <div class="kayan-project-content">
+                        <h3>مشروع زاوية (Zawya Hub)</h3>
+                        <div class="kayan-location"><i class="fa-solid fa-location-dot" style="color:var(--kayan-gold);"></i> الشيخ زايد الجديدة</div>
+                        <div class="kayan-project-meta">
+                            <div><strong>إداري / عيادات</strong>الاستخدام</div>
+                            <div><strong>موقع مركزي</strong>مميزات</div>
+                            <div><strong>60 - 220م²</strong>مساحات</div>
+                        </div>
+                        <a href="project-single.html" class="kayan-btn kayan-btn-outline">تفاصيل المشروع ←</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="kayan-footer">
+    <div class="kayan-container">
+        <div class="kayan-footer-grid">
+            <div class="kayan-footer-logo">
+                <strong>كيان العقارية</strong>
+                <p>
+                    نعمل على تقديم مشروعات عقارية متميزة تجمع بين الجودة والتصميم والموقع الاستراتيجي في مصر منذ عام 2011.
+                </p>
+                <div class="kayan-social">
+                    <a href="#" title="فيسبوك"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" title="لينكدإن"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" title="انستغرام"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" title="يوتيوب"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="projects.html">المشروعات</a></li>
+                    <li><a href="blog.html">المدونة</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>المشروعات</h3>
+                <ul>
+                    <li><a href="projects.html?status=current">المشروعات الحالية</a></li>
+                    <li><a href="projects.html?status=delivered">المشروعات السابقة</a></li>
+                    <li><a href="projects.html">البحث عن وحدة</a></li>
+                    <li><a href="finishing.html">التشطيبات</a></li>
+                </ul>
+            </div>
+
+            <div class="kayan-footer-contact">
+                <h3>تواصل معنا</h3>
+                <div>الخط الساخن <strong>16959</strong></div>
+                <br>
+                <div>WhatsApp <strong>010 0000 0000</strong></div>
+            </div>
+        </div>
+
+        <div class="kayan-copyright">
+            © 2026 كيان العقارية - جميع الحقوق محفوظة
+        </div>
+    </div>
+</footer>
+
+    <!-- ================= FLOATING ================= -->
+    <a href="tel:16959" class="kayan-side-call" title="اتصل بنا">
+        <i class="fa-solid fa-phone"></i> اتصل بنا
+    </a>
+
+    <div class="kayan-floating">
+        <a
+            href="https://wa.me/201000000000"
+            target="_blank"
+            class="kayan-float kayan-float-whatsapp kayan-whatsapp-float"
+            title="محادثة واتساب"
+            aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a
+            href="tel:16959"
+            class="kayan-float kayan-float-phone kayan-call-float"
+            title="اتصال هاتفي"
+            aria-label="اتصال">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+
+        <a
+            href="#"
+            id="kayanScrollTop"
+            class="kayan-float kayan-scroll-top"
+            title="العودة للأعلى"
+            aria-label="العودة للأعلى">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+
+</div><!-- /.kayan-home -->
+
+<!-- Scripts -->
+<script src="script.js"></script>
+</body>
+</html>

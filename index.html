@@ -8,9 +8,11 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Stylesheet -->
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,7 +26,7 @@
 
         <a href="#" class="kayan-logo">
 
-            <div class="kayan-logo-icon">🏢</div>
+            <div class="kayan-logo-icon"><i class="fa-solid fa-city"></i></div>
 
             <div class="kayan-logo-text">
                 <strong>كيان العقارية</strong>
@@ -34,7 +36,7 @@
         </a>
 
         <button class="kayan-mobile-toggle" onclick="kayanMenu()">
-            ☰
+            <i class="fa-solid fa-bars"></i>
         </button>
 
         <nav class="kayan-nav" id="kayanNav">
@@ -42,27 +44,35 @@
             <ul>
 
                 <li class="active">
-                    <a href="#">الرئيسية</a>
+                    <a href="index.html">الرئيسية</a>
                 </li>
 
                 <li>
-                    <a href="#">من  نحن</a>
+                    <a href="about.html">من نحن</a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="projects.html">
                         المشروعات
-                        <span>⌄</span>
+                        <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i>
                     </a>
 
                     <div class="kayan-dropdown">
 
-                        <a href="#current-projects">
+                        <a href="projects.html">
+                            جميع المشروعات
+                        </a>
+
+                        <a href="projects.html?status=current">
                             المشروعات الحالية
                         </a>
 
-                        <a href="#sold-projects">
+                        <a href="projects.html?status=delivered">
                             المشروعات السابقة
+                        </a>
+
+                        <a href="project-single.html">
+                            مشروع فيو (نموذج تفصيلي)
                         </a>
 
                     </div>
@@ -72,36 +82,36 @@
                 <li>
                     <a href="#">
                         المعرض
-                        <span>⌄</span>
+                        <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i>
                     </a>
 
                     <div class="kayan-dropdown">
+
+                        <a href="blog.html">المدونة والمقالات</a>
 
                         <a href="#events">الفعاليات</a>
 
                         <a href="#gallery">الصور والفيديوهات</a>
 
-                        <a href="#blog">المدونة</a>
-
-                        <a href="#careers">التوظيف</a>
+                        <a href="contact.html#careers">التوظيف</a>
 
                     </div>
 
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="finishing.html">
                         التشطيبات
-                        <span>⌄</span>
+                        <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i>
                     </a>
 
                     <div class="kayan-dropdown">
 
-                        <a href="#finishing">
+                        <a href="finishing.html">
                             مواصفات التشطيب
                         </a>
 
-                        <a href="#finishing">
+                        <a href="finishing.html#decor">
                             تشطيبات وديكورات الوحدات
                         </a>
 
@@ -110,7 +120,7 @@
                 </li>
 
                 <li>
-                    <a href="#contact">
+                    <a href="contact.html">
                         اتصل بنا
                     </a>
                 </li>
@@ -120,8 +130,7 @@
         </nav>
 
         <a href="tel:16959" class="kayan-hotline">
-            ☎
-            <span>16959</span>
+            <i class="fa-solid fa-phone"></i> <span>16959</span>
         </a>
 
     </div>
@@ -153,12 +162,12 @@
 
             <div class="kayan-hero-buttons">
 
-                <a href="#current-projects"
+                <a href="projects.html"
                    class="kayan-btn kayan-btn-gold">
                     اكتشف مشروعاتنا ←
                 </a>
 
-                <a href="#contact"
+                <a href="contact.html"
                    class="kayan-btn kayan-btn-outline">
                     تواصل معنا
                 </a>
@@ -182,9 +191,7 @@
 
             <div class="kayan-search-head">
 
-                <h3>
-                    🔎 بحث متقدم
-                </h3>
+                <h3><i class="fa-solid fa-sliders" style="color:var(--kayan-gold);"></i> بحث متقدم</h3>
 
                 <span>
                     ابحث عن وحدتك المثالية
@@ -250,7 +257,7 @@
                     class="kayan-search-btn"
                     onclick="alert('سيتم ربط البحث بقاعدة بيانات المشروعات')">
 
-                    🔍 بحث
+                    <i class="fa-solid fa-magnifying-glass"></i> بحث
 
                 </button>
 
@@ -296,7 +303,7 @@
                 <div class="kayan-project-image">
 
                     <img
-                        src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80"
+                        src="images/project-view.jpg"
                         alt="مشروع فيو"
                     >
 
@@ -307,8 +314,8 @@
                     <a
                         href="https://wa.me/201000000000"
                         target="_blank"
-                        class="kayan-whatsapp-project">
-                        ☎
+                        class="kayan-whatsapp-project" title="تواصل عبر واتساب">
+                        <i class="fa-brands fa-whatsapp"></i>
                     </a>
 
                 </div>
@@ -320,7 +327,7 @@
                     </h3>
 
                     <div class="kayan-location">
-                        📍 العاصمة الإدارية الجديدة
+                        <i class="fa-solid fa-location-dot" style="color:var(--kayan-gold);"></i> العاصمة الإدارية الجديدة
                     </div>
 
                     <div class="kayan-project-meta">
@@ -342,8 +349,8 @@
 
                     </div>
 
-                    <a href="#" class="kayan-btn kayan-btn-outline">
-                        تفاصيل المشروع
+                    <a href="project-single.html" class="kayan-btn kayan-btn-outline">
+                        تفاصيل المشروع ←
                     </a>
 
                 </div>
@@ -358,7 +365,7 @@
                 <div class="kayan-project-image">
 
                     <img
-                        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80"
+                        src="images/project-green-yard.jpg"
                         alt="مشروع جرين يارد"
                     >
 
@@ -369,8 +376,8 @@
                     <a
                         href="https://wa.me/201000000000"
                         target="_blank"
-                        class="kayan-whatsapp-project">
-                        ☎
+                        class="kayan-whatsapp-project" title="تواصل عبر واتساب">
+                        <i class="fa-brands fa-whatsapp"></i>
                     </a>
 
                 </div>
@@ -382,7 +389,7 @@
                     </h3>
 
                     <div class="kayan-location">
-                        📍 القاهرة الجديدة
+                        <i class="fa-solid fa-location-dot" style="color:var(--kayan-gold);"></i> القاهرة الجديدة
                     </div>
 
                     <div class="kayan-project-meta">
@@ -404,8 +411,8 @@
 
                     </div>
 
-                    <a href="#" class="kayan-btn kayan-btn-outline">
-                        تفاصيل المشروع
+                    <a href="project-single.html" class="kayan-btn kayan-btn-outline">
+                        تفاصيل المشروع ←
                     </a>
 
                 </div>
@@ -420,7 +427,7 @@
                 <div class="kayan-project-image">
 
                     <img
-                        src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=80"
+                        src="images/project-zawya.jpg"
                         alt="مشروع زاوية"
                     >
 
@@ -431,8 +438,8 @@
                     <a
                         href="https://wa.me/201000000000"
                         target="_blank"
-                        class="kayan-whatsapp-project">
-                        ☎
+                        class="kayan-whatsapp-project" title="تواصل عبر واتساب">
+                        <i class="fa-brands fa-whatsapp"></i>
                     </a>
 
                 </div>
@@ -444,7 +451,7 @@
                     </h3>
 
                     <div class="kayan-location">
-                        📍 الشيخ زايد - أكتوبر
+                        <i class="fa-solid fa-location-dot" style="color:var(--kayan-gold);"></i> الشيخ زايد - أكتوبر
                     </div>
 
                     <div class="kayan-project-meta">
@@ -466,8 +473,8 @@
 
                     </div>
 
-                    <a href="#" class="kayan-btn kayan-btn-outline">
-                        تفاصيل المشروع
+                    <a href="project-single.html" class="kayan-btn kayan-btn-outline">
+                        تفاصيل المشروع ←
                     </a>
 
                 </div>
@@ -517,7 +524,7 @@
                     </div>
 
                     <img
-                        src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80"
+                        src="images/project-waha.jpg"
                         alt="مشروع الواحة"
                     >
 
@@ -528,7 +535,7 @@
                     <h3>مشروع الواحة</h3>
 
                     <div class="kayan-location">
-                        📍 العاصمة الإدارية
+                        <i class="fa-solid fa-location-dot" style="color:var(--kayan-gold);"></i> العاصمة الإدارية
                     </div>
 
                 </div>
@@ -545,7 +552,7 @@
                     </div>
 
                     <img
-                        src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=80"
+                        src="images/project-masryeen.jpg"
                         alt="مشروع المصريين"
                     >
 
@@ -556,7 +563,7 @@
                     <h3>مشروع المصريين</h3>
 
                     <div class="kayan-location">
-                        📍 القاهرة الجديدة
+                        <i class="fa-solid fa-location-dot" style="color:var(--kayan-gold);"></i> القاهرة الجديدة
                     </div>
 
                 </div>
@@ -573,7 +580,7 @@
                     </div>
 
                     <img
-                        src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80"
+                        src="images/project-nakheel.jpg"
                         alt="مشروع النخيل"
                     >
 
@@ -584,7 +591,7 @@
                     <h3>مشروع النخيل</h3>
 
                     <div class="kayan-location">
-                        📍 الشيخ زايد
+                        <i class="fa-solid fa-location-dot" style="color:var(--kayan-gold);"></i> الشيخ زايد
                     </div>
 
                 </div>
@@ -609,7 +616,7 @@
             <div class="kayan-about-image">
 
                 <img
-                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
+                    src="images/about-kayan.jpg"
                     alt="كيان العقارية"
                 >
 
@@ -646,9 +653,7 @@
 
                     <div class="kayan-feature">
 
-                        <div class="kayan-feature-icon">
-                            📍
-                        </div>
+                        <div class="kayan-feature-icon"><i class="fa-solid fa-map-location-dot"></i></div>
 
                         <div>
                             <strong>مواقع متميزة</strong>
@@ -662,9 +667,7 @@
 
                     <div class="kayan-feature">
 
-                        <div class="kayan-feature-icon">
-                            🛡
-                        </div>
+                        <div class="kayan-feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
 
                         <div>
                             <strong>جودة عالية</strong>
@@ -678,9 +681,7 @@
 
                     <div class="kayan-feature">
 
-                        <div class="kayan-feature-icon">
-                            ★
-                        </div>
+                        <div class="kayan-feature-icon"><i class="fa-solid fa-award"></i></div>
 
                         <div>
                             <strong>خبرة وإنجازات</strong>
@@ -694,9 +695,7 @@
 
                     <div class="kayan-feature">
 
-                        <div class="kayan-feature-icon">
-                            ☎
-                        </div>
+                        <div class="kayan-feature-icon"><i class="fa-solid fa-headset"></i></div>
 
                         <div>
                             <strong>دعم مستمر</strong>
@@ -710,8 +709,8 @@
                 </div>
 
 
-                <a href="#" class="kayan-btn kayan-btn-gold">
-                    تعرف علينا أكثر
+                <a href="about.html" class="kayan-btn kayan-btn-gold">
+                    تعرف على كيان العقارية أكثر ←
                 </a>
 
             </div>
@@ -780,7 +779,7 @@
             <a href="#" class="kayan-media-card">
 
                 <img
-                    src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80"
+                    src="images/media-events.jpg"
                     alt="الفعاليات">
 
                 <div class="kayan-media-overlay">
@@ -793,7 +792,7 @@
             <a href="#" class="kayan-media-card">
 
                 <img
-                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80"
+                    src="images/media-gallery.jpg"
                     alt="الصور والفيديوهات">
 
                 <div class="kayan-media-overlay">
@@ -806,7 +805,7 @@
             <a href="#" class="kayan-media-card">
 
                 <img
-                    src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80"
+                    src="images/media-blog.jpg"
                     alt="المدونة">
 
                 <div class="kayan-media-overlay">
@@ -819,7 +818,7 @@
             <a href="#" class="kayan-media-card">
 
                 <img
-                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80"
+                    src="images/media-careers.jpg"
                     alt="التوظيف">
 
                 <div class="kayan-media-overlay">
@@ -864,7 +863,7 @@
 
                 <div class="kayan-blog-image">
                     <img
-                        src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=80"
+                        src="images/blog-1.jpg"
                         alt="اختيار العقار المناسب">
                 </div>
 
@@ -881,7 +880,7 @@
                         أهم المعايير التي تساعدك على مقارنة الموقع والمساحة والتشطيب وخطط السداد قبل اتخاذ قرار الشراء.
                     </p>
 
-                    <a href="#" class="kayan-blog-link">
+                    <a href="blog-single.html" class="kayan-blog-link">
                         اقرأ المقال ←
                     </a>
                 </div>
@@ -893,7 +892,7 @@
 
                 <div class="kayan-blog-image">
                     <img
-                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80"
+                        src="images/blog-2.jpg"
                         alt="الاستثمار العقاري">
                 </div>
 
@@ -910,7 +909,7 @@
                         تعرف على تأثير الموقع والخدمات المحيطة وسهولة الوصول على قيمة العقار وفرص نموه المستقبلية.
                     </p>
 
-                    <a href="#" class="kayan-blog-link">
+                    <a href="blog-single.html" class="kayan-blog-link">
                         اقرأ المقال ←
                     </a>
                 </div>
@@ -922,7 +921,7 @@
 
                 <div class="kayan-blog-image">
                     <img
-                        src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80"
+                        src="images/blog-3.jpg"
                         alt="تشطيب الوحدات">
                 </div>
 
@@ -939,7 +938,7 @@
                         قائمة عملية لمراجعة جودة التشطيب والأعمال الأساسية والتأكد من جاهزية الوحدة قبل الاستلام النهائي.
                     </p>
 
-                    <a href="#" class="kayan-blog-link">
+                    <a href="blog-single.html" class="kayan-blog-link">
                         اقرأ المقال ←
                     </a>
                 </div>
@@ -982,7 +981,7 @@
             <a href="#" class="kayan-finishing-card">
 
                 <img
-                    src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80"
+                    src="images/finishing-specs.jpg"
                     alt="مواصفات التشطيب">
 
                 <div class="kayan-finishing-content">
@@ -1003,7 +1002,7 @@
             <a href="#" class="kayan-finishing-card">
 
                 <img
-                    src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80"
+                    src="images/finishing-decor.jpg"
                     alt="تشطيبات وديكورات">
 
                 <div class="kayan-finishing-content">
@@ -1053,15 +1052,14 @@
                 class="kayan-btn"
                 style="background:#25D366;color:#fff">
 
-                WhatsApp
-
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
             </a>
 
             <a
                 href="tel:16959"
                 class="kayan-btn kayan-btn-gold">
 
-                ☎ اتصل بنا
+                <i class="fa-solid fa-phone"></i> اتصل بنا
 
             </a>
 
@@ -1094,12 +1092,10 @@
                 </p>
 
                 <div class="kayan-social">
-
-                    <a href="#">f</a>
-                    <a href="#">in</a>
-                    <a href="#">◎</a>
-                    <a href="#">▶</a>
-
+                    <a href="#" title="فيسبوك"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" title="لينكدإن"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" title="انستغرام"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" title="يوتيوب"><i class="fa-brands fa-youtube"></i></a>
                 </div>
 
             </div>
@@ -1111,12 +1107,12 @@
 
                 <ul>
 
-                    <li><a href="#">الرئيسية</a></li>
-                    <li><a href="#">من نحن</a></li>
-                    <li><a href="#current-projects">المشروعات</a></li>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="projects.html">المشروعات</a></li>
                     <li><a href="#gallery">المعرض</a></li>
-                    <li><a href="#blog">المدونة</a></li>
-                    <li><a href="#contact">اتصل بنا</a></li>
+                    <li><a href="blog.html">المدونة</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
 
                 </ul>
 
@@ -1129,10 +1125,10 @@
 
                 <ul>
 
-                    <li><a href="#">المشروعات الحالية</a></li>
-                    <li><a href="#">المشروعات السابقة</a></li>
-                    <li><a href="#">البحث عن وحدة</a></li>
-                    <li><a href="#">التشطيبات</a></li>
+                    <li><a href="projects.html?status=current">المشروعات الحالية</a></li>
+                    <li><a href="projects.html?status=delivered">المشروعات السابقة</a></li>
+                    <li><a href="projects.html">البحث عن وحدة</a></li>
+                    <li><a href="finishing.html">التشطيبات</a></li>
 
                 </ul>
 
@@ -1171,49 +1167,38 @@
 </footer>
 
 
-<!-- ================= FLOATING ================= -->
-
-<a
-    href="tel:16959"
-    class="kayan-side-call">
-
-    ☎ اتصل بنا
-
-</a>
-
-
-<div class="kayan-floating">
-
-    <a
-        href="https://wa.me/201000000000"
-        target="_blank"
-        class="kayan-float kayan-float-whatsapp"
-        aria-label="WhatsApp">
-
-        ☎
-
+    <!-- ================= FLOATING ================= -->
+    <a href="tel:16959" class="kayan-side-call" title="اتصل بنا">
+        <i class="fa-solid fa-phone"></i> اتصل بنا
     </a>
 
-    <a
-        href="tel:16959"
-        class="kayan-float kayan-float-phone"
-        aria-label="اتصال">
+    <div class="kayan-floating">
+        <a
+            href="https://wa.me/201000000000"
+            target="_blank"
+            class="kayan-float kayan-float-whatsapp kayan-whatsapp-float"
+            title="محادثة واتساب"
+            aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
 
-        ☎
+        <a
+            href="tel:16959"
+            class="kayan-float kayan-float-phone kayan-call-float"
+            title="اتصال هاتفي"
+            aria-label="اتصال">
+            <i class="fa-solid fa-phone"></i>
+        </a>
 
-    </a>
-
-    <a
-        href="#"
-        id="kayanScrollTop"
-        class="kayan-float kayan-scroll-top"
-        aria-label="العودة للأعلى">
-
-        ↑
-
-    </a>
-
-</div>
+        <a
+            href="#"
+            id="kayanScrollTop"
+            class="kayan-float kayan-scroll-top"
+            title="العودة للأعلى"
+            aria-label="العودة للأعلى">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
 
 </div>
 
