@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المشروعات - كيان العقارية | KAYAN REAL ESTATE</title>
+    <meta name="description" content="استكشف أرقى المشروعات السكنية والاستثمارية من كيان العقارية في القاهرة الجديدة، الشيخ زايد، والعاصمة الإدارية الجديدة.">
+    
+    <!-- Google Fonts: El Messiri & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="kayan-home">
+
+<!-- ================= HEADER ================= -->
+<header class="kayan-header">
+    <div class="kayan-container kayan-header-inner">
+        <a href="index.html" class="kayan-logo">
+            <div class="kayan-logo-icon"><i class="fa-solid fa-city"></i></div>
+            <div class="kayan-logo-text">
+                <strong>كيان العقارية</strong>
+                <span>KAYAN REAL ESTATE</span>
+            </div>
+        </a>
+
+        <button class="kayan-mobile-toggle" onclick="kayanMenu()" aria-label="القائمة الرئيسية">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="kayan-nav" id="kayanNav">
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li class="active">
+                    <a href="projects.html">المشروعات <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i></a>
+                    <div class="kayan-dropdown">
+                        <a href="projects.html">جميع المشروعات</a>
+                        <a href="projects.html?status=current">المشروعات الحالية</a>
+                        <a href="projects.html?status=delivered">المشروعات السابقة</a>
+                        <a href="project-single.html">مشروع فيو (نموذج تفصيلي)</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">المعرض <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i></a>
+                    <div class="kayan-dropdown">
+                        <a href="blog.html">المدونة والمقالات</a>
+                        <a href="index.html#events">الفعاليات</a>
+                        <a href="index.html#gallery">الصور والفيديوهات</a>
+                        <a href="contact.html#careers">التوظيف</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="finishing.html">التشطيبات <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i></a>
+                    <div class="kayan-dropdown">
+                        <a href="finishing.html">مواصفات التشطيب</a>
+                        <a href="finishing.html#decor">تشطيبات وديكورات الوحدات</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+
+        <a href="tel:16959" class="kayan-hotline">
+            <i class="fa-solid fa-phone"></i> <span>16959</span>
+        </a>
+    </div>
+</header>
+
+<!-- ================= PAGE HEADER ================= -->
+<section class="kayan-page-header">
+    <div class="kayan-container kayan-page-header-inner">
+        <div class="kayan-breadcrumb">
+            <a href="index.html">الرئيسية</a>
+            <span class="sep">/</span>
+            <span class="current">مشروعات كيان</span>
+        </div>
+        <h1>مشروعات <span>كيان العقارية</span></h1>
+        <p>
+            رحلة من الإتقان المعماري والتخطيط المستقبلي في أرقى المواقع الاستراتيجية بمصر، مصممة خصيصاً لتمنحك ولعائلتك أرقى معايير الرفاهية والأمان الاستثماري.
+        </p>
+        <div class="kayan-header-badges">
+            <span class="kayan-chip gold"><i class="fa-solid fa-star"></i> 6 مشروعات متميزة</span>
+            <span class="kayan-chip green"><i class="fa-solid fa-circle-check"></i> وحدات جاهزة للحجز الفوري</span>
+            <span class="kayan-chip"><i class="fa-solid fa-ruler-combined"></i> تشطيبات فندقية فائقة الجودة</span>
+        </div>
+    </div>
+</section>
+
+<!-- ================= MAIN PROJECTS LISTING ================= -->
+<section class="kayan-section">
+    <div class="kayan-container">
+
+        <!-- Filters Toolbar -->
+        <div class="kayan-filter-bar">
+            <div class="kayan-filter-pills">
+                <button class="kayan-filter-btn active" data-filter="all">الكل (6)</button>
+                <button class="kayan-filter-btn" data-filter="current">المشروعات الحالية (3)</button>
+                <button class="kayan-filter-btn" data-filter="delivered">مشروعات تم تسليمها (3)</button>
+                <button class="kayan-filter-btn" data-filter="residential">سكني فاخر</button>
+                <button class="kayan-filter-btn" data-filter="commercial">تجاري وإداري</button>
+            </div>
+
+            <div class="kayan-filter-search">
+                <input type="text" id="projectSearchInput" placeholder="ابحث باسم المشروع أو المنطقة...">
+            </div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:25px; color:var(--kayan-gray); font-size:14px;">
+            <div>يتم عرض <strong style="color:#fff;" id="projectsCount">6</strong> مشروعات متطابقة</div>
+            <div>مرتبة حسب: <span style="color:var(--kayan-gold-light);">أحدث المشروعات أولاً</span></div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="kayan-project-grid" id="projectsGridContainer">
+
+            <!-- PROJECT 1: فيو -->
+            <article class="kayan-project-card kayan-filterable-project" data-category="residential" data-status="current">
+                <div class="kayan-project-image">
+                    <img src="images/project-view.jpg" alt="مشروع فيو العاصمة الإدارية">
+                    <span class="kayan-project-status">متاح للحجز</span>
+                    <a href="https://wa.me/201000000000?text=استفسار عن مشروع فيو" target="_blank" class="kayan-whatsapp-project" title="تواصل عبر واتساب">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+                <div class="kayan-project-content">
+                    <h3>مشروع فيو (View Residence)</h3>
+                    <div class="kayan-location"><i class="fa-solid fa-location-dot" style="color:var(--kayan-gold);"></i> العاصمة الإدارية الجديدة - الحي السكني R7</div>
+                    <div class="kayan-project-meta">
+                        <div><strong>عمائر فاخرة</strong>نوع البناء</div>
+                        <div><strong>1 - 4</strong>غرف نوم</div>
+                        <div><strong>135 - 320م²</strong>المساحات</div>
+                    </div>
+                    <div class="kayan-price-tag">
+                        <span>تبدأ الأسعار من:</span>
+                        <strong>3,200,000 ج.م</strong>
+                    </div>
+                    <div class="kayan-card-actions">
+                        <a href="project-single.html" class="kayan-btn kayan-btn-gold">تفاصيل المشروع والحجز ←</a>
+                        <a href="https://wa.me/201000000000" target="_blank" class="kayan-icon-btn" title="واتساب مباشر"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PROJECT 2: جرين يارد -->
+            <article class="kayan-project-card kayan-filterable-project" data-category="residential" data-status="current">
+                <div class="kayan-project-image">
+                    <img src="images/project-green-yard.jpg" alt="مشروع جرين يارد القاهرة الجديدة">
+                    <span class="kayan-project-status">متاح للحجز</span>
+                    <a href="https://wa.me/201000000000?text=استفسار عن مشروع جرين يارد" target="_blank" class="kayan-whatsapp-project" title="تواصل عبر واتساب">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+                <div class="kayan-project-content">
+                    <h3>مشروع جرين يارد (Green Yard)</h3>
+                    <div class="kayan-location"><i class="fa-solid fa-location-dot" style="color:var(--kayan-gold);"></i> القاهرة الجديدة - بيت الوطن الحي الثاني</div>
+                    <div class="kayan-project-meta">
+                        <div><strong>G+4 أدوار</strong>تصميم معماري</div>
+                        <div><strong>2 - 4</strong>غرف نوم</div>
+                        <div><strong>150 - 280م²</strong>المساحات</div>
+                    </div>
+                    <div class="kayan-price-tag">
+                        <span>تبدأ الأسعار من:</span>
+                        <strong>4,500,000 ج.م</strong>
+                    </div>
+                    <div class="kayan-card-actions">
+                        <a href="project-single.html" class="kayan-btn kayan-btn-gold">تفاصيل المشروع والحجز ←</a>
+                        <a href="https://wa.me/201000000000" target="_blank" class="kayan-icon-btn" title="واتساب مباشر"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PROJECT 3: زاوية -->
+            <article class="kayan-project-card kayan-filterable-project" data-category="commercial" data-status="current">
+                <div class="kayan-project-image">
+                    <img src="images/project-zawya.jpg" alt="مشروع زاوية الشيخ زايد">
+                    <span class="kayan-project-status">متاح للحجز</span>
+                    <a href="https://wa.me/201000000000?text=استفسار عن مشروع زاوية" target="_blank" class="kayan-whatsapp-project" title="تواصل عبر واتساب">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+                <div class="kayan-project-content">
+                    <h3>مشروع زاوية (Zawya Hub)</h3>
+                    <div class="kayan-location"><i class="fa-solid fa-location-dot" style="color:var(--kayan-gold);"></i> الشيخ زايد الجديدة - على المحور المركزي مباشرة</div>
+                    <div class="kayan-project-meta">
+                        <div><strong>تجاري / إداري</strong>نوع المشروع</div>
+                        <div><strong>عيادات ومكاتب</strong>الاستخدام</div>
+                        <div><strong>60 - 220م²</strong>المساحات</div>
+                    </div>
+                    <div class="kayan-price-tag">
+                        <span>تبدأ الأسعار من:</span>
+                        <strong>5,100,000 ج.م</strong>
+                    </div>
+                    <div class="kayan-card-actions">
+                        <a href="project-single.html" class="kayan-btn kayan-btn-gold">تفاصيل المشروع والحجز ←</a>
+                        <a href="https://wa.me/201000000000" target="_blank" class="kayan-icon-btn" title="واتساب مباشر"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PROJECT 4: الواحة (تم التسليم) -->
+            <article class="kayan-project-card kayan-filterable-project" data-category="residential" data-status="delivered">
+                <div class="kayan-project-image">
+                    <img src="images/project-waha.jpg" alt="مشروع الواحة أكتوبر">
+                    <span class="kayan-project-status sold" style="background:#242424; color:var(--kayan-gold);">تم التسليم بالكامل 100%</span>
+                </div>
+                <div class="kayan-project-content">
+                    <h3>مشروع الواحة (Al Waha Compound)</h3>
+                    <div class="kayan-location"><i class="fa-solid fa-location-dot" style="color:var(--kayan-gold);"></i> مدينة 6 أكتوبر - التوسعات الشرقية</div>
+                    <div class="kayan-project-meta">
+                        <div><strong>سكني مغلق</strong>مجتمع متكامل</div>
+                        <div><strong>80 وحدة</strong>تم تسليمها</div>
+                        <div><strong>2023</strong>سنة التسليم</div>
+                    </div>
+                    <div class="kayan-price-tag">
+                        <span>حالة المشروع:</span>
+                        <strong style="color:#fff;">مأهول بالسكان</strong>
+                    </div>
+                    <div class="kayan-card-actions">
+                        <a href="project-single.html" class="kayan-btn kayan-btn-outline">استعراض سابقة الأعمال ←</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PROJECT 5: المصريين (تم التسليم) -->
+            <article class="kayan-project-card kayan-filterable-project" data-category="residential" data-status="delivered">
+                <div class="kayan-project-image">
+                    <img src="images/project-masryeen.jpg" alt="مشروع المصريين التجمع الخامس">
+                    <span class="kayan-project-status sold" style="background:#242424; color:var(--kayan-gold);">تم التسليم بالكامل 100%</span>
+                </div>
+                <div class="kayan-project-content">
+                    <h3>مشروع المصريين (Al Masryeen)</h3>
+                    <div class="kayan-location"><i class="fa-solid fa-location-dot" style="color:var(--kayan-gold);"></i> القاهرة الجديدة - منطقة اللوتس الجنوبية</div>
+                    <div class="kayan-project-meta">
+                        <div><strong>عمائر منفصلة</strong>نوع العقار</div>
+                        <div><strong>48 وحدة</strong>تم تسليمها</div>
+                        <div><strong>2024</strong>سنة التسليم</div>
+                    </div>
+                    <div class="kayan-price-tag">
+                        <span>حالة المشروع:</span>
+                        <strong style="color:#fff;">تسليم فوري</strong>
+                    </div>
+                    <div class="kayan-card-actions">
+                        <a href="project-single.html" class="kayan-btn kayan-btn-outline">استعراض سابقة الأعمال ←</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PROJECT 6: النخيل (تم التسليم) -->
+            <article class="kayan-project-card kayan-filterable-project" data-category="residential" data-status="delivered">
+                <div class="kayan-project-image">
+                    <img src="images/project-nakheel.jpg" alt="مشروع النخيل الشروق">
+                    <span class="kayan-project-status sold" style="background:#242424; color:var(--kayan-gold);">تم التسليم بالكامل 100%</span>
+                </div>
+                <div class="kayan-project-content">
+                    <h3>مشروع النخيل (Al Nakheel Living)</h3>
+                    <div class="kayan-location"><i class="fa-solid fa-location-dot" style="color:var(--kayan-gold);"></i> مدينة الشروق - الحي الثاني شرق</div>
+                    <div class="kayan-project-meta">
+                        <div><strong>ميني كومباوند</strong>فيلات وشقق</div>
+                        <div><strong>60 وحدة</strong>تم تسليمها</div>
+                        <div><strong>2024</strong>سنة التسليم</div>
+                    </div>
+                    <div class="kayan-price-tag">
+                        <span>حالة المشروع:</span>
+                        <strong style="color:#fff;">تسليم كامل المرافق</strong>
+                    </div>
+                    <div class="kayan-card-actions">
+                        <a href="project-single.html" class="kayan-btn kayan-btn-outline">استعراض سابقة الأعمال ←</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="kayan-pagination">
+            <a href="#" class="kayan-page-num active">1</a>
+            <a href="#" class="kayan-page-num">2</a>
+            <a href="#" class="kayan-page-num">←</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= REAL ESTATE ADVISORY CTA ================= -->
+<section class="kayan-cta">
+    <div class="kayan-container kayan-cta-inner">
+        <div>
+            <h2 style="font-size:28px; margin:0 0 10px; color:#fff;">هل تحتاج لمساعدة في اختيار موقعك ووحدتك المثالية؟</h2>
+            <p style="color:var(--kayan-gray-light); margin:0; font-size:15px;">
+                فريق استشاريي كيان العقارية يقدم لك دراسة مقارنة مجانية تشمل خطط السداد وتوقعات العائد الاستثماري.
+            </p>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="contact.html" class="kayan-btn kayan-btn-gold">احجز استشارة عقارية مجانية ←</a>
+            <a href="tel:16959" class="kayan-btn kayan-btn-outline">اتصل بالخط الساخن 16959</a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="kayan-footer">
+    <div class="kayan-container">
+        <div class="kayan-footer-grid">
+            <div class="kayan-footer-logo">
+                <strong>كيان العقارية</strong>
+                <p>
+                    نعمل على تقديم مشروعات عقارية متميزة تجمع بين الجودة والتصميم والموقع الاستراتيجي في مصر منذ عام 2011.
+                </p>
+                <div class="kayan-social">
+                    <a href="#" title="فيسبوك"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" title="لينكدإن"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" title="انستغرام"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" title="يوتيوب"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="projects.html">المشروعات</a></li>
+                    <li><a href="blog.html">المدونة</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>المشروعات</h3>
+                <ul>
+                    <li><a href="projects.html?status=current">المشروعات الحالية</a></li>
+                    <li><a href="projects.html?status=delivered">المشروعات السابقة</a></li>
+                    <li><a href="projects.html">البحث عن وحدة</a></li>
+                    <li><a href="finishing.html">التشطيبات</a></li>
+                </ul>
+            </div>
+
+            <div class="kayan-footer-contact">
+                <h3>تواصل معنا</h3>
+                <div>الخط الساخن <strong>16959</strong></div>
+                <br>
+                <div>WhatsApp <strong>010 0000 0000</strong></div>
+            </div>
+        </div>
+
+        <div class="kayan-copyright">
+            © 2026 كيان العقارية - جميع الحقوق محفوظة
+        </div>
+    </div>
+</footer>
+
+    <!-- ================= FLOATING ================= -->
+    <a href="tel:16959" class="kayan-side-call" title="اتصل بنا">
+        <i class="fa-solid fa-phone"></i> اتصل بنا
+    </a>
+
+    <div class="kayan-floating">
+        <a
+            href="https://wa.me/201000000000"
+            target="_blank"
+            class="kayan-float kayan-float-whatsapp kayan-whatsapp-float"
+            title="محادثة واتساب"
+            aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a
+            href="tel:16959"
+            class="kayan-float kayan-float-phone kayan-call-float"
+            title="اتصال هاتفي"
+            aria-label="اتصال">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+
+        <a
+            href="#"
+            id="kayanScrollTop"
+            class="kayan-float kayan-scroll-top"
+            title="العودة للأعلى"
+            aria-label="العودة للأعلى">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+
+</div><!-- /.kayan-home -->
+
+<!-- Scripts -->
+<script src="script.js"></script>
+</body>
+</html>
