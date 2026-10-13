@@ -9,9 +9,9 @@
 :root{
     --kayan-navy:#f5f5f5;
     --kayan-navy-2:#d8d8d8;
-    --kayan-gold:#bd8a2c;
-    --kayan-gold-light:#d7ad58;
-    --kayan-gold-dark:#9a6d1c;
+    --kayan-gold:#F3E8D9;
+    --kayan-gold-light:#FAF5EE;
+    --kayan-gold-dark:#D6C7B3;
     --kayan-white:#ffffff;
     --kayan-light:#0d0d0d;
     --kayan-card-bg:#111111;
@@ -19,31 +19,34 @@
     --kayan-gray:#a6a6a6;
     --kayan-gray-light:#d0d0d0;
     --kayan-border:#242424;
-    --kayan-border-gold:rgba(189,138,44,0.35);
+    --kayan-border-gold:rgba(243,232,217,0.35);
     --kayan-green:#25D366;
     --shadow:0 15px 45px rgba(0,0,0,.45);
-    --shadow-gold:0 10px 30px rgba(189,138,44,0.15);
+    --shadow-gold:0 10px 30px rgba(243,232,217,0.15);
     
     /* Authentic Arabic Luxury Real Estate Typography */
     --kayan-font-title:'El Messiri', 'Cairo', serif;
     --kayan-font-body:'Tajawal', 'Cairo', sans-serif;
 }
 
-body,
-.kayan-home,
-.kayan-home *{
-    box-sizing:border-box;
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body,
-.kayan-home{
-    margin:0;
-    direction:rtl;
-    font-family:var(--kayan-font-body);
-    color:var(--kayan-navy);
-    background:#050505;
-    line-height:1.7;
-    -webkit-font-smoothing:antialiased;
+.kayan-home {
+    margin: 0;
+    direction: rtl;
+    font-family: var(--kayan-font-body);
+    color: var(--kayan-navy);
+    background: #050505;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -55,14 +58,20 @@ h1, h2, h3, h4, h5, h6,
 .kayan-blog-content h3,
 .kayan-page-header h1,
 .kayan-single-title,
-.kayan-calc-result strong{
-    font-family:var(--kayan-font-title);
-    letter-spacing:-0.2px;
+.kayan-calc-result strong {
+    font-family: var(--kayan-font-title);
+    letter-spacing: -0.2px;
 }
 
-.kayan-home a{
-    text-decoration:none;
-    color:inherit;
+/* Universal Link Reset - Eliminates browser default blue/purple links across all pages */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover {
+    color: var(--kayan-gold);
 }
 
 .kayan-container{
@@ -147,6 +156,7 @@ h1, h2, h3, h4, h5, h6,
     padding:30px 15px;
     font-size:14px;
     font-weight:600;
+    color:#ffffff !important;
     transition:.25s;
     white-space:nowrap;
 }
@@ -225,7 +235,7 @@ h1, h2, h3, h4, h5, h6,
     color:#050505 !important;
     border-color:var(--kayan-gold-light);
     transform:translateY(-2px);
-    box-shadow:0 6px 20px rgba(189,138,44,0.4);
+    box-shadow:0 6px 20px rgba(243,232,217,0.4);
 }
 
 .kayan-mobile-toggle{
@@ -307,12 +317,15 @@ h1, h2, h3, h4, h5, h6,
     cursor:pointer;
 }
 
-.kayan-btn-gold{
-    background:linear-gradient(135deg, var(--kayan-gold) 0%, var(--kayan-gold-dark) 100%);
-    color:#ffffff !important;
-    border:1px solid var(--kayan-gold);
-    box-shadow:0 4px 15px rgba(189,138,44,0.25);
-    transition:all .25s ease;
+.kayan-btn-gold,
+a.kayan-btn-gold,
+button.kayan-btn-gold {
+    background: linear-gradient(135deg, var(--kayan-gold) 0%, var(--kayan-gold-dark) 100%) !important;
+    color: #121212 !important;
+    font-weight: 700 !important;
+    border: 1px solid var(--kayan-gold) !important;
+    box-shadow: 0 4px 15px rgba(243,232,217,0.25);
+    transition: all .25s ease;
 }
 
 .kayan-btn-gold:hover{
@@ -320,7 +333,7 @@ h1, h2, h3, h4, h5, h6,
     color:#050505 !important; /* Deep dark text on bright gold for maximum contrast! */
     border-color:var(--kayan-gold-light);
     transform:translateY(-2px);
-    box-shadow:0 8px 25px rgba(189,138,44,0.45);
+    box-shadow:0 8px 25px rgba(243,232,217,0.45);
 }
 
 .kayan-btn-outline{
@@ -335,7 +348,7 @@ h1, h2, h3, h4, h5, h6,
     border-color:var(--kayan-gold);
     color:#050505 !important; /* Deep black text on gold hover */
     transform:translateY(-2px);
-    box-shadow:0 6px 20px rgba(189,138,44,0.35);
+    box-shadow:0 6px 20px rgba(243,232,217,0.35);
 }
 
 .kayan-hero-buttons{
@@ -429,7 +442,7 @@ h1, h2, h3, h4, h5, h6,
 .kayan-search-btn:hover{
     background:var(--kayan-gold-light);
     color:#050505;
-    box-shadow:0 6px 20px rgba(189,138,44,0.4);
+    box-shadow:0 6px 20px rgba(243,232,217,0.4);
 }
 
 /* ================= SECTIONS ================= */
@@ -1067,7 +1080,7 @@ h1, h2, h3, h4, h5, h6,
 .kayan-call-float{
     background:linear-gradient(135deg, var(--kayan-gold) 0%, var(--kayan-gold-dark) 100%) !important;
     color:#050505 !important;
-    box-shadow:0 8px 25px rgba(189,138,44,0.45) !important;
+    box-shadow:0 8px 25px rgba(243,232,217,0.45) !important;
     border:2px solid rgba(255,255,255,0.25) !important;
 }
 
@@ -1076,7 +1089,7 @@ h1, h2, h3, h4, h5, h6,
     background:linear-gradient(135deg, #e5be6b 0%, var(--kayan-gold) 100%) !important;
     color:#050505 !important;
     transform:translateY(-5px) scale(1.1) !important;
-    box-shadow:0 12px 30px rgba(189,138,44,0.65) !important;
+    box-shadow:0 12px 30px rgba(243,232,217,0.65) !important;
     border-color:rgba(255,255,255,0.5) !important;
 }
 
@@ -1084,7 +1097,7 @@ h1, h2, h3, h4, h5, h6,
 .kayan-scroll-top{
     background:#141414 !important;
     color:var(--kayan-gold-light) !important;
-    border:1px solid rgba(189,138,44,0.35) !important;
+    border:1px solid rgba(243,232,217,0.35) !important;
     box-shadow:0 8px 22px rgba(0,0,0,0.6) !important;
     opacity:0;
     visibility:hidden;
@@ -1104,7 +1117,7 @@ h1, h2, h3, h4, h5, h6,
     color:#050505 !important;
     border-color:var(--kayan-gold) !important;
     transform:translateY(-5px) scale(1.1) !important;
-    box-shadow:0 12px 28px rgba(189,138,44,0.5) !important;
+    box-shadow:0 12px 28px rgba(243,232,217,0.5) !important;
 }
 
 /* Vertical side call tab (Golden luxury look across all pages) */
@@ -1122,7 +1135,7 @@ h1, h2, h3, h4, h5, h6,
     border-radius:8px 0 0 8px;
     font-size:13px;
     letter-spacing:0.5px;
-    box-shadow:-3px 6px 20px rgba(189,138,44,0.35);
+    box-shadow:-3px 6px 20px rgba(243,232,217,0.35);
     display:flex;
     align-items:center;
     gap:8px;
@@ -1139,7 +1152,7 @@ h1, h2, h3, h4, h5, h6,
     background:linear-gradient(180deg, #e5be6b 0%, var(--kayan-gold) 100%) !important;
     color:#050505 !important;
     padding-right:14px;
-    box-shadow:-5px 8px 25px rgba(189,138,44,0.55);
+    box-shadow:-5px 8px 25px rgba(243,232,217,0.55);
 }
 
 /* ================= MOBILE ================= */
@@ -1389,9 +1402,9 @@ h1, h2, h3, h4, h5, h6,
     position:relative;
     padding:65px 0 55px;
     background:
-        radial-gradient(ellipse at top center, rgba(189,138,44,0.15) 0%, rgba(5,5,5,0.95) 70%),
+        radial-gradient(ellipse at top center, rgba(243,232,217,0.15) 0%, rgba(5,5,5,0.95) 70%),
         #050505;
-    border-bottom:1px solid rgba(189,138,44,0.22);
+    border-bottom:1px solid rgba(243,232,217,0.22);
     overflow:hidden;
 }
 
@@ -1479,7 +1492,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .kayan-chip.gold{
-    background:rgba(189,138,44,0.12);
+    background:rgba(243,232,217,0.12);
     border-color:var(--kayan-border-gold);
     color:var(--kayan-gold-light);
 }
@@ -1534,7 +1547,7 @@ h1, h2, h3, h4, h5, h6,
     background:linear-gradient(135deg, var(--kayan-gold) 0%, var(--kayan-gold-dark) 100%);
     border-color:var(--kayan-gold);
     color:#fff;
-    box-shadow:0 4px 15px rgba(189,138,44,0.3);
+    box-shadow:0 4px 15px rgba(243,232,217,0.3);
 }
 
 .kayan-filter-search{
@@ -1583,7 +1596,7 @@ h1, h2, h3, h4, h5, h6,
 .kayan-project-card:hover{
     transform:translateY(-6px);
     border-color:var(--kayan-border-gold);
-    box-shadow:0 18px 40px rgba(0,0,0,0.6), 0 0 25px rgba(189,138,44,0.15);
+    box-shadow:0 18px 40px rgba(0,0,0,0.6), 0 0 25px rgba(243,232,217,0.15);
 }
 
 .kayan-price-tag{
@@ -1823,8 +1836,8 @@ h1, h2, h3, h4, h5, h6,
 .kayan-amenity-icon{
     width:44px;
     height:44px;
-    background:rgba(189,138,44,0.12);
-    border:1px solid rgba(189,138,44,0.25);
+    background:rgba(243,232,217,0.12);
+    border:1px solid rgba(243,232,217,0.25);
     border-radius:10px;
     display:flex;
     align-items:center;
@@ -1947,7 +1960,7 @@ h1, h2, h3, h4, h5, h6,
 .kayan-distance-item strong{
     color:var(--kayan-gold-light);
     font-size:13px;
-    background:rgba(189,138,44,0.1);
+    background:rgba(243,232,217,0.1);
     padding:4px 10px;
     border-radius:6px;
 }
@@ -2038,7 +2051,7 @@ h1, h2, h3, h4, h5, h6,
 
 .kayan-calc-result-box{
     background:#080808;
-    border:1px solid rgba(189,138,44,0.3);
+    border:1px solid rgba(243,232,217,0.3);
     border-radius:14px;
     padding:22px;
     display:flex;
@@ -2120,7 +2133,7 @@ h1, h2, h3, h4, h5, h6,
 .kayan-form-group select:focus,
 .kayan-form-group textarea:focus{
     border-color:var(--kayan-gold);
-    box-shadow:0 0 0 3px rgba(189,138,44,0.15);
+    box-shadow:0 0 0 3px rgba(243,232,217,0.15);
 }
 
 .kayan-form-submit{
@@ -2223,7 +2236,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .kayan-post-meta .category{
-    background:rgba(189,138,44,0.12);
+    background:rgba(243,232,217,0.12);
     color:var(--kayan-gold-light);
     border:1px solid var(--kayan-border-gold);
     padding:3px 10px;
@@ -2367,7 +2380,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .kayan-blockquote{
-    background:linear-gradient(90deg, rgba(189,138,44,0.1) 0%, rgba(22,22,22,0.9) 100%);
+    background:linear-gradient(90deg, rgba(243,232,217,0.1) 0%, rgba(22,22,22,0.9) 100%);
     border-right:4px solid var(--kayan-gold);
     border-radius:0 12px 12px 0;
     padding:24px 28px;
@@ -2380,7 +2393,7 @@ h1, h2, h3, h4, h5, h6,
 
 .kayan-callout{
     background:#131313;
-    border:1px solid rgba(189,138,44,0.3);
+    border:1px solid rgba(243,232,217,0.3);
     border-radius:12px;
     padding:20px 24px;
     margin:30px 0;
@@ -2702,8 +2715,8 @@ h1, h2, h3, h4, h5, h6,
     width:60px;
     height:60px;
     margin:0 auto 18px;
-    background:rgba(189,138,44,0.12);
-    border:1px solid rgba(189,138,44,0.25);
+    background:rgba(243,232,217,0.12);
+    border:1px solid rgba(243,232,217,0.25);
     border-radius:50%;
     display:flex;
     align-items:center;
@@ -2848,7 +2861,7 @@ h1, h2, h3, h4, h5, h6,
 
 .kayan-timeline-year{
     display:inline-block;
-    background:rgba(189,138,44,0.15);
+    background:rgba(243,232,217,0.15);
     color:var(--kayan-gold-light);
     font-weight:700;
     font-size:13px;
@@ -2896,8 +2909,8 @@ h1, h2, h3, h4, h5, h6,
     width:52px;
     height:52px;
     margin:0 auto 14px;
-    background:rgba(189,138,44,0.12);
-    border:1px solid rgba(189,138,44,0.25);
+    background:rgba(243,232,217,0.12);
+    border:1px solid rgba(243,232,217,0.25);
     border-radius:12px;
     display:flex;
     align-items:center;
@@ -3122,7 +3135,7 @@ h1, h2, h3, h4, h5, h6,
 .kayan-tier-card.featured{
     background:linear-gradient(180deg, #18150d 0%, #111 100%);
     border-color:var(--kayan-gold);
-    box-shadow:0 10px 30px rgba(189,138,44,0.18);
+    box-shadow:0 10px 30px rgba(243,232,217,0.18);
 }
 
 .kayan-tier-badge{
@@ -3313,7 +3326,7 @@ a.kayan-hotline:hover{
 }
 
 .kayan-filter-btn:hover{
-    background:rgba(189,138,44,0.15) !important;
+    background:rgba(243,232,217,0.15) !important;
     color:var(--kayan-gold-light) !important;
 }
 
@@ -3388,7 +3401,7 @@ a.kayan-hotline:hover{
     }
     
     .kayan-dropdown a:hover{
-        background:rgba(189,138,44,0.1) !important;
+        background:rgba(243,232,217,0.1) !important;
         color:var(--kayan-gold) !important;
     }
 }
@@ -3551,4 +3564,1079 @@ a.kayan-hotline:hover{
         top: 65px !important;
         max-height: calc(100vh - 65px) !important;
     }
+}
+
+
+/* ================= KANDEEL-STYLE FLOATING CONTACT BAR ================= */
+.kayan-bottom-bar {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99998;
+    background: rgba(14, 14, 14, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(243, 232, 217, 0.3);
+    border-radius: 50px;
+    padding: 6px 10px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.75), 0 0 20px rgba(243, 232, 217, 0.1);
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.kayan-bottom-bar:hover {
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.85), 0 0 30px rgba(243, 232, 217, 0.2);
+    transform: translateX(-50%) translateY(-3px);
+}
+
+.kayan-bar-inner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.kayan-bar-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 30px;
+    transition: all 0.25s ease;
+}
+
+.kayan-bar-call:hover {
+    color: var(--kayan-gold) !important;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.kayan-bar-call i {
+    color: var(--kayan-gold);
+    font-size: 13px;
+}
+
+.kayan-bar-whatsapp {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #25D366 !important;
+    color: #ffffff !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: all 0.25s ease;
+}
+
+.kayan-bar-whatsapp:hover {
+    transform: scale(1.1);
+    background: #20ba5a !important;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.kayan-bar-register {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 20px;
+    background: #F3E8D9 !important;
+    color: #050505 !important;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(243, 232, 217, 0.3);
+    transition: all 0.25s ease;
+}
+
+.kayan-bar-register:hover {
+    background: #ffffff !important;
+    color: #050505 !important;
+    transform: scale(1.04);
+    box-shadow: 0 6px 20px rgba(243, 232, 217, 0.5);
+}
+
+@media (max-width: 600px) {
+    .kayan-bottom-bar {
+        bottom: 12px;
+        width: calc(100% - 24px);
+        max-width: 380px;
+        padding: 5px 6px;
+    }
+    .kayan-bar-inner {
+        justify-content: space-between;
+        width: 100%;
+        gap: 4px;
+    }
+    .kayan-bar-call {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    .kayan-bar-whatsapp {
+        width: 38px;
+        height: 38px;
+        font-size: 19px;
+    }
+    .kayan-bar-register {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+}
+
+/* --- LOCATION MAP PRIMARY HERO COMPONENT --- */
+.kayan-project-map-hero {
+    background: #0d0d0d;
+    border: 1px solid var(--kayan-border-gold);
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 35px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.kayan-project-map-hero-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.kayan-project-map-hero-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--kayan-gold);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.kayan-project-map-hero-header span {
+    font-size: 12px;
+    color: var(--kayan-gray);
+}
+
+.kayan-project-map-wrapper {
+    background: #fbf9f6;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kayan-project-map-wrapper img {
+    max-width: 100%;
+    height: auto;
+    max-height: 550px;
+    object-fit: contain;
+    border-radius: 6px;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.kayan-project-map-wrapper img:hover {
+    transform: scale(1.02);
+}
+
+
+.kayan-brand-logo {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.25s ease;
+}
+
+.kayan-brand-logo:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+    .kayan-brand-logo {
+        height: 38px;
+    }
+}
+
+
+/* =========================================================================
+   COMPREHENSIVE LAYOUT & COMPONENT FIXES (Dar Al Arkan Production Polish)
+   ========================================================================= */
+
+/* --- 1. CORE CARD SYSTEM --- */
+.kayan-single-card {
+    background: #141414;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.kayan-single-card:hover {
+    border-color: rgba(243, 232, 217, 0.25);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+}
+
+.kayan-single-card-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 18px 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.kayan-single-card-title i {
+    color: var(--kayan-gold);
+}
+
+/* --- 2. PROJECT SINGLE PAGE 2-COLUMN LAYOUT --- */
+.kayan-project-single-grid {
+    display: grid;
+    grid-template-columns: 1fr 370px;
+    gap: 35px;
+    align-items: start;
+}
+
+.kayan-project-main-col {
+    min-width: 0;
+}
+
+.kayan-project-sidebar {
+    min-width: 0;
+}
+
+.kayan-sticky-sidebar {
+    position: sticky;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.kayan-sidebar-box {
+    background: #141414;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    padding: 26px 22px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+.kayan-sidebar-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(243, 232, 217, 0.1);
+    color: var(--kayan-gold);
+    border: 1px solid var(--kayan-border-gold);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+}
+
+.kayan-sidebar-title {
+    font-size: 22px;
+    color: #fff;
+    line-height: 1.4;
+    margin: 0 0 16px 0;
+}
+
+.kayan-sidebar-price {
+    background: #0d0d0d;
+    border: 1px solid rgba(243, 232, 217, 0.22);
+    border-radius: 12px;
+    padding: 15px 18px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.kayan-sidebar-price span {
+    font-size: 12px;
+    color: var(--kayan-gray);
+}
+
+.kayan-sidebar-price strong {
+    font-size: 26px;
+    color: var(--kayan-gold-light);
+    font-weight: 800;
+    font-family: var(--kayan-font-title);
+}
+
+.kayan-sidebar-specs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 22px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.kayan-sidebar-specs li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 13px;
+}
+
+.kayan-sidebar-specs li span {
+    color: var(--kayan-gray);
+}
+
+.kayan-sidebar-specs li strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.kayan-sidebar-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.kayan-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.kayan-feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.8;
+}
+
+.kayan-feature-list li i {
+    color: var(--kayan-gold);
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+/* --- 3. UNIT MODELS & BLUEPRINTS --- */
+.kayan-unit-tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.kayan-unit-tab {
+    background: #181818;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #aaa;
+    padding: 9px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: var(--kayan-font-body);
+    transition: all 0.25s ease;
+}
+
+.kayan-unit-tab:hover,
+.kayan-unit-tab.active {
+    background: var(--kayan-gold) !important;
+    border-color: var(--kayan-gold) !important;
+    color: #050505 !important;
+}
+
+.kayan-unit-detail {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 25px;
+    align-items: center;
+    background: #161616;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 14px;
+    padding: 24px;
+}
+
+.kayan-unit-info h4 {
+    color: #fff;
+    font-size: 18px;
+    margin: 0 0 10px 0;
+}
+
+.kayan-unit-info p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.kayan-unit-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background: #0d0d0d;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.kayan-unit-specs div {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--kayan-gray);
+    padding: 4px 0;
+}
+
+.kayan-unit-specs div strong {
+    color: #fff;
+}
+
+.kayan-unit-blueprint {
+    height: 300px;
+    max-height: 300px;
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.kayan-unit-blueprint img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+/* --- 4. INSTALLMENT CALCULATOR --- */
+.kayan-calc-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.kayan-calc-header span i {
+    font-size: 26px;
+    color: var(--kayan-gold);
+}
+
+.kayan-calc-header h3 {
+    margin: 0 0 4px 0;
+    font-size: 19px;
+    color: #fff;
+}
+
+.kayan-calc-body {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 28px;
+    align-items: center;
+}
+
+.kayan-calc-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.kayan-calc-group label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: var(--kayan-gray);
+    margin-bottom: 8px;
+}
+
+.kayan-calc-group label strong {
+    color: var(--kayan-gold-light);
+    font-size: 15px;
+}
+
+.kayan-slider {
+    width: 100%;
+    height: 8px;
+    accent-color: var(--kayan-gold);
+    cursor: pointer;
+    background: #252525;
+    border-radius: 4px;
+    outline: none;
+}
+
+.kayan-calc-options {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.kayan-calc-opt {
+    flex: 1;
+    min-width: 70px;
+    background: #1c1c1c;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #ccc;
+    padding: 9px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    text-align: center;
+}
+
+.kayan-calc-opt:hover,
+.kayan-calc-opt.active {
+    background: var(--kayan-gold) !important;
+    border-color: var(--kayan-gold) !important;
+    color: #050505 !important;
+    box-shadow: 0 4px 12px rgba(243, 232, 217, 0.25);
+}
+
+.kayan-calc-results {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background: #0a0a0a;
+    border: 1px solid rgba(243, 232, 217, 0.2);
+    border-radius: 14px;
+    padding: 22px;
+}
+
+.kayan-calc-result-card {
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    background: #141414;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.kayan-calc-result-card.highlight {
+    background: rgba(243, 232, 217, 0.08);
+    border: 1px solid var(--kayan-border-gold);
+}
+
+.kayan-calc-result-card span {
+    display: block;
+    font-size: 12px;
+    color: var(--kayan-gray);
+    margin-bottom: 4px;
+}
+
+.kayan-calc-result-card strong {
+    display: block;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.kayan-calc-result-card.highlight strong {
+    font-size: 26px;
+    color: var(--kayan-gold-light);
+}
+
+/* --- 5. BADGES & BREADCRUMBS --- */
+.kayan-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--kayan-gray);
+    margin-bottom: 12px;
+}
+
+.kayan-breadcrumbs a {
+    color: var(--kayan-gray-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.kayan-breadcrumbs a:hover {
+    color: var(--kayan-gold);
+}
+
+.kayan-breadcrumbs span {
+    color: #666;
+}
+
+.kayan-header-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.kayan-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #1c1c1c;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ddd;
+    font-size: 12px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.kayan-badge.gold {
+    background: rgba(243, 232, 217, 0.12);
+    border-color: var(--kayan-border-gold);
+    color: var(--kayan-gold);
+}
+
+.kayan-badge.green {
+    background: rgba(37, 211, 102, 0.12);
+    border-color: rgba(37, 211, 102, 0.3);
+    color: #25D366;
+}
+
+/* --- 6. PROJECTS FILTER & SEARCH --- */
+.kayan-filter-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.kayan-search-inline {
+    position: relative;
+    flex: 1;
+    min-width: 260px;
+    max-width: 420px;
+}
+
+.kayan-search-inline i {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--kayan-gold);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.kayan-search-inline input {
+    width: 100%;
+    background: #141414;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 10px 42px 10px 18px;
+    color: #fff;
+    font-size: 13px;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+.kayan-search-inline input:focus {
+    border-color: var(--kayan-gold);
+    box-shadow: 0 0 0 3px rgba(243, 232, 217, 0.15);
+}
+
+.kayan-filter-pills {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.kayan-filter-btn {
+    background: #141414;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.kayan-filter-btn:hover,
+.kayan-filter-btn.active {
+    background: var(--kayan-gold) !important;
+    border-color: var(--kayan-gold) !important;
+    color: #050505 !important;
+}
+
+.kayan-results-info {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--kayan-gray);
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- 7. GALLERY GRID ITEMS --- */
+.gallery-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.gallery-item img {
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* --- 8. FORMS & BUTTONS POLISH --- */
+.kayan-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.kayan-form .kayan-form-group {
+    margin-bottom: 0;
+}
+
+/* --- 9. BUTTON HOVER FIXES & CONTRAST --- */
+.kayan-btn:hover {
+    filter: brightness(1.05);
+}
+
+.kayan-btn-gold:hover {
+    background: linear-gradient(135deg, #e5be6b 0%, var(--kayan-gold) 100%) !important;
+    color: #050505 !important;
+    border-color: var(--kayan-gold-light);
+}
+
+.kayan-btn-outline:hover {
+    background: var(--kayan-gold) !important;
+    border-color: var(--kayan-gold) !important;
+    color: #050505 !important;
+}
+
+.kayan-icon-btn:hover {
+    background: #25D366 !important;
+    border-color: #25D366 !important;
+    color: #fff !important;
+}
+
+.kayan-page-num:hover,
+.kayan-page-num.active {
+    background: var(--kayan-gold) !important;
+    border-color: var(--kayan-gold) !important;
+    color: #050505 !important;
+}
+
+/* --- 10. RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 992px) {
+    .kayan-project-single-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .kayan-sticky-sidebar {
+        position: static !important;
+    }
+    .kayan-calc-body {
+        grid-template-columns: 1fr !important;
+    }
+    .kayan-unit-detail {
+        grid-template-columns: 1fr !important;
+    }
+    .kayan-about-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .kayan-filter-wrap {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    .kayan-search-inline {
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .kayan-gallery-thumbs {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    .kayan-unit-blueprint {
+        height: 220px !important;
+    }
+    .kayan-unit-specs {
+        grid-template-columns: 1fr !important;
+    }
+    .kayan-calc-options {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+
+/* =========================================================
+   COMPREHENSIVE POLISH & BUG FIXES ACROSS ALL PAGES
+   ========================================================= */
+
+/* --- 1. HERO SUBTITLE BADGE --- */
+.kayan-hero-subtitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(243, 232, 217, 0.08);
+    border: 1px solid rgba(243, 232, 217, 0.28);
+    color: var(--kayan-gold);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 18px;
+    border-radius: 30px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.kayan-hero-subtitle i {
+    color: var(--kayan-gold);
+    font-size: 13px;
+}
+
+/* --- 2. PROJECT CARD TAG & FOOTER --- */
+.kayan-project-tag {
+    display: inline-block;
+    background: rgba(243, 232, 217, 0.12);
+    color: var(--kayan-gold);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(243, 232, 217, 0.22);
+    letter-spacing: 0.2px;
+}
+
+.kayan-project-card-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.kayan-project-content h3 a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+}
+
+.kayan-project-content h3 a:hover {
+    color: var(--kayan-gold) !important;
+}
+
+.kayan-blog-content h3 a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+}
+
+.kayan-blog-content h3 a:hover {
+    color: var(--kayan-gold) !important;
+}
+
+/* --- 3. BREADCRUMBS UNIFIED STYLING --- */
+.kayan-breadcrumb,
+.kayan-breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: var(--kayan-gray);
+}
+
+.kayan-breadcrumb a,
+.kayan-breadcrumbs a {
+    color: #b0b0b0 !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+}
+
+.kayan-breadcrumb a:hover,
+.kayan-breadcrumbs a:hover {
+    color: var(--kayan-gold) !important;
+}
+
+.kayan-breadcrumb span.sep,
+.kayan-breadcrumbs span.sep {
+    color: var(--kayan-gold);
+    opacity: 0.6;
+}
+
+.kayan-breadcrumb span.current,
+.kayan-breadcrumbs span.current {
+    color: var(--kayan-gold-light);
+    font-weight: 600;
+}
+
+/* --- 4. FOOTER COMPLETE STYLING --- */
+.kayan-footer {
+    background: #000000;
+    color: #ffffff;
+    padding-top: 65px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.kayan-footer h4 {
+    font-size: 16px;
+    font-family: var(--kayan-font-title);
+    color: #ffffff;
+    margin: 0 0 18px 0;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.kayan-footer h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 32px;
+    height: 2px;
+    background: var(--kayan-gold);
+}
+
+.kayan-footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.kayan-footer-links li {
+    margin-bottom: 10px;
+}
+
+.kayan-footer-links li a {
+    color: #a9b5bf !important;
+    font-size: 13px;
+    text-decoration: none !important;
+    display: inline-block;
+    transition: all 0.25s ease;
+}
+
+.kayan-footer-links li a:hover {
+    color: var(--kayan-gold) !important;
+    transform: translateX(-4px);
+}
+
+.kayan-footer-social {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.kayan-footer-social a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #141414;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff !important;
+    font-size: 15px;
+    text-decoration: none !important;
+    transition: all 0.25s ease;
+}
+
+.kayan-footer-social a:hover {
+    background: var(--kayan-gold) !important;
+    color: #050505 !important;
+    border-color: var(--kayan-gold) !important;
+    transform: translateY(-3px);
+}
+
+.kayan-footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 45px;
+    padding: 22px 0 35px;
+    text-align: center;
+    font-size: 13px;
+    color: #888888;
+}
+
+.kayan-footer-bottom p {
+    margin: 0;
+}
+
+/* --- 5. FORM CONTROLS & FILE INPUT --- */
+.kayan-form input[type="file"] {
+    background: #161616;
+    border: 1px dashed rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #aaa;
+    font-size: 13px;
+    width: 100%;
+    cursor: pointer;
+    transition: border-color 0.25s ease;
+}
+
+.kayan-form input[type="file"]:hover {
+    border-color: var(--kayan-gold);
+}
+
+.kayan-form select {
+    background-color: #141414;
+    color: #fff;
+}
+
+.kayan-form select option {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 10px;
+}
+
+/* --- 6. GLOBAL BUTTON CONTRAST ENFORCEMENT --- */
+.kayan-btn-gold,
+a.kayan-btn-gold,
+button.kayan-btn-gold,
+input[type="submit"].kayan-btn-gold {
+    background: linear-gradient(135deg, var(--kayan-gold) 0%, var(--kayan-gold-dark) 100%) !important;
+    color: #121212 !important;
+    font-weight: 700 !important;
+    text-shadow: none !important;
+}
+
+.kayan-btn-gold:hover,
+a.kayan-btn-gold:hover,
+button.kayan-btn-gold:hover,
+input[type="submit"].kayan-btn-gold:hover {
+    background: #ffffff !important;
+    color: #050505 !important;
+    border-color: #ffffff !important;
 }

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الصور والفيديوهات | دار الأركان للتطوير العقاري</title>
+    <meta name="description" content="معرض الوسائط المتعددة لدار الأركان للتطوير العقاري: فيديوهات، فعاليات، نماذج تشطيبات، وصور الإنشاءات وسابقة الأعمال.">
+    <link rel="icon" type="image/png" href="images/logo-dar-arkan.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+<div class="kayan-home">
+    <!-- ================= HEADER ================= -->
+    <header class="kayan-header">
+        <div class="kayan-container kayan-header-inner">
+            <a href="index.html" class="kayan-logo">
+                <img src="images/logo-dar-arkan.png" alt="دار الأركان للتطوير العقاري" class="kayan-brand-logo">
+            </a>
+
+            <button type="button" class="kayan-mobile-toggle" id="kayanMobileToggle"  aria-label="القائمة الرئيسية" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="kayan-nav" id="kayanNav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li>
+                        <a href="projects.html">المشروعات <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i></a>
+                        <div class="kayan-dropdown">
+                            <a href="projects.html">جميع المشروعات</a>
+                            <a href="projects.html?status=current">المشروعات المتاحة</a>
+                            <a href="projects.html?status=delivered">سابقة الأعمال (تم البيع)</a>
+                        </div>
+                    </li>
+                    <li class="active">
+                        <a href="#">المعرض <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i></a>
+                        <div class="kayan-dropdown">
+                            <a href="events.html">الفعاليات والأخبار</a>
+                            <a href="gallery.html">الصور والفيديوهات</a>
+                            <a href="blog.html">المدونة والمقالات</a>
+                            <a href="careers.html">التوظيف</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="finishing.html">التشطيبات <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i></a>
+                        <div class="kayan-dropdown">
+                            <a href="finishing.html#specs">مواصفات التشطيب</a>
+                            <a href="finishing.html#decor">تشطيبات وديكورات الوحدات</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+
+            <a href="tel:16812" class="kayan-hotline" title="الخط الساخن">
+                <i class="fa-solid fa-phone"></i> <span>16812</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="kayan-page-header">
+        <div class="kayan-container">
+            <div class="kayan-breadcrumb">
+                <a href="index.html">الرئيسية</a> <span>/</span> <span>المعرض والوسائط</span>
+            </div>
+            <h1>معرض الصور والفيديوهات</h1>
+            <p>جولة بصرية شاملة في مشروعات، فعاليات، تشطيبات، وتطور إنشاءات دار الأركان</p>
+        </div>
+    </section>
+
+    <section class="kayan-section">
+        <div class="kayan-container">
+            <div class="kayan-section-title">
+                <span>رؤية القيادة والتطوير</span>
+                <h2>كلمة رئيس مجلس الإدارة - م. طارق خليل</h2>
+                <p>«العقار ملاذ آمن».. فلسفة دار الأركان في بناء مجتمعات سكنية تحمي حقوق العملاء وتمنحهم عائداً استثمارياً مستداماً</p>
+            </div>
+
+            <div style="max-width:850px; margin:0 auto 50px; background:#111; border:1px solid var(--kayan-border-gold); border-radius:16px; overflow:hidden; box-shadow:0 15px 40px rgba(0,0,0,0.7);">
+                <div style="position:relative; padding-bottom:56.25%; height:0; background:#000;">
+                    <video controls style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;" poster="images/home-event-1.png">
+                        <source src="videos/eng-tarek-speech.mp4" type="video/mp4">
+                        متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+                </div>
+            </div>
+
+            <div class="kayan-section-title">
+                <span>سجل مصور</span>
+                <h2>ألبوم الصور الحصرية</h2>
+            </div>
+
+            <div style="display:flex; justify-content:center; gap:10px; margin-bottom:30px; flex-wrap:wrap;">
+                <button type="button" class="kayan-btn kayan-btn-gold" onclick="filterGallery('all', this)">الكل</button>
+                <button type="button" class="kayan-btn kayan-btn-outline" onclick="filterGallery('events', this)">الفعاليات</button>
+                <button type="button" class="kayan-btn kayan-btn-outline" onclick="filterGallery('decor', this)">الديكور والتشطيبات</button>
+                <button type="button" class="kayan-btn kayan-btn-outline" onclick="filterGallery('constructions', this)">مواقع الإنشاءات</button>
+                <button type="button" class="kayan-btn kayan-btn-outline" onclick="filterGallery('projects', this)">سابقة الأعمال</button>
+            </div>
+
+            <div id="galleryGrid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
+                
+<div class="gallery-item" data-category="events" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/real-event-1.jpeg" alt="فعاليات دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+<div class="gallery-item" data-category="events" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/real-event-2.jpeg" alt="فعاليات دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+<div class="gallery-item" data-category="events" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/real-event-3.jpeg" alt="فعاليات دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+<div class="gallery-item" data-category="events" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/real-event-4.jpeg" alt="فعاليات دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+<div class="gallery-item" data-category="events" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/real-event-5.jpeg" alt="فعاليات دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+<div class="gallery-item" data-category="events" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/real-event-6.jpeg" alt="فعاليات دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+                
+<div class="gallery-item" data-category="decor" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/decor-real-1.png" alt="تشطيبات دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+<div class="gallery-item" data-category="decor" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/decor-real-2.png" alt="تشطيبات دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+<div class="gallery-item" data-category="decor" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/decor-real-3.png" alt="تشطيبات دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+<div class="gallery-item" data-category="decor" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/decor-real-4.png" alt="تشطيبات دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+<div class="gallery-item" data-category="decor" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/decor-real-5.png" alt="تشطيبات دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+<div class="gallery-item" data-category="decor" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/decor-real-6.png" alt="تشطيبات دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+                
+<div class="gallery-item" data-category="constructions" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/constructions/const-a61-1.jpg" alt="إنشاءات دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+<div class="gallery-item" data-category="constructions" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/constructions/const-c87-1.jpg" alt="إنشاءات دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+<div class="gallery-item" data-category="constructions" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/constructions/const-d80-1.jpg" alt="إنشاءات دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+<div class="gallery-item" data-category="constructions" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/constructions/const-d384-1.jpg" alt="إنشاءات دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+<div class="gallery-item" data-category="constructions" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/constructions/const-g30-1.jpg" alt="إنشاءات دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+<div class="gallery-item" data-category="constructions" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/constructions/const-a187-1.jpg" alt="إنشاءات دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+                
+<div class="gallery-item" data-category="projects" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/prev-الأندلس-620-1.png" alt="سابقة أعمال دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+<div class="gallery-item" data-category="projects" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/prev-اللوتس-62-1.png" alt="سابقة أعمال دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+<div class="gallery-item" data-category="projects" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/prev-الاندلس-457-1.png" alt="سابقة أعمال دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+<div class="gallery-item" data-category="projects" style="border-radius:12px; overflow:hidden; height:240px; background:#151515; border:1px solid rgba(255,255,255,0.06);">
+    <img src="images/prev-الاندلس-728-1.png" alt="سابقة أعمال دار الأركان" style="width:100%; height:100%; object-fit:cover; transition:transform .4s ease;" loading="lazy">
+</div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+    function filterGallery(category, btn) {
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            if (category === 'all' || item.getAttribute('data-category') === category) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+        btn.parentElement.querySelectorAll('button').forEach(b => {
+            b.className = 'kayan-btn kayan-btn-outline';
+        });
+        btn.className = 'kayan-btn kayan-btn-gold';
+    }
+    </script>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="kayan-footer">
+        <div class="kayan-container">
+            <div class="kayan-footer-grid">
+                <div class="kayan-footer-logo">
+                    <img src="images/logo-dar-arkan.png" alt="دار الأركان للتطوير العقاري" style="height:55px; margin-bottom:15px;">
+                    <p>
+                        تأسست دار الأركان للتطوير العقاري عام 2015 بقيادة رجل الأعمال المهندس طارق خليل. خبرة ممتدة لأكثر من 16 عاماً وأكثر من 100 مشروع متميز في أرقى مناطق القاهرة الجديدة قائمة على جودة التنفيذ، الالتزام، والشفافية.
+                    </p>
+                    <div class="kayan-footer-social">
+                        <a href="https://www.facebook.com/DarElArkanEG" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/dar_el_arkan" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@darelarkandevelopment" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://wa.me/201090030008" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>روابط سريعة</h4>
+                    <ul class="kayan-footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="projects.html">المشروعات المتاحة</a></li>
+                        <li><a href="projects.html?status=delivered">سابقة الأعمال</a></li>
+                        <li><a href="finishing.html">مواصفات التشطيب</a></li>
+                        <li><a href="careers.html">التوظيف</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>المشروعات المتاحة</h4>
+                    <ul class="kayan-footer-links">
+                        <li><a href="project-d384.html">مشروع D384 - النرجس الجديدة</a></li>
+                        <li><a href="project-g30.html">مشروع G30 - الحي السادس بيت الوطن</a></li>
+                        <li><a href="project-c87.html">مشروع C87 - الحي الأول بيت الوطن</a></li>
+                        <li><a href="project-a187.html">مشروع A187 - الحي الثاني بيت الوطن</a></li>
+                        <li><a href="project-a61.html">مشروع A61 - الحي الرابع بيت الوطن</a></li>
+                        <li><a href="project-d80.html">مشروع D80 - الحي الثامن بيت الوطن</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>تواصل معنا</h4>
+                    <p style="color:#aaa; font-size:13px; line-height:1.8; margin-bottom:12px;">
+                        <i class="fa-solid fa-location-dot" style="color:var(--kayan-gold); margin-left:6px;"></i>
+                        ٢٢٤ القطاع الثاني - التجمع الخامس - خلف فندق الدوسيت - مبنى كريستال عصفور - الدور الثالث
+                    </p>
+                    <p style="color:#aaa; font-size:13px; margin-bottom:8px;">
+                        <i class="fa-solid fa-phone" style="color:var(--kayan-gold); margin-left:6px;"></i>
+                        الخط الساخن: <a href="tel:16812" style="color:#fff; font-weight:700;">16812</a>
+                    </p>
+                    <p style="color:#aaa; font-size:13px; margin-bottom:8px;">
+                        <i class="fa-solid fa-mobile-screen" style="color:var(--kayan-gold); margin-left:6px;"></i>
+                        المبيعات: <a href="tel:01090030008" style="color:#fff;">01090030008</a>
+                    </p>
+                    <p style="color:#aaa; font-size:13px; margin-bottom:15px;">
+                        <i class="fa-brands fa-whatsapp" style="color:#25D366; margin-left:6px;"></i>
+                        واتساب: <a href="https://wa.me/201090030008" target="_blank" style="color:#fff;">01090030008</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="kayan-footer-bottom">
+                <p>© 2026 دار الأركان للتطوير العقاري - DAR AL ARKAN REAL ESTATE DEVELOPMENT. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= KANDEEL-STYLE FLOATING CONTACT BAR ================= -->
+    <div class="kayan-bottom-bar" id="kayanBottomBar">
+        <div class="kayan-bar-inner">
+            <a href="tel:16812" class="kayan-bar-call" title="اتصل بنا الآن">
+                <i class="fa-solid fa-phone"></i>
+                <span>16812</span>
+            </a>
+            <a href="https://wa.me/201090030008" target="_blank" class="kayan-bar-whatsapp" title="محادثة واتساب مباشرة" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="contact.html" class="kayan-bar-register" title="سجل اهتمامك الآن">
+                <i class="fa-solid fa-comment-dots"></i>
+                <span>سجل الآن</span>
+            </a>
+        </div>
+    </div>
+
+    <a href="#" id="kayanScrollTop" class="kayan-float kayan-scroll-top" title="العودة للأعلى" aria-label="العودة للأعلى">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js?v=3"></script>
+</div>
+</body>
+</html>

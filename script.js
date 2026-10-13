@@ -8,11 +8,19 @@ document.addEventListener('DOMContentLoaded', function () {
     /* ================= MOBILE BURGER MENU (TOUCH & DESKTOP) ================= */
     const nav = document.getElementById('kayanNav');
     const toggleBtn = document.getElementById('kayanMobileToggle') || document.querySelector('.kayan-mobile-toggle');
+    let lastToggleTime = 0;
 
     function toggleMobileMenu(e) {
-        if (e && e.cancelable) {
-            e.preventDefault();
+        if (e) {
+            if (e.cancelable) e.preventDefault();
+            e.stopPropagation();
         }
+        const now = Date.now();
+        if (now - lastToggleTime < 350) {
+            return;
+        }
+        lastToggleTime = now;
+
         if (!nav) return;
 
         const isOpen = nav.classList.toggle('open');
@@ -33,26 +41,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    window.kayanMenu = toggleMobileMenu;
+
     if (toggleBtn && nav) {
-        let lastToggleTime = 0;
-
-        function handleMenuToggle(e) {
-            const now = Date.now();
-            // Prevent synthetic double events (tap -> click within 350ms on mobile)
-            if (now - lastToggleTime < 350) {
-                if (e.cancelable) e.preventDefault();
-                return;
-            }
-            lastToggleTime = now;
-            toggleMobileMenu(e);
-        }
-
-        // Support both tap/touchend and click for zero delay on mobile
-        toggleBtn.addEventListener('click', handleMenuToggle);
-        toggleBtn.addEventListener('touchend', handleMenuToggle, { passive: false });
+        toggleBtn.addEventListener('click', toggleMobileMenu);
 
         // Close on clicking/tapping outside
-        function closeMenuOutside(e) {
+        document.addEventListener('click', function (e) {
             if (nav.classList.contains('open')) {
                 if (!nav.contains(e.target) && !toggleBtn.contains(e.target)) {
                     nav.classList.remove('open');
@@ -65,9 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }
             }
-        }
-        document.addEventListener('click', closeMenuOutside);
-        document.addEventListener('touchend', closeMenuOutside);
+        });
 
         // Close on Escape key
         document.addEventListener('keydown', function (e) {
@@ -97,14 +90,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         icon.classList.add('fa-bars');
                     }
                 }
-            });
+            }
+        );
         });
     }
-
-    // Global fallback for any inline call
-    window.kayanMenu = function (e) {
-        toggleMobileMenu(e);
-    };
 
     /* ================= SCROLL TOP BUTTON ================= */
     const kayanScrollTop = document.getElementById('kayanScrollTop');
@@ -354,6 +343,42 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /* ================= TOAST NOTIFICATION & FORM HANDLERS ================= */
+    window.showToast = showToast;
+
+    window.handleContactSubmit = function(form) {
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn ? submitBtn.innerHTML : '';
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> جاري الإرسال...';
+        }
+        setTimeout(function() {
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+            form.reset();
+            showToast('شكراً لتواصلكم مع دار الأركان للتطوير العقاري! تم استلام طلبكم بنجاح وسيتواصل معكم مستشار المبيعات فوراً.');
+        }, 700);
+    };
+
+    window.handleCareersSubmit = function(form) {
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn ? submitBtn.innerHTML : '';
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> جاري الإرسال...';
+        }
+        setTimeout(function() {
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+            form.reset();
+            showToast('تم استلام طلب التوظيف والسيرة الذاتية بنجاح! سيتواصل معكم قسم الموارد البشرية بدار الأركان.');
+        }, 700);
+    };
+
     function showToast(message) {
         let toast = document.getElementById('kayanToast');
         if (!toast) {
@@ -389,7 +414,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     submitBtn.innerHTML = originalText;
                 }
                 form.reset();
-                showToast('شكراً لتواصلكم مع كيان العقارية! تم استلام طلبكم وسيتواصل معكم مستشارنا في غضون 30 دقيقة.');
+                showToast('شكراً لتواصلكم مع دار الأركان للتطوير العقاري! تم استلام طلبكم وسيتواصل معكم فريقنا في أقرب وقت.');
             }, 800);
         });
     });

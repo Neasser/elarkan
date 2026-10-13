@@ -3,371 +3,441 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>من نحن - كيان العقارية | KAYAN REAL ESTATE</title>
-    <meta name="description" content="تعرف على شركة كيان العقارية: قصة نجاحنا، رؤيتنا المعمارية، فريق الإدارة والخبراء، ومسيرتنا في تطوير أرقى المشروعات بمصر.">
-    
-    <!-- Google Fonts: El Messiri & Tajawal -->
+    <title>من نحن | دار الأركان للتطوير العقاري</title>
+    <meta name="description" content="تعرف على تاريخ وإنجازات دار الأركان للتطوير العقاري بقيادة المهندس طارق خليل وخبرة أكثر من 16 عاماً في القاهرة الجديدة.">
+    <link rel="icon" type="image/png" href="images/logo-dar-arkan.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
-    <!-- Font Awesome 6 Icons -->
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <div class="kayan-home">
+    <!-- ================= HEADER ================= -->
+    <header class="kayan-header">
+        <div class="kayan-container kayan-header-inner">
+            <a href="index.html" class="kayan-logo">
+                <img src="images/logo-dar-arkan.png" alt="دار الأركان للتطوير العقاري" class="kayan-brand-logo">
+            </a>
 
-<!-- ================= HEADER ================= -->
-<header class="kayan-header">
-    <div class="kayan-container kayan-header-inner">
-        <a href="index.html" class="kayan-logo">
-            <div class="kayan-logo-icon"><i class="fa-solid fa-city"></i></div>
-            <div class="kayan-logo-text">
-                <strong>كيان العقارية</strong>
-                <span>KAYAN REAL ESTATE</span>
-            </div>
-        </a>
+            <button type="button" class="kayan-mobile-toggle" id="kayanMobileToggle"  aria-label="القائمة الرئيسية" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
-        <button type="button" class="kayan-mobile-toggle" id="kayanMobileToggle" aria-label="القائمة الرئيسية" aria-expanded="false">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <nav class="kayan-nav" id="kayanNav">
-            <ul>
-                <li><a href="index.html">الرئيسية</a></li>
-                <li class="active"><a href="about.html">من نحن</a></li>
-                <li>
-                    <a href="projects.html">المشروعات <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i></a>
-                    <div class="kayan-dropdown">
-                        <a href="projects.html">جميع المشروعات</a>
-                        <a href="projects.html?status=current">المشروعات الحالية</a>
-                        <a href="projects.html?status=delivered">المشروعات السابقة</a>
-                        <a href="project-single.html">مشروع فيو (نموذج تفصيلي)</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">المعرض <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i></a>
-                    <div class="kayan-dropdown">
-                        <a href="blog.html">المدونة والمقالات</a>
-                        <a href="index.html#events">الفعاليات</a>
-                        <a href="index.html#gallery">الصور والفيديوهات</a>
-                        <a href="contact.html#careers">التوظيف</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="finishing.html">التشطيبات <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i></a>
-                    <div class="kayan-dropdown">
-                        <a href="finishing.html">مواصفات التشطيب</a>
-                        <a href="finishing.html#decor">تشطيبات وديكورات الوحدات</a>
-                    </div>
-                </li>
-                <li><a href="contact.html">اتصل بنا</a></li>
-            </ul>
-        </nav>
-
-        <a href="tel:16959" class="kayan-hotline">
-            <i class="fa-solid fa-phone"></i> <span>16959</span>
-        </a>
-    </div>
-</header>
-
-<!-- ================= PAGE HEADER ================= -->
-<section class="kayan-page-header">
-    <div class="kayan-container kayan-page-header-inner">
-        <div class="kayan-breadcrumb">
-            <a href="index.html">الرئيسية</a>
-            <span class="sep">/</span>
-            <span class="current">من نحن</span>
-        </div>
-        <h1>عن <span>كيان العقارية</span></h1>
-        <p>
-            نبني الثقة قبل الجدران؛ أكثر من عقد ونصف من التميز المعماري والالتزام الدقيق بوعودنا لنصنع لعملائنا بيوتاً تليق بطموحاتهم ومستقبل عائلاتهم.
-        </p>
-        <div class="kayan-header-badges">
-            <span class="kayan-chip gold"><i class="fa-solid fa-building-columns"></i> تأسست عام 2011</span>
-            <span class="kayan-chip green"><i class="fa-solid fa-circle-check"></i> أكثر من 35 مشروعاً تم تسليمه</span>
-            <span class="kayan-chip"><i class="fa-solid fa-users"></i> 4,500+ أسرة في مجتمعاتنا</span>
-        </div>
-    </div>
-</section>
-
-<!-- ================= STORY & VISION ================= -->
-<section class="kayan-section">
-    <div class="kayan-container">
-        <div class="kayan-about-story">
-            <div class="kayan-story-img">
-                <img src="images/about-kayan.jpg" alt="شركة كيان العقارية">
-                <div class="kayan-story-badge">
-                    <strong>+15</strong>
-                    <span>عاماً من الريادة والتميز</span>
-                </div>
-            </div>
-
-            <div>
-                <div class="kayan-section-title" style="text-align:right; margin-bottom:20px;">
-                    <span class="eyebrow">قصتنا وهويتنا</span>
-                    <h2>نصنع الفارق في سوق العقارات المصري</h2>
-                </div>
-                <p style="color:var(--kayan-gray-light); font-size:16px; line-height:1.9; margin-bottom:18px;">
-                    انطلقت <strong>كيان العقارية</strong> برؤية واضحة تستهدف إعادة صياغة مفهوم التطوير العقاري في مصر، من خلال الانتقال من مجرد بناء وحدات سكنية تقليدية إلى هندسة مجتمعات حية متكاملة تمنح ساكنيها الراحة والاستقرار، وتمنح المستثمرين أعلى معدلات الأمان والنمو الرأسمالي.
-                </p>
-                <p style="color:var(--kayan-gray); font-size:15px; line-height:1.8; margin-bottom:25px;">
-                    نحن نؤمن بأن النجاح الحقيقي لا يقاس بحجم الخرسانات فقط، بل بثقة آلاف الأسر التي اختارت كيان لتكون شريك رحلتها في بناء المستقبل، وبسجل ناصع البياض من الالتزام بمواعيد التسليم والمواصفات الفنية المعتمدة دون أي تنازل.
-                </p>
-
-                <div class="kayan-stats" style="margin-top:30px;">
-                    <div class="kayan-stat">
-                        <strong>35+</strong>
-                        <span>مشروعاً ناجحاً</span>
-                    </div>
-                    <div class="kayan-stat">
-                        <strong>4500+</strong>
-                        <span>عميل سعيد</span>
-                    </div>
-                    <div class="kayan-stat">
-                        <strong>98%</strong>
-                        <span>تسليم في الموعد</span>
-                    </div>
-                    <div class="kayan-stat">
-                        <strong>15+</strong>
-                        <span>سنة خبرة</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Vision, Mission, Values -->
-        <div class="kayan-values-grid">
-            <div class="kayan-value-card">
-                <div class="kayan-value-icon"><i class="fa-solid fa-bullseye"></i></div>
-                <h3>رؤيتنا الاستراتيجية</h3>
-                <p>
-                    أن نكون المطور العقاري الأكثر ثقة وموثوقية في مصر والشرق الأوسط، ونموذجاً يحتذى به في الابتكار المعماري وبناء المدن الذكية المستدامة.
-                </p>
-            </div>
-
-            <div class="kayan-value-card">
-                <div class="kayan-value-icon"><i class="fa-solid fa-gem"></i></div>
-                <h3>رسالتنا لعملائنا</h3>
-                <p>
-                    تقديم حلول سكنية واستثمارية فائقة الجودة توازن بدقة بين فخامة التصميم، التميز الاستراتيجي للموقع، ومرونة خطط السداد التي تناسب تطلعات الجميع.
-                </p>
-            </div>
-
-            <div class="kayan-value-card">
-                <div class="kayan-value-icon"><i class="fa-solid fa-handshake"></i></div>
-                <h3>قيمنا الراسخة</h3>
-                <p>
-                    الشفافية المطلقة، الأمانة في التنفيذ، احترام المواعيد التعاقدية، والمسؤولية الكاملة عن خدمة ما بعد البيع وإدارة المرافق بكفاءة دائمة.
-                </p>
-            </div>
-        </div>
-
-        <!-- Leadership Team -->
-        <div class="kayan-section-title" style="margin-bottom:45px;">
-            <span class="eyebrow">القيادة والخبرة الهندسية</span>
-            <h2>فريق يقود التميز المعماري</h2>
-            <p>نخبة من كبار المهندسين والاستشاريين الماليين يقودون مشروعات كيان نحو آفاق غير مسبوقة</p>
-        </div>
-
-        <div class="kayan-team-grid">
-            <div class="kayan-team-card">
-                <div class="kayan-team-photo">
-                    <img src="images/team-1.jpg" alt="م. طارق الناصر">
-                </div>
-                <div class="kayan-team-info">
-                    <h4>م. طارق الناصر</h4>
-                    <span>رئيس مجلس الإدارة والمؤسس</span>
-                    <p>خبير التطوير العمراني بخبرة تفوق 22 عاماً في إدارة محافظ المشروعات الكبرى بمصر والخليج.</p>
-                </div>
-            </div>
-
-            <div class="kayan-team-card">
-                <div class="kayan-team-photo">
-                    <img src="images/team-2.jpg" alt="م. سارة القاضي">
-                </div>
-                <div class="kayan-team-info">
-                    <h4>م. سارة القاضي</h4>
-                    <span>رئيس قطاع التصميم والتخطيط</span>
-                    <p>مهندسة معمارية متخصصة في التصميم المستدام وتقنيات العمارة الخضراء ومدن الجيل الرابع.</p>
-                </div>
-            </div>
-
-            <div class="kayan-team-card">
-                <div class="kayan-team-photo">
-                    <img src="images/team-3.jpg" alt="م. محمود الشافعي">
-                </div>
-                <div class="kayan-team-info">
-                    <h4>م. محمود الشافعي</h4>
-                    <span>رئيس قطاع المشروعات والتنفيذ</span>
-                    <p>يشرف على التزام الجودة الهندسية والمطابقة الإنشائية الصارمة لكافة المشروعات الميدانية.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Timeline of Success -->
-        <div class="kayan-section-title" style="margin-bottom:45px;">
-            <span class="eyebrow">مسيرة النمو</span>
-            <h2>محطات في تاريخ كيان</h2>
-            <p>خطوات واثقة رسخت اسمنا في سماء العقارات المصرية</p>
-        </div>
-
-        <div class="kayan-timeline">
-            <div class="kayan-timeline-item">
-                <div class="kayan-timeline-dot"></div>
-                <div class="kayan-timeline-content">
-                    <span class="kayan-timeline-year">2011</span>
-                    <h4>التأسيس والانطلاقة الأولى</h4>
-                    <p>تأسيس شركة كيان العقارية وتنفيذ أولى عمائرها السكنية الفاخرة بشرق القاهرة وفق أعلى معايير الجودة.</p>
-                </div>
-            </div>
-
-            <div class="kayan-timeline-item">
-                <div class="kayan-timeline-dot"></div>
-                <div class="kayan-timeline-content">
-                    <span class="kayan-timeline-year">2016</span>
-                    <h4>التوسع في القاهرة الجديدة</h4>
-                    <p>إطلاق حزمة من المشروعات السكنية في أحياء الأندلس، اللوتس، وبيت الوطن بالتجمع الخامس وتسليمها بنجاح.</p>
-                </div>
-            </div>
-
-            <div class="kayan-timeline-item">
-                <div class="kayan-timeline-dot"></div>
-                <div class="kayan-timeline-content">
-                    <span class="kayan-timeline-year">2020</span>
-                    <h4>الدخول للعاصمة الإدارية الجديدة</h4>
-                    <p>بدء العمل في المشروعات المتكاملة بالحي السكني R7 ومجمع الأعمال بالحي المالي والإداري.</p>
-                </div>
-            </div>
-
-            <div class="kayan-timeline-item">
-                <div class="kayan-timeline-dot"></div>
-                <div class="kayan-timeline-content">
-                    <span class="kayan-timeline-year">2024</span>
-                    <h4>إطلاق المشروعات الذكية (Smart Living)</h4>
-                    <p>تدشين مشروعي "فيو ريزيدنس" و"جرين يارد" بأنظمة الطاقة الشمسية وتقنيات المنازل الذكية المتطورة.</p>
-                </div>
-            </div>
-
-            <div class="kayan-timeline-item">
-                <div class="kayan-timeline-dot"></div>
-                <div class="kayan-timeline-content">
-                    <span class="kayan-timeline-year">2026</span>
-                    <h4>آفاق جديدة نحو المستقبل</h4>
-                    <p>مواصلة ريادة السوق بضخ استثمارات تتجاوز 5 مليارات جنيه في مشروعات استثمارية جديدة في غرب وشرق القاهرة.</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- ================= CTA ================= -->
-<section class="kayan-cta">
-    <div class="kayan-container kayan-cta-inner">
-        <div>
-            <h2 style="font-size:28px; margin:0 0 10px; color:#fff;">كن جزءاً من عائلة كيان العقارية اليوم</h2>
-            <p style="color:var(--kayan-gray-light); margin:0; font-size:15px;">
-                اكتشف مشروعاتنا الحالية أو تواصل مباشرة مع فريقنا للتعرف على أحدث الفرص المتاحة.
-            </p>
-        </div>
-        <div style="display:flex; gap:12px; flex-wrap:wrap;">
-            <a href="projects.html" class="kayan-btn kayan-btn-gold">تصفح المشروعات المتاحة ←</a>
-            <a href="contact.html" class="kayan-btn kayan-btn-outline">تواصل مع فريقنا</a>
-        </div>
-    </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer class="kayan-footer">
-    <div class="kayan-container">
-        <div class="kayan-footer-grid">
-            <div class="kayan-footer-logo">
-                <strong>كيان العقارية</strong>
-                <p>
-                    نعمل على تقديم مشروعات عقارية متميزة تجمع بين الجودة والتصميم والموقع الاستراتيجي في مصر منذ عام 2011.
-                </p>
-                <div class="kayan-social">
-                    <a href="#" title="فيسبوك"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" title="لينكدإن"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" title="انستغرام"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" title="يوتيوب"><i class="fa-brands fa-youtube"></i></a>
-                </div>
-            </div>
-
-            <div>
-                <h3>روابط سريعة</h3>
+            <nav class="kayan-nav" id="kayanNav">
                 <ul>
                     <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="about.html">من نحن</a></li>
-                    <li><a href="projects.html">المشروعات</a></li>
-                    <li><a href="blog.html">المدونة</a></li>
+                    <li class="active"><a href="about.html">من نحن</a></li>
+                    <li>
+                        <a href="projects.html">المشروعات <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i></a>
+                        <div class="kayan-dropdown">
+                            <a href="projects.html">جميع المشروعات</a>
+                            <a href="projects.html?status=current">المشروعات المتاحة</a>
+                            <a href="projects.html?status=delivered">سابقة الأعمال (تم البيع)</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">المعرض <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i></a>
+                        <div class="kayan-dropdown">
+                            <a href="events.html">الفعاليات والأخبار</a>
+                            <a href="gallery.html">الصور والفيديوهات</a>
+                            <a href="blog.html">المدونة والمقالات</a>
+                            <a href="careers.html">التوظيف</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="finishing.html">التشطيبات <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i></a>
+                        <div class="kayan-dropdown">
+                            <a href="finishing.html#specs">مواصفات التشطيب</a>
+                            <a href="finishing.html#decor">تشطيبات وديكورات الوحدات</a>
+                        </div>
+                    </li>
                     <li><a href="contact.html">اتصل بنا</a></li>
                 </ul>
-            </div>
+            </nav>
 
-            <div>
-                <h3>المشروعات</h3>
-                <ul>
-                    <li><a href="projects.html?status=current">المشروعات الحالية</a></li>
-                    <li><a href="projects.html?status=delivered">المشروعات السابقة</a></li>
-                    <li><a href="projects.html">البحث عن وحدة</a></li>
-                    <li><a href="finishing.html">التشطيبات</a></li>
-                </ul>
-            </div>
+            <a href="tel:16812" class="kayan-hotline" title="الخط الساخن">
+                <i class="fa-solid fa-phone"></i> <span>16812</span>
+            </a>
+        </div>
+    </header>
 
-            <div class="kayan-footer-contact">
-                <h3>تواصل معنا</h3>
-                <div>الخط الساخن <strong>16959</strong></div>
-                <br>
-                <div>WhatsApp <strong>010 0000 0000</strong></div>
+    <section class="kayan-page-header">
+        <div class="kayan-container">
+            <div class="kayan-breadcrumb">
+                <a href="index.html">الرئيسية</a> <span>/</span> <span>من نحن</span>
+            </div>
+            <h1>دار الأركان للتطوير العقاري</h1>
+            <p>ريادة في التشييد والبناء، وسجل حافل يضم أكثر من 100 مشروع متميز في أرقى أحياء القاهرة الجديدة</p>
+        </div>
+    </section>
+
+    <section class="kayan-section">
+        <div class="kayan-container">
+            <div style="display:grid; grid-template-columns: 1.1fr 0.9fr; gap:40px; align-items:center;">
+                <div class="kayan-about-text">
+                    <span style="color:var(--kayan-gold); font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:10px;">قصة نجاح دار الأركان</span>
+                    <h2 style="font-size:32px; color:#fff; line-height:1.4; margin-bottom:20px;">نبني بثقة.. ونطوّر قيمة تدوم لأجيال</h2>
+                    <p style="color:#ccc; font-size:15px; line-height:1.9; margin-bottom:16px;">تأسست دار الأركان للتطوير العقاري عام 2015 بقيادة رجل الأعمال المهندس طارق خليل، لتبدأ رحلة من العمل والخبرة في مجالات التطوير العقاري والإنشاءات والمقاولات، وترسّخت مكانتها من خلال مشروعات تعتمد على جودة التنفيذ، الالتزام، والثقة.</p>
+                    <p style="color:#ccc; font-size:15px; line-height:1.9; margin-bottom:16px;">على مدار أكثر من 11 عامًا، نجحت دار الأركان في تنفيذ وتطوير أكثر من 100 مشروعاً في عدد من أهم مناطق القاهرة الجديدة، من بينها جنوب الأكاديمية، النرجس، اللوتس الشمالية والجنوبية، الأندلس، القرنفل، الياسمين، البنفسج، بيت الوطن والنرجس الجديدة.</p>
+                    <p style="color:#ccc; font-size:15px; line-height:1.9; margin-bottom:24px;">نعتمد في جميع مشروعاتنا على التخطيط المدروس، والإدارة الاحترافية، وضبط الجودة، والالتزام بمعايير الأمن والسلامة، بدايةً من دراسة المشروع واختيار الموقع وامتلاك الأرض، مرورًا بمراحل التصميم والتنفيذ، وحتى التسليم للعملاء.</p>
+                    
+                    <div style="background:rgba(243,232,217,0.06); border-right:3px solid var(--kayan-gold); padding:16px 20px; border-radius:8px; margin-bottom:25px;">
+                        <p style="color:var(--kayan-gold); font-size:14px; line-height:1.8; margin:0; font-weight:500;">
+                            «العقار ليس مجرد مبنى خرساني، بل هو أمان العائلة وملاذ استثماري يحمي المدخرات. في دار الأركان نجعل من الالتزام بالوعد والجودة أولوية مطلقة لا تقبل المساومة.»
+                        </p>
+                        <strong style="display:block; color:#fff; font-size:13px; margin-top:8px;">— المهندس طارق خليل | رئيس مجلس الإدارة</strong>
+                    </div>
+
+                    <div style="display:flex; gap:15px; flex-wrap:wrap;">
+                        <a href="projects.html" class="kayan-btn kayan-btn-gold"><i class="fa-solid fa-building"></i> تصفح مشروعاتنا</a>
+                        <a href="contact.html" class="kayan-btn kayan-btn-outline"><i class="fa-solid fa-headset"></i> تواصل مع الإدارة</a>
+                    </div>
+                </div>
+
+                <div>
+                    <div style="background:#111; border:1px solid var(--kayan-border-gold); border-radius:16px; overflow:hidden; box-shadow:0 15px 40px rgba(0,0,0,0.8);">
+                        <div style="position:relative; padding-bottom:56.25%; height:0; background:#000;">
+                            <video controls style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;" poster="images/home-event-1.png">
+                                <source src="videos/eng-tarek-speech.mp4" type="video/mp4">
+                                متصفحك لا يدعم تشغيل الفيديو.
+                            </video>
+                        </div>
+                        <div style="padding:16px 20px; background:#151515; display:flex; align-items:center; justify-content:space-between;">
+                            <div>
+                                <h4 style="color:#fff; font-size:15px; margin-bottom:4px;">كلمة المهندس طارق خليل</h4>
+                                <span style="color:#888; font-size:12px;">رئيس مجلس إدارة دار الأركان للتطوير العقاري</span>
+                            </div>
+                            <span style="background:var(--kayan-gold); color:#000; font-size:11px; font-weight:700; padding:4px 10px; border-radius:20px;">فيديو رسمي</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="kayan-copyright">
-            © 2026 كيان العقارية - جميع الحقوق محفوظة
+    <section class="kayan-section" style="background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.05); border-bottom:1px solid rgba(255,255,255,0.05);">
+        <div class="kayan-container">
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:25px; text-align:center;">
+                <div class="kayan-single-card" style="padding:30px 20px;">
+                    <i class="fa-solid fa-city" style="font-size:36px; color:var(--kayan-gold); margin-bottom:15px;"></i>
+                    <h3 style="font-size:38px; color:#fff; font-weight:800; margin-bottom:6px;">+100</h3>
+                    <p style="color:#aaa; font-size:14px; margin:0;">مشروع تم تطويره وتنفيذه</p>
+                </div>
+                <div class="kayan-single-card" style="padding:30px 20px;">
+                    <i class="fa-solid fa-timeline" style="font-size:36px; color:var(--kayan-gold); margin-bottom:15px;"></i>
+                    <h3 style="font-size:38px; color:#fff; font-weight:800; margin-bottom:6px;">+16</h3>
+                    <p style="color:#aaa; font-size:14px; margin:0;">عاماً من الخبرة العقارية والهندسية</p>
+                </div>
+                <div class="kayan-single-card" style="padding:30px 20px;">
+                    <i class="fa-solid fa-map-location-dot" style="font-size:36px; color:var(--kayan-gold); margin-bottom:15px;"></i>
+                    <h3 style="font-size:38px; color:#fff; font-weight:800; margin-bottom:6px;">+10</h3>
+                    <p style="color:#aaa; font-size:14px; margin:0;">أحياء راقية بالقاهرة الجديدة</p>
+                </div>
+                <div class="kayan-single-card" style="padding:30px 20px;">
+                    <i class="fa-solid fa-circle-check" style="font-size:36px; color:var(--kayan-gold); margin-bottom:15px;"></i>
+                    <h3 style="font-size:38px; color:#fff; font-weight:800; margin-bottom:6px;">100%</h3>
+                    <p style="color:#aaa; font-size:14px; margin:0;">التزام بالمواصفات ومواعيد التسليم</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="kayan-section">
+        <div class="kayan-container">
+            <div class="kayan-section-title">
+                <span>البوصلة التي تقود مسيرتنا</span>
+                <h2>الرؤية والرسالة</h2>
+                <p>نعمل وفق فلسفة تنموية واضحة تضع راحة العميل وأمان استثماره في مقدمة الأولويات</p>
+            </div>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:30px;">
+                <div class="kayan-single-card" style="padding:35px 30px; border-top:3px solid var(--kayan-gold);">
+                    <div style="display:flex; align-items:center; gap:15px; margin-bottom:20px;">
+                        <div style="width:50px; height:50px; border-radius:12px; background:rgba(243,232,217,0.1); display:flex; align-items:center; justify-content:center; color:var(--kayan-gold); font-size:22px;">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+                        <h3 style="color:#fff; font-size:22px; margin:0;">رؤيتنا | Our Vision</h3>
+                    </div>
+                    <p style="color:#ccc; font-size:15px; line-height:1.9; margin:0;">أن تصبح دار الأركان للتطوير العقاري واحدة من أبرز شركات التطوير العقاري الموثوقة في مصر والمنطقة، من خلال بناء مشروعات تحقق قيمة حقيقية لعملائنا وتواكب تطورات و|إحتياجات السوق العقاري. ونسعى إلى التوسع المدروس في المشروعات السكنية والتجارية والمجتمعات المتكاملة، مع تطوير قدراتنا الهندسية والإدارية، وبناء شراكات قوية وطويلة الأجل داخل مصر وأسواق المنطقة. هدفنا أن يكون اسم دار الأركان مرادفًا للثقة، والجودة، والالتزام، والقيمة العقارية المستدامة.</p>
+                </div>
+
+                <div class="kayan-single-card" style="padding:35px 30px; border-top:3px solid var(--kayan-gold);">
+                    <div style="display:flex; align-items:center; gap:15px; margin-bottom:20px;">
+                        <div style="width:50px; height:50px; border-radius:12px; background:rgba(243,232,217,0.1); display:flex; align-items:center; justify-content:center; color:var(--kayan-gold); font-size:22px;">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3 style="color:#fff; font-size:22px; margin:0;">رسالتنا | Our Mission</h3>
+                    </div>
+                    <p style="color:#ccc; font-size:15px; line-height:1.9; margin:0;">أن نقدم مشروعات عقارية تمنح عملائنا تجربة سكنية وإستثمارية متكاملة، تجمع بين جودة التنفيذ، الراحة، الأمان والقيمة المستدامة. ونلتزم بأن تكون كل خطوة في رحلة العميل معنا قائمة على الوضوح والشفافية وحماية حقوقه، بداية من الإختيار والتعاقد وحتى التنفيذ والتسليم. كما نحرص على توفير مستندات قانونية واضحة لكافة مشروعاتنا، وضمان حقوق العملاء في مشروعات الملكية والشراكات، بما يعزز الثقة ويمنح العميل قرارًا استثماريًا أكثر أمانًا..</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="kayan-section" style="background:#0a0a0a; border-top:1px solid rgba(255,255,255,0.05); border-bottom:1px solid rgba(255,255,255,0.05);">
+        <div class="kayan-container">
+            <div class="kayan-section-title">
+                <span>المبادئ الحاكمة</span>
+                <h2>قيم دار الأركان</h2>
+                <p>ركائز أخلاقية وهندسية لا نحيد عنها في كل خطوة ومرحلة من مراحل العمل</p>
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:25px;">
+                
+<div class="kayan-single-card" style="padding:26px 20px;">
+    <div style="width:44px; height:44px; border-radius:10px; background:rgba(243,232,217,0.1); display:flex; align-items:center; justify-content:center; color:var(--kayan-gold); font-size:20px; margin-bottom:15px;">
+        <i class="fa-solid fa-award"></i>
+    </div>
+    <h4 style="color:#fff; font-size:17px; margin-bottom:8px;">الجودة</h4>
+    <p style="color:#aaa; font-size:13px; line-height:1.8; margin:0;">نلتزم بمعايير تنفيذ واضحة ودقيقة في جميع مراحل المشروع من الأساسات حتى التشطيب النهائي.</p>
+</div>
+<div class="kayan-single-card" style="padding:26px 20px;">
+    <div style="width:44px; height:44px; border-radius:10px; background:rgba(243,232,217,0.1); display:flex; align-items:center; justify-content:center; color:var(--kayan-gold); font-size:20px; margin-bottom:15px;">
+        <i class="fa-solid fa-handshake"></i>
+    </div>
+    <h4 style="color:#fff; font-size:17px; margin-bottom:8px;">الثقة</h4>
+    <p style="color:#aaa; font-size:13px; line-height:1.8; margin:0;">نبني علاقات طويلة الأمد مع عملائنا وشركائنا، تقوم على الحفاظ على الحقوق والوفاء بكافة الالتزامات.</p>
+</div>
+<div class="kayan-single-card" style="padding:26px 20px;">
+    <div style="width:44px; height:44px; border-radius:10px; background:rgba(243,232,217,0.1); display:flex; align-items:center; justify-content:center; color:var(--kayan-gold); font-size:20px; margin-bottom:15px;">
+        <i class="fa-solid fa-clock"></i>
+    </div>
+    <h4 style="color:#fff; font-size:17px; margin-bottom:8px;">الالتزام</h4>
+    <p style="color:#aaa; font-size:13px; line-height:1.8; margin:0;">نضع الالتزام بالتعاقدات والجداول الزمنية ومواعيد التسليم الدقيقة في مقدمة أولوياتنا الراسخة.</p>
+</div>
+<div class="kayan-single-card" style="padding:26px 20px;">
+    <div style="width:44px; height:44px; border-radius:10px; background:rgba(243,232,217,0.1); display:flex; align-items:center; justify-content:center; color:var(--kayan-gold); font-size:20px; margin-bottom:15px;">
+        <i class="fa-solid fa-shield-halved"></i>
+    </div>
+    <h4 style="color:#fff; font-size:17px; margin-bottom:8px;">الأمان</h4>
+    <p style="color:#aaa; font-size:13px; line-height:1.8; margin:0;">نهتم بتطبيق أعلى معايير الأمن والسلامة الهندسية في مواقع العمل ومواصفات المباني.</p>
+</div>
+<div class="kayan-single-card" style="padding:26px 20px;">
+    <div style="width:44px; height:44px; border-radius:10px; background:rgba(243,232,217,0.1); display:flex; align-items:center; justify-content:center; color:var(--kayan-gold); font-size:20px; margin-bottom:15px;">
+        <i class="fa-solid fa-eye"></i>
+    </div>
+    <h4 style="color:#fff; font-size:17px; margin-bottom:8px;">الشفافية</h4>
+    <p style="color:#aaa; font-size:13px; line-height:1.8; margin:0;">نتعامل بوضوح تام ومصداقية مطلقة مع عملائنا فيما يخص التراخيص والأوراق الثبوتية لكل قطعة أرض.</p>
+</div>
+<div class="kayan-single-card" style="padding:26px 20px;">
+    <div style="width:44px; height:44px; border-radius:10px; background:rgba(243,232,217,0.1); display:flex; align-items:center; justify-content:center; color:var(--kayan-gold); font-size:20px; margin-bottom:15px;">
+        <i class="fa-solid fa-scale-balanced"></i>
+    </div>
+    <h4 style="color:#fff; font-size:17px; margin-bottom:8px;">النزاهة</h4>
+    <p style="color:#aaa; font-size:13px; line-height:1.8; margin:0;">نحقق أعلى الممارسات المهنية والأخلاقية في التعامل مع الموردين والمقاولين وجمهور العملاء.</p>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="kayan-section">
+        <div class="kayan-container">
+            <div class="kayan-section-title">
+                <span>خارطة المستقبل</span>
+                <h2>أهدافنا الاستراتيجية</h2>
+                <p>نواصل النمو والتوسع المدروس مع الحفاظ على أعلى معايير الجودة ورضا العملاء</p>
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:25px;">
+                
+<div class="kayan-single-card" style="padding:26px 20px;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+        <i class="fa-solid fa-gem" style="color:var(--kayan-gold); font-size:18px;"></i>
+        <h4 style="color:#fff; font-size:16px; margin:0;">تقديم قيمة عقارية حقيقية</h4>
+    </div>
+    <p style="color:#bbb; font-size:13px; line-height:1.8; margin:0;">تطوير مشروعات عقارية تحقق قيمة سكنية واستثمارية واضحة وتوفر فرصاً مناسبة لمختلف الاحتياجات.</p>
+</div>
+<div class="kayan-single-card" style="padding:26px 20px;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+        <i class="fa-solid fa-check-double" style="color:var(--kayan-gold); font-size:18px;"></i>
+        <h4 style="color:#fff; font-size:16px; margin:0;">الجودة في كل مرحلة</h4>
+    </div>
+    <p style="color:#bbb; font-size:13px; line-height:1.8; margin:0;">تطبيق معايير دقيقة للجودة بداية من التخطيط والتصميم وحتى التنفيذ والتشطيب والتسليم.</p>
+</div>
+<div class="kayan-single-card" style="padding:26px 20px;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+        <i class="fa-solid fa-calendar-check" style="color:var(--kayan-gold); font-size:18px;"></i>
+        <h4 style="color:#fff; font-size:16px; margin:0;">الالتزام بمواعيد التنفيذ</h4>
+    </div>
+    <p style="color:#bbb; font-size:13px; line-height:1.8; margin:0;">إدارة المشروعات وفق جداول زمنية واضحة والعمل بكفاءة للحفاظ على معدلات التنفيذ المستهدفة.</p>
+</div>
+<div class="kayan-single-card" style="padding:26px 20px;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+        <i class="fa-solid fa-file-shield" style="color:var(--kayan-gold); font-size:18px;"></i>
+        <h4 style="color:#fff; font-size:16px; margin:0;">حماية حقوق العملاء</h4>
+    </div>
+    <p style="color:#bbb; font-size:13px; line-height:1.8; margin:0;">توفير أعلى درجات الوضوح والشفافية فيما يتعلق بالملكية والمستندات القانونية والتعاقدات.</p>
+</div>
+<div class="kayan-single-card" style="padding:26px 20px;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+        <i class="fa-solid fa-users-gear" style="color:var(--kayan-gold); font-size:18px;"></i>
+        <h4 style="color:#fff; font-size:16px; margin:0;">علاقات طويلة الأمد</h4>
+    </div>
+    <p style="color:#bbb; font-size:13px; line-height:1.8; margin:0;">الامتداد في رعاية العميل لما بعد عملية البيع من خلال المتابعة المستمرة وملف الصيانة الشامل.</p>
+</div>
+<div class="kayan-single-card" style="padding:26px 20px;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:10px;">
+        <i class="fa-solid fa-earth-africa" style="color:var(--kayan-gold); font-size:18px;"></i>
+        <h4 style="color:#fff; font-size:16px; margin:0;">التوسع والشراكات الإقليمية</h4>
+    </div>
+    <p style="color:#bbb; font-size:13px; line-height:1.8; margin:0;">بناء شراكات استراتيجية مع مستثمرين في مصر ودول الخليج وعلى رأسهم السعودية والإمارات.</p>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="kayan-section" style="background:#0c0c0c; border-top:1px solid rgba(255,255,255,0.05);">
+        <div class="kayan-container">
+            <div class="kayan-section-title">
+                <span>ثقة تبني قراراتك</span>
+                <h2>لماذا تختار دار الأركان للتطوير العقاري؟</h2>
+                <p>مجموعة من المزايا الحقيقية تجعل شراء وحدتك معنا قراراً استثمارياً وسكنياً فائق الاطمئنان</p>
+            </div>
+
+            <div style="max-width:900px; margin:0 auto; background:#141414; border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:35px 30px;">
+                <ul style="list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:16px;">
+                    
+<li style="display:flex; align-items:flex-start; gap:12px; color:#ddd; font-size:14px; line-height:1.8; margin-bottom:12px;">
+    <i class="fa-solid fa-circle-check" style="color:var(--kayan-gold); margin-top:5px; font-size:16px;"></i>
+    <span>خبرة ممتدة في قطاع التطوير والمقاولات منذ عام 2010.</span>
+</li>
+<li style="display:flex; align-items:flex-start; gap:12px; color:#ddd; font-size:14px; line-height:1.8; margin-bottom:12px;">
+    <i class="fa-solid fa-circle-check" style="color:var(--kayan-gold); margin-top:5px; font-size:16px;"></i>
+    <span>سجل إنجازات يضم أكثر من 100 مشروعاً منفذاً في أرقى مناطق القاهرة الجديدة.</span>
+</li>
+<li style="display:flex; align-items:flex-start; gap:12px; color:#ddd; font-size:14px; line-height:1.8; margin-bottom:12px;">
+    <i class="fa-solid fa-circle-check" style="color:var(--kayan-gold); margin-top:5px; font-size:16px;"></i>
+    <span>مشروعات في أكثر المواقع تميزاً: جنوب الأكاديمية، النرجس، اللوتس، الأندلس، بيت الوطن، والنرجس الجديدة.</span>
+</li>
+<li style="display:flex; align-items:flex-start; gap:12px; color:#ddd; font-size:14px; line-height:1.8; margin-bottom:12px;">
+    <i class="fa-solid fa-circle-check" style="color:var(--kayan-gold); margin-top:5px; font-size:16px;"></i>
+    <span>مواقع مدروسة بعناية فائقة تضمن سهولة الحركة والقرب من المحاور الرئيسية.</span>
+</li>
+<li style="display:flex; align-items:flex-start; gap:12px; color:#ddd; font-size:14px; line-height:1.8; margin-bottom:12px;">
+    <i class="fa-solid fa-circle-check" style="color:var(--kayan-gold); margin-top:5px; font-size:16px;"></i>
+    <span>تصميمات معمارية تجمع بين الفخامة الكلاسيكية والاستغلال الذكي للمساحات الداخلية.</span>
+</li>
+<li style="display:flex; align-items:flex-start; gap:12px; color:#ddd; font-size:14px; line-height:1.8; margin-bottom:12px;">
+    <i class="fa-solid fa-circle-check" style="color:var(--kayan-gold); margin-top:5px; font-size:16px;"></i>
+    <span>جودة تنفيذ واضحة ومطابقة للكود المصري للأعمال الخرسانية والتشطيبات.</span>
+</li>
+<li style="display:flex; align-items:flex-start; gap:12px; color:#ddd; font-size:14px; line-height:1.8; margin-bottom:12px;">
+    <i class="fa-solid fa-circle-check" style="color:var(--kayan-gold); margin-top:5px; font-size:16px;"></i>
+    <span>أنظمة سداد مرنة وأسعار تنافسية تلائم مختلف التطلعات والخطط المالية.</span>
+</li>
+<li style="display:flex; align-items:flex-start; gap:12px; color:#ddd; font-size:14px; line-height:1.8; margin-bottom:12px;">
+    <i class="fa-solid fa-circle-check" style="color:var(--kayan-gold); margin-top:5px; font-size:16px;"></i>
+    <span>حرص كامل على القيمة الاستثمارية المستقبلية للعقار وحمايته كوعاء ادخاري آمن.</span>
+</li>
+<li style="display:flex; align-items:flex-start; gap:12px; color:#ddd; font-size:14px; line-height:1.8; margin-bottom:12px;">
+    <i class="fa-solid fa-circle-check" style="color:var(--kayan-gold); margin-top:5px; font-size:16px;"></i>
+    <span>وضوح وشفافية مطلقة في تسليم المستندات القانونية وتراخيص البناء.</span>
+</li>
+<li style="display:flex; align-items:flex-start; gap:12px; color:#ddd; font-size:14px; line-height:1.8; margin-bottom:12px;">
+    <i class="fa-solid fa-circle-check" style="color:var(--kayan-gold); margin-top:5px; font-size:16px;"></i>
+    <span>الالتزام الكامل بحقوق العميل في كل خطوة حتى استلام الوحدة وتشغيلها.</span>
+</li>
+                </ul>
+                
+                <div style="margin-top:30px; padding-top:25px; border-top:1px solid rgba(255,255,255,0.08); text-align:center;">
+                    <h3 style="color:var(--kayan-gold); font-size:20px; margin-bottom:15px;">دار الأركان.. نبني بثقة، ونطوّر قيمة تدوم</h3>
+                    <a href="contact.html" class="kayan-btn kayan-btn-gold"><i class="fa-solid fa-phone"></i> تحدث مع مستشارك العقاري اليوم</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="kayan-footer">
+        <div class="kayan-container">
+            <div class="kayan-footer-grid">
+                <div class="kayan-footer-logo">
+                    <img src="images/logo-dar-arkan.png" alt="دار الأركان للتطوير العقاري" style="height:55px; margin-bottom:15px;">
+                    <p>
+                        تأسست دار الأركان للتطوير العقاري عام 2015 بقيادة رجل الأعمال المهندس طارق خليل. خبرة ممتدة لأكثر من 16 عاماً وأكثر من 100 مشروع متميز في أرقى مناطق القاهرة الجديدة قائمة على جودة التنفيذ، الالتزام، والشفافية.
+                    </p>
+                    <div class="kayan-footer-social">
+                        <a href="https://www.facebook.com/DarElArkanEG" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/dar_el_arkan" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@darelarkandevelopment" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://wa.me/201090030008" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>روابط سريعة</h4>
+                    <ul class="kayan-footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="projects.html">المشروعات المتاحة</a></li>
+                        <li><a href="projects.html?status=delivered">سابقة الأعمال</a></li>
+                        <li><a href="finishing.html">مواصفات التشطيب</a></li>
+                        <li><a href="careers.html">التوظيف</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>المشروعات المتاحة</h4>
+                    <ul class="kayan-footer-links">
+                        <li><a href="project-d384.html">مشروع D384 - النرجس الجديدة</a></li>
+                        <li><a href="project-g30.html">مشروع G30 - الحي السادس بيت الوطن</a></li>
+                        <li><a href="project-c87.html">مشروع C87 - الحي الأول بيت الوطن</a></li>
+                        <li><a href="project-a187.html">مشروع A187 - الحي الثاني بيت الوطن</a></li>
+                        <li><a href="project-a61.html">مشروع A61 - الحي الرابع بيت الوطن</a></li>
+                        <li><a href="project-d80.html">مشروع D80 - الحي الثامن بيت الوطن</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>تواصل معنا</h4>
+                    <p style="color:#aaa; font-size:13px; line-height:1.8; margin-bottom:12px;">
+                        <i class="fa-solid fa-location-dot" style="color:var(--kayan-gold); margin-left:6px;"></i>
+                        ٢٢٤ القطاع الثاني - التجمع الخامس - خلف فندق الدوسيت - مبنى كريستال عصفور - الدور الثالث
+                    </p>
+                    <p style="color:#aaa; font-size:13px; margin-bottom:8px;">
+                        <i class="fa-solid fa-phone" style="color:var(--kayan-gold); margin-left:6px;"></i>
+                        الخط الساخن: <a href="tel:16812" style="color:#fff; font-weight:700;">16812</a>
+                    </p>
+                    <p style="color:#aaa; font-size:13px; margin-bottom:8px;">
+                        <i class="fa-solid fa-mobile-screen" style="color:var(--kayan-gold); margin-left:6px;"></i>
+                        المبيعات: <a href="tel:01090030008" style="color:#fff;">01090030008</a>
+                    </p>
+                    <p style="color:#aaa; font-size:13px; margin-bottom:15px;">
+                        <i class="fa-brands fa-whatsapp" style="color:#25D366; margin-left:6px;"></i>
+                        واتساب: <a href="https://wa.me/201090030008" target="_blank" style="color:#fff;">01090030008</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="kayan-footer-bottom">
+                <p>© 2026 دار الأركان للتطوير العقاري - DAR AL ARKAN REAL ESTATE DEVELOPMENT. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= KANDEEL-STYLE FLOATING CONTACT BAR ================= -->
+    <div class="kayan-bottom-bar" id="kayanBottomBar">
+        <div class="kayan-bar-inner">
+            <a href="tel:16812" class="kayan-bar-call" title="اتصل بنا الآن">
+                <i class="fa-solid fa-phone"></i>
+                <span>16812</span>
+            </a>
+            <a href="https://wa.me/201090030008" target="_blank" class="kayan-bar-whatsapp" title="محادثة واتساب مباشرة" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="contact.html" class="kayan-bar-register" title="سجل اهتمامك الآن">
+                <i class="fa-solid fa-comment-dots"></i>
+                <span>سجل الآن</span>
+            </a>
         </div>
     </div>
-</footer>
 
-    <!-- ================= FLOATING ================= -->
-    <a href="tel:16959" class="kayan-side-call" title="اتصل بنا">
-        <i class="fa-solid fa-phone"></i> اتصل بنا
+    <a href="#" id="kayanScrollTop" class="kayan-float kayan-scroll-top" title="العودة للأعلى" aria-label="العودة للأعلى">
+        <i class="fa-solid fa-arrow-up"></i>
     </a>
 
-    <div class="kayan-floating">
-        <a
-            href="https://wa.me/201000000000"
-            target="_blank"
-            class="kayan-float kayan-float-whatsapp kayan-whatsapp-float"
-            title="محادثة واتساب"
-            aria-label="WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-
-        <a
-            href="tel:16959"
-            class="kayan-float kayan-float-phone kayan-call-float"
-            title="اتصال هاتفي"
-            aria-label="اتصال">
-            <i class="fa-solid fa-phone"></i>
-        </a>
-
-        <a
-            href="#"
-            id="kayanScrollTop"
-            class="kayan-float kayan-scroll-top"
-            title="العودة للأعلى"
-            aria-label="العودة للأعلى">
-            <i class="fa-solid fa-arrow-up"></i>
-        </a>
-    </div>
-
-</div><!-- /.kayan-home -->
-
-<!-- Scripts -->
-<script src="script.js"></script>
+    <script src="script.js?v=3"></script>
+</div>
 </body>
 </html>
