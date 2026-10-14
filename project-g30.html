@@ -7,7 +7,7 @@
     <meta name="description" content="يقع مشروع G30 في الحي السادس ببيت الوطن – التجمع الخامس، في موقع مميز يطل على شارع النوادي وبالقرب من محور محمد بن زايد ومحطة المونوريل.">
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="style.css?v=7">
     <script src="data/constructions.js"></script>
 </head>
 <body>
@@ -334,7 +334,6 @@
                             </a>
                         </div>
 
-                    </div>
                 <!-- R10. Sidebar Location Map -->
                         <div class="kayan-sidebar-box" style="margin-top:20px;">
                             <h3 style="font-size:18px; color:var(--color-primary); margin-bottom:14px; font-family:var(--kayan-font-title);">
@@ -345,43 +344,76 @@
                             </div>
                         </div>
 
-                        <!-- R10. Sidebar Booking Form -->
+                        <!-- R10. Sidebar Registration Form -->
                         <div class="kayan-sidebar-box" style="margin-top:20px;">
-                            <h3 style="font-size:18px; color:var(--color-primary); margin-bottom:12px; font-family:var(--kayan-font-title);">
-                                <i class="fa-solid fa-file-signature"></i> استمارة حجز الوحدة
+                            <h3 style="font-size:19px; color:var(--color-primary); margin-bottom:14px; font-family:var(--kayan-font-title); display:flex; align-items:center; gap:8px;">
+                                <i class="fa-solid fa-pen-to-square"></i> سجل الآن
                             </h3>
-                            <p style="color:#aaa; font-size:13px; line-height:1.6; margin-bottom:14px;">
-                                سجل بياناتك للتواصل المباشر مع استشاري المشروع وحجز موعد معاينة:
-                            </p>
-                            <form class="kayan-booking-form" id="sidebarBookingForm" onsubmit="window.handleBookingSubmit(event, 'مشروع G30 – الحي السادس بيت الوطن')">
+                            <form class="kayan-sidebar-reg-form" id="sidebarBookingForm" novalidate onsubmit="window.handleSidebarRegisterSubmit(event, 'مشروع G30 – الحي السادس بيت الوطن')">
                                 <input type="hidden" name="project_name" value="مشروع G30 – الحي السادس بيت الوطن">
-                                <div class="form-group" style="margin-bottom:12px;">
-                                    <label style="display:block; font-size:13px; color:#ccc; margin-bottom:5px;">الاسم الكريم</label>
-                                    <input type="text" name="client_name" placeholder="أدخل اسمك" style="width:100%; background:#0d0d0d; border:1px solid #282828; color:#fff; padding:10px 14px; border-radius:8px; font-family:inherit; font-size:14px;">
+                                <div class="kayan-form-group">
+                                    <label for="sbRegName">اسمك <span class="req">*</span></label>
+                                    <div class="kayan-input-wrap">
+                                        <i class="fa-solid fa-user"></i>
+                                        <input type="text" id="sbRegName" name="name" required placeholder="الاسم بالكامل">
+                                    </div>
                                 </div>
-                                <div class="form-group" style="margin-bottom:12px;">
-                                    <label style="display:block; font-size:13px; color:#ccc; margin-bottom:5px;">رقم التليفون / واتساب</label>
-                                    <input type="tel" name="phone" placeholder="01xxxxxxxxx" style="width:100%; background:#0d0d0d; border:1px solid #282828; color:#fff; padding:10px 14px; border-radius:8px; font-family:inherit; font-size:14px;">
+                                <div class="kayan-form-group">
+                                    <label for="sbRegPhone">هاتفك <span class="req">*</span></label>
+                                    <div class="kayan-input-wrap">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <input type="tel" id="sbRegPhone" name="phone" required placeholder="رقم الهاتف">
+                                    </div>
                                 </div>
-                                <div class="form-group" style="margin-bottom:12px;">
-                                    <label style="display:block; font-size:13px; color:#ccc; margin-bottom:5px;">نوع الوحدة المفضلة</label>
-                                    <select name="unit_type" style="width:100%; background:#0d0d0d; border:1px solid #282828; color:#fff; padding:10px 14px; border-radius:8px; font-family:inherit; font-size:14px;">
-                                        <option value="شقق">شقق متكرر</option>
-                                        <option value="أرضي بحديقة">أرضي بحديقة</option>
-                                        <option value="بنتهاوس">بنتهاوس</option>
-                                        <option value="دوبلكس">دوبلكس</option>
-                                    </select>
+                                <div class="kayan-form-group">
+                                    <label for="sbRegPhoneConfirm">تأكيد هاتفك <span class="req">*</span></label>
+                                    <div class="kayan-input-wrap">
+                                        <i class="fa-solid fa-phone-flip"></i>
+                                        <input type="tel" id="sbRegPhoneConfirm" name="phone_confirm" required placeholder="تأكيد رقم الهاتف">
+                                    </div>
+                                    <span class="kayan-field-error" id="sbPhoneMismatchMsg">رقم الهاتف غير متطابق</span>
                                 </div>
-                                <div class="form-group" style="margin-bottom:14px;">
-                                    <label style="display:block; font-size:13px; color:#ccc; margin-bottom:5px;">استفسار أو ملاحظة إضافية</label>
-                                    <textarea name="notes" rows="2" placeholder="أي تفاصيل تود السؤال عنها..." style="width:100%; background:#0d0d0d; border:1px solid #282828; color:#fff; padding:10px 14px; border-radius:8px; font-family:inherit; font-size:14px;"></textarea>
+                                <div class="kayan-form-group">
+                                    <label for="sbRegEmail">ايميلك</label>
+                                    <div class="kayan-input-wrap">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <input type="email" id="sbRegEmail" name="email" placeholder="البريد الإلكتروني">
+                                    </div>
                                 </div>
-                                <button type="submit" class="kayan-btn kayan-btn-gold" style="width:100%; justify-content:center; text-align:center;">
-                                    <i class="fa-solid fa-paper-plane"></i> إرسال استمارة الحجز
+                                <div class="kayan-form-group">
+                                    <label for="sbRegRegion">المنطقة</label>
+                                    <div class="kayan-input-wrap">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <select id="sbRegRegion" name="region">
+                                            <option value="">اختر المنطقة</option>
+                                            <option value="بيت الوطن" selected>بيت الوطن</option>
+                                            <option value="النرجس الجديدة">النرجس الجديدة</option>
+                                            <option value="شمال الرحاب">شمال الرحاب</option>
+                                            <option value="الأندلس">الأندلس</option>
+                                            <option value="أخرى">أخرى</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="kayan-form-group">
+                                    <label for="sbRegMessage">رسالتك</label>
+                                    <div class="kayan-input-wrap textarea-wrap">
+                                        <i class="fa-solid fa-comment-dots"></i>
+                                        <textarea id="sbRegMessage" name="message" rows="3" placeholder="اكتب استفسارك أو تفاصيل طلبك..."></textarea>
+                                    </div>
+                                </div>
+                                <button type="submit" class="kayan-btn-submit-modal" id="sbSubmitRegisterBtn">
+                                    <span>ارسال</span>
+                                    <i class="fa-solid fa-paper-plane"></i>
                                 </button>
+                                <div class="kayan-modal-success" id="sbRegSuccessMsg">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <h4>تم استلام طلبك بنجاح!</h4>
+                                    <p>شكراً لتسجيل اهتمامك. سيتواصل معك أحد مسؤولي المبيعات قريباً.</p>
+                                </div>
                             </form>
                         </div>
-</aside>
+                    </div>
+                </aside>
 
             </div>
         </div>
@@ -554,7 +586,7 @@
         </div>
     </div>
 
-    <script src="script.js?v=6"></script>
+    <script src="script.js?v=7"></script>
 
 </body>
 </html>

@@ -549,33 +549,88 @@ function initHeroSlider() {
 }
 window.initHeroSlider = initHeroSlider;
 
-/* R10: Sidebar Booking Form Submission */
-window.handleBookingSubmit = function(e, projectName) {
+/* R10: Sidebar Register Form Submission (سجل الآن) */
+window.handleSidebarRegisterSubmit = function(e, projectName) {
     if (e) e.preventDefault();
-    var form = e ? e.target : document.getElementById('sidebarBookingForm');
+    var form = e ? (e.target.tagName === "FORM" ? e.target : e.target.closest("form")) : document.getElementById("sidebarBookingForm");
     if (!form) return;
 
-    var submitBtn = form.querySelector('button[type="submit"]');
-    var originalText = submitBtn ? submitBtn.innerHTML : '';
+    var nameInput = form.querySelector("input[name="name"]");
+    var phoneInput = form.querySelector("input[name="phone"]");
+    var phoneConfirmInput = form.querySelector("input[name="phone_confirm"]");
+    var mismatchMsg = form.querySelector(".kayan-field-error");
+    var submitBtn = form.querySelector("button[type="submit"]");
+    var successMsg = form.querySelector(".kayan-modal-success");
+
+    // Reset error styling
+    [nameInput, phoneInput, phoneConfirmInput].forEach(function(input) {
+        if (input) input.classList.remove("input-error");
+    });
+    if (mismatchMsg) mismatchMsg.style.display = "none";
+
+    var isValid = true;
+    if (!nameInput || !nameInput.value.trim()) {
+        if (nameInput) { nameInput.classList.add("input-error"); nameInput.focus(); }
+        isValid = false;
+        return;
+    }
+
+    if (!phoneInput || !phoneInput.value.trim()) {
+        if (phoneInput) { phoneInput.classList.add("input-error"); phoneInput.focus(); }
+        isValid = false;
+        return;
+    }
+
+    if (!phoneConfirmInput || !phoneConfirmInput.value.trim()) {
+        if (phoneConfirmInput) { phoneConfirmInput.classList.add("input-error"); phoneConfirmInput.focus(); }
+        isValid = false;
+        return;
+    }
+
+    if (phoneInput.value.trim() !== phoneConfirmInput.value.trim()) {
+        if (phoneConfirmInput) phoneConfirmInput.classList.add("input-error");
+        if (mismatchMsg) mismatchMsg.style.display = "block";
+        if (phoneConfirmInput) phoneConfirmInput.focus();
+        isValid = false;
+        return;
+    }
+
     if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> جاري إرسال طلب الحجز...';
+        submitBtn.innerHTML = "<span>جاري الإرسال...</span> <i class="fa-solid fa-spinner fa-spin"></i>";
     }
 
     setTimeout(function() {
-        if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalText;
+        var groups = form.querySelectorAll(".kayan-form-group");
+        groups.forEach(function(g) { g.style.display = "none"; });
+        if (submitBtn) submitBtn.style.display = "none";
+
+        if (successMsg) {
+            successMsg.style.display = "block";
         }
-        form.reset();
-        var msg = 'تم استلام طلب حجزك لمشروع ' + (projectName || 'دار الأركان') + ' بنجاح! سيتواصل معك استشاري المبيعات لتحديد موعد المعاينة على الطبيعة.';
-        if (typeof window.showToast === 'function') {
-            window.showToast(msg);
-        } else {
-            alert(msg);
+
+        var proj = projectName || (form.querySelector("input[name="project_name"]") ? form.querySelector("input[name="project_name"]").value : "دار الأركان");
+        var toastMsg = "تم استلام طلب تسجيلك بنجاح لمشروع " + proj + "! سيتواصل معك أحد مسؤولي المبيعات قريباً.";
+        if (typeof window.showToast === "function") {
+            window.showToast(toastMsg);
         }
-    }, 700);
+    }, 600);
 };
+
+window.handleBookingSubmit = window.handleSidebarRegisterSubmit;
+
+// Clear sidebar register errors on typing
+document.addEventListener("input", function(e) {
+    if (!e.target) return;
+    if (e.target.name === "phone" || e.target.name === "phone_confirm" || e.target.name === "name") {
+        var form = e.target.closest("#sidebarBookingForm");
+        if (form) {
+            e.target.classList.remove("input-error");
+            var mismatch = form.querySelector(".kayan-field-error");
+            if (mismatch) mismatch.style.display = "none";
+        }
+    }
+});
 
 /* Video Modal */
 window.playVideoModal = function(src, title) {

@@ -5712,3 +5712,58 @@ a.kayan-hotline:hover {
         padding: 5px 10px;
     }
 }
+
+
+/* ================= SIDEBAR REGISTRATION FORM (سجل الآن) ================= */
+.kayan-sidebar-reg-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: right;
+    position: relative;
+}
+
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap input,
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap select,
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap textarea {
+    background: #0d0d0d;
+    border: 1px solid #282828;
+    color: #ffffff;
+}
+
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap input:focus,
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap select:focus,
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 12px rgba(243, 232, 217, 0.22);
+    background: #161616;
+}
+
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-modal-success {
+    padding: 16px 8px;
+}
+
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-modal-success i {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-modal-success h4 {
+    font-size: 17px;
+}
+
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-modal-success p {
+    font-size: 12.5px;
+}
+
+.kayan-project-sidebar .kayan-sticky-sidebar {
+    position: relative !important;
+    top: auto !important;
+}
+
