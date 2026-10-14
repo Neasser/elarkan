@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <div class="kayan-home">
@@ -306,10 +306,70 @@
             <a href="https://wa.me/201090030008" target="_blank" class="kayan-bar-whatsapp" title="محادثة واتساب مباشرة" aria-label="WhatsApp">
                 <i class="fa-brands fa-whatsapp"></i>
             </a>
-            <a href="contact.html" class="kayan-bar-register" title="سجل اهتمامك الآن">
+            <a href="#registerModal" class="kayan-bar-register" id="openRegisterModalBtn" title="سجل الآن">
                 <i class="fa-solid fa-comment-dots"></i>
                 <span>سجل الآن</span>
             </a>
+        </div>
+    </div>
+
+    
+                    <div class="kayan-form-group">
+                        <label for="regPhone">هاتفك <span class="req">*</span></label>
+                        <div class="kayan-input-wrap">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="regPhone" name="phone" required placeholder="رقم الهاتف">
+                        </div>
+                    </div>
+                </div>
+                <div class="kayan-form-row">
+                    <div class="kayan-form-group">
+                        <label for="regPhoneConfirm">تأكيد هاتفك <span class="req">*</span></label>
+                        <div class="kayan-input-wrap">
+                            <i class="fa-solid fa-phone-flip"></i>
+                            <input type="tel" id="regPhoneConfirm" name="phone_confirm" required placeholder="تأكيد رقم الهاتف">
+                        </div>
+                        <span class="kayan-field-error" id="phoneMismatchMsg">رقم الهاتف غير متطابق</span>
+                    </div>
+                    <div class="kayan-form-group">
+                        <label for="regEmail">ايميلك</label>
+                        <div class="kayan-input-wrap">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="regEmail" name="email" placeholder="البريد الإلكتروني">
+                        </div>
+                    </div>
+                </div>
+                <div class="kayan-form-group">
+                    <label for="regRegion">المنطقة</label>
+                    <div class="kayan-input-wrap">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <select id="regRegion" name="region">
+                            <option value="">اختر المنطقة</option>
+                            <option value="بيت الوطن">بيت الوطن</option>
+                            <option value="النرجس الجديدة">النرجس الجديدة</option>
+                            <option value="شمال الرحاب">شمال الرحاب</option>
+                            <option value="الأندلس">الأندلس</option>
+                            <option value="أخرى">أخرى</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="kayan-form-group">
+                    <label for="regMessage">رسالتك</label>
+                    <div class="kayan-input-wrap textarea-wrap">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <textarea id="regMessage" name="message" rows="3" placeholder="اكتب استفسارك أو تفاصيل طلبك..."></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="kayan-btn-submit-modal" id="submitRegisterBtn">
+                    <span>ارسال</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+                <div class="kayan-modal-success" id="regSuccessMsg">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h4>تم استلام طلبك بنجاح!</h4>
+                    <p>شكراً لتسجيل اهتمامك. سيتواصل معك أحد مسؤولي المبيعات قريباً.</p>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -317,7 +377,24 @@
         <i class="fa-solid fa-arrow-up"></i>
     </a>
 
-    <script src="script.js?v=3"></script>
+    <!-- ================= KANDEEL REGISTRATION MODAL POPUP ================= -->
+    <div class="kayan-modal-overlay" id="kayanRegisterModal" aria-hidden="true" role="dialog">
+        <div class="kayan-modal-dialog">
+            <button type="button" class="kayan-modal-close" id="closeRegisterModalBtn" aria-label="إغلاق">&times;</button>
+            <div class="kayan-modal-header">
+                <h3 class="kayan-modal-title"><i class="fa-solid fa-pen-to-square"></i> سجل الآن</h3>
+            </div>
+            <form id="kayanRegisterForm" class="kayan-modal-form" novalidate>
+                <div class="kayan-form-row">
+                    <div class="kayan-form-group">
+                        <label for="regName">اسمك <span class="req">*</span></label>
+                        <div class="kayan-input-wrap">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="regName" name="name" required placeholder="الاسم بالكامل">
+                        </div>
+                    </div>
+
+    <script src="script.js?v=5"></script>
 </div>
 </body>
 </html>

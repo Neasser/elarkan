@@ -785,8 +785,142 @@ function initConstructionsPage() {
 }
 window.initConstructionsPage = initConstructionsPage;
 
+/* ================= KANDEEL REGISTRATION MODAL POPUP ================= */
+function initRegisterModal() {
+    function getModal() {
+        return document.getElementById('kayanRegisterModal');
+    }
+
+    function openModal(e) {
+        if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        var m = getModal();
+        if (!m) return;
+        m.classList.add('active');
+        m.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        var nameInput = document.getElementById('regName');
+        if (nameInput) {
+            setTimeout(function() { nameInput.focus(); }, 150);
+        }
+    }
+
+    function closeModal() {
+        var m = getModal();
+        if (!m) return;
+        m.classList.remove('active');
+        m.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    window.openRegisterModal = openModal;
+    window.closeRegisterModal = closeModal;
+
+    // Attach direct click listeners to all buttons matching register
+    document.querySelectorAll('.kayan-bar-register, #openRegisterModalBtn, [data-open-modal="register"]').forEach(function(btn) {
+        btn.addEventListener('click', openModal);
+    });
+
+    // Delegation on document body
+    document.addEventListener('click', function(e) {
+        var trigger = e.target.closest('.kayan-bar-register, #openRegisterModalBtn, [data-open-modal="register"]');
+        if (trigger) {
+            e.preventDefault();
+            openModal(e);
+            return;
+        }
+
+        var closeBtn = e.target.closest('#closeRegisterModalBtn, .kayan-modal-close');
+        if (closeBtn) {
+            e.preventDefault();
+            closeModal();
+            return;
+        }
+
+        var m = getModal();
+        if (m && e.target === m) {
+            closeModal();
+        }
+    });
+
+    // Escape key listener
+    document.addEventListener('keydown', function(e) {
+        var m = getModal();
+        if (e.key === 'Escape' && m && m.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+    // Form submission
+    document.addEventListener('submit', function(e) {
+        if (e.target && e.target.id === 'kayanRegisterForm') {
+            e.preventDefault();
+            var form = e.target;
+            var name = document.getElementById('regName');
+            var phone = document.getElementById('regPhone');
+            var phoneConfirm = document.getElementById('regPhoneConfirm');
+            var mismatchMsg = document.getElementById('phoneMismatchMsg');
+            var submitBtn = document.getElementById('submitRegisterBtn');
+            var successMsg = document.getElementById('regSuccessMsg');
+
+            var isValid = true;
+            [name, phone, phoneConfirm].forEach(function(input) {
+                if (input) input.classList.remove('input-error');
+            });
+            if (mismatchMsg) mismatchMsg.style.display = 'none';
+
+            if (!name || !name.value.trim()) {
+                if (name) { name.classList.add('input-error'); name.focus(); }
+                isValid = false;
+                return;
+            }
+
+            if (!phone || !phone.value.trim()) {
+                if (phone) { phone.classList.add('input-error'); phone.focus(); }
+                isValid = false;
+                return;
+            }
+
+            if (!phoneConfirm || !phoneConfirm.value.trim()) {
+                if (phoneConfirm) { phoneConfirm.classList.add('input-error'); phoneConfirm.focus(); }
+                isValid = false;
+                return;
+            }
+
+            if (phone.value.trim() !== phoneConfirm.value.trim()) {
+                if (phoneConfirm) phoneConfirm.classList.add('input-error');
+                if (mismatchMsg) mismatchMsg.style.display = 'block';
+                phoneConfirm.focus();
+                isValid = false;
+                return;
+            }
+
+            if (isValid) {
+                if (submitBtn) submitBtn.style.display = 'none';
+                var rows = form.querySelectorAll('.kayan-form-row, .kayan-form-group');
+                rows.forEach(function(r) { r.style.display = 'none'; });
+                if (successMsg) successMsg.style.display = 'block';
+
+                setTimeout(function() {
+                    closeModal();
+                    setTimeout(function() {
+                        form.reset();
+                        rows.forEach(function(r) { r.style.display = ''; });
+                        if (submitBtn) submitBtn.style.display = '';
+                        if (successMsg) successMsg.style.display = 'none';
+                    }, 400);
+                }, 2800);
+            }
+        }
+    });
+}
+window.initRegisterModal = initRegisterModal;
+
 // Auto-run helpers on page load
 document.addEventListener('DOMContentLoaded', function() {
     initHeroSlider();
     initProjectConstructionTab();
+    initRegisterModal();
 });
