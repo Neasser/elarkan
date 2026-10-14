@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="stylesheet" href="style.css?v=3">
+    <script src="data/constructions.js"></script>
 </head>
 <body>
 
@@ -86,13 +87,19 @@
                 <div class="kayan-project-main-col">
                     
                     <!-- 1. LOCATION MAP HERO (PRIMARY IMAGE AS SPECIFIED IN PLAN) -->
-                    <div class="kayan-project-map-hero">
-                        <div class="kayan-project-map-hero-header">
-                            <h3><i class="fa-solid fa-map-location-dot"></i> خريطة موقع المشروع المعتمدة</h3>
-                            <span>رسم توضيحي دقيق للمعالم والمحاور المحيطة بالمشروع</span>
+                    <!-- ================= CONSTRUCTION PROGRESS SECTION (R11) ================= -->
+                    <div class="kayan-single-card" id="projectConstructionProgressSection" style="margin-top:35px;">
+                        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:20px; border-bottom:1px solid var(--kayan-border); padding-bottom:14px;">
+                            <h3 class="kayan-single-card-title" style="margin:0;">
+                                <i class="fa-solid fa-helmet-safety" style="color:var(--color-primary); margin-left:8px;"></i>
+                                الموقف التنفيذي وتطور أعمال البناء
+                            </h3>
+                            <a href="constructions.html" style="color:var(--color-primary); font-size:13px; font-weight:700; text-decoration:none;">
+                                صفحة الإنشاءات الشاملة <i class="fa-solid fa-arrow-left"></i>
+                            </a>
                         </div>
-                        <div class="kayan-project-map-wrapper">
-                            <img src="images/map-a61.png" alt="خريطة موقع مشروع A61 – الحي الرابع | بيت الوطن" id="projectLocationMap" title="انقر للمعاينة">
+                        <div id="projectConstructionStagesContainer" data-project-id="a61">
+                            <!-- Rendered dynamically from data/constructions.js -->
                         </div>
                     </div>
 
@@ -322,7 +329,53 @@
                         </div>
 
                     </div>
-                </aside>
+                <!-- R10. Sidebar Location Map -->
+                        <div class="kayan-sidebar-box" style="margin-top:20px;">
+                            <h3 style="font-size:18px; color:var(--color-primary); margin-bottom:14px; font-family:var(--kayan-font-title);">
+                                <i class="fa-solid fa-map-location-dot"></i> خريطة موقع المشروع
+                            </h3>
+                            <div class="kayan-project-map-wrapper" style="border-radius:8px; overflow:hidden; border:1px solid #2a2a2a;">
+                                <img src="images/map-a61.png" alt="خريطة موقع مشروع A61 – الحي الرابع بيت الوطن" id="projectLocationMap" style="width:100%; height:auto; display:block; cursor:pointer;" onclick="window.openImageLightbox(this.src)" title="انقر لتكبير الخريطة">
+                            </div>
+                        </div>
+
+                        <!-- R10. Sidebar Booking Form -->
+                        <div class="kayan-sidebar-box" style="margin-top:20px;">
+                            <h3 style="font-size:18px; color:var(--color-primary); margin-bottom:12px; font-family:var(--kayan-font-title);">
+                                <i class="fa-solid fa-file-signature"></i> استمارة حجز الوحدة
+                            </h3>
+                            <p style="color:#aaa; font-size:13px; line-height:1.6; margin-bottom:14px;">
+                                سجل بياناتك للتواصل المباشر مع استشاري المشروع وحجز موعد معاينة:
+                            </p>
+                            <form class="kayan-booking-form" id="sidebarBookingForm" onsubmit="window.handleBookingSubmit(event, 'مشروع A61 – الحي الرابع بيت الوطن')">
+                                <input type="hidden" name="project_name" value="مشروع A61 – الحي الرابع بيت الوطن">
+                                <div class="form-group" style="margin-bottom:12px;">
+                                    <label style="display:block; font-size:13px; color:#ccc; margin-bottom:5px;">الاسم الكريم</label>
+                                    <input type="text" name="client_name" placeholder="أدخل اسمك" style="width:100%; background:#0d0d0d; border:1px solid #282828; color:#fff; padding:10px 14px; border-radius:8px; font-family:inherit; font-size:14px;">
+                                </div>
+                                <div class="form-group" style="margin-bottom:12px;">
+                                    <label style="display:block; font-size:13px; color:#ccc; margin-bottom:5px;">رقم التليفون / واتساب</label>
+                                    <input type="tel" name="phone" placeholder="01xxxxxxxxx" style="width:100%; background:#0d0d0d; border:1px solid #282828; color:#fff; padding:10px 14px; border-radius:8px; font-family:inherit; font-size:14px;">
+                                </div>
+                                <div class="form-group" style="margin-bottom:12px;">
+                                    <label style="display:block; font-size:13px; color:#ccc; margin-bottom:5px;">نوع الوحدة المفضلة</label>
+                                    <select name="unit_type" style="width:100%; background:#0d0d0d; border:1px solid #282828; color:#fff; padding:10px 14px; border-radius:8px; font-family:inherit; font-size:14px;">
+                                        <option value="شقق">شقق متكرر</option>
+                                        <option value="أرضي بحديقة">أرضي بحديقة</option>
+                                        <option value="بنتهاوس">بنتهاوس</option>
+                                        <option value="دوبلكس">دوبلكس</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" style="margin-bottom:14px;">
+                                    <label style="display:block; font-size:13px; color:#ccc; margin-bottom:5px;">استفسار أو ملاحظة إضافية</label>
+                                    <textarea name="notes" rows="2" placeholder="أي تفاصيل تود السؤال عنها..." style="width:100%; background:#0d0d0d; border:1px solid #282828; color:#fff; padding:10px 14px; border-radius:8px; font-family:inherit; font-size:14px;"></textarea>
+                                </div>
+                                <button type="submit" class="kayan-btn kayan-btn-gold" style="width:100%; justify-content:center; text-align:center;">
+                                    <i class="fa-solid fa-paper-plane"></i> إرسال استمارة الحجز
+                                </button>
+                            </form>
+                        </div>
+</aside>
 
             </div>
         </div>

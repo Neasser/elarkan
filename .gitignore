@@ -4,6 +4,7 @@ plan.md
 *.zip
 *.tar.gz
 *.rar
+*.md
 .tempmediaStorage/
 scratch/
 node_modules/

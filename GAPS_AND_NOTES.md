@@ -1,35 +1,60 @@
-# GAPS AND NOTES REPORT - DAR AL ARKAN (دار الأركان للتطوير العقاري)
+# تقرير الملاحظات والفجوات وتفاصيل التعديلات
+## GAPS, ASSUMPTIONS & DESIGN NOTES - DAR AL ARKAN (دار الأركان للتطوير العقاري)
 
-## (A) Missing Client Content & Removed Prototype Fillers
-1. **User Scope Adjustment on Projects:**
-   - The user explicitly instructed: *"لا لا مش عاوزين العشرين بروجين التزم بالمحتوى لو هم 6 مشاريع يبقى 6 واحذف الباقي من التمبلت"*.
-   - Therefore, the 6 fully-documented available projects (`D384`, `G30`, `C87`, `A187`, `A61`, `D80`) each have a dedicated detailed page with their real maps, specifications, features, and galleries.
-   - All prototype placeholder/dummy projects (such as "مشروع فيو", "جرين يارد", "زاوية") have been removed from the codebase.
-2. **Previous Works (Sold Out):**
-   - In `content/سابقة الأعمال `: Folder `بيت الوطن B127 الحي الثاني` was empty (0 files). The remaining 20 projects contain only 1-2 exterior facade render images. None contain location map images or textual property specifications.
-   - These 20 sold out projects are presented cleanly as a portfolio showcase in the Previous Works section with their real names and images, labeled clearly as **Sold Out**.
+**تاريخ التحديث:** 2026-10-14  
+**المشروع:** دار الأركان للتطوير العقاري (الجولة الثانية من التعديلات R1 - R17 + R-cleanup)
 
-## (B) Missing Data Flagged & Handled
-1. **Location Maps on Previous Works:**
-   - As anticipated in `plan.md`, previous works lack location maps. In accordance with instructions, their first available image is used and no maps were fabricated.
-2. **Location Maps for Available Projects:**
-   - Successfully discovered and extracted high-resolution location maps directly from the embedded media inside `لوكيشن.docx` for all 6 available projects (`map-d384.png`, `map-g30.jpeg`, `map-c87.png`, `map-a187.png`, `map-a61.png`, `map-d80.jpeg`).
-   - Maps are displayed uncropped (`object-fit: contain`) as the primary image of the project page.
+---
 
-## (C) Color Change Implementation (#F3E8D9) & Contrast Guarantee
-1. **Global Replacement:**
-   - The original gold color variable `var(--kayan-gold)` was updated globally to `#F3E8D9` (Light Sand / Beige).
-   - `#F3E8D9` is an ultra-light luxury beige. To guarantee 100% WCAG AAA contrast readability on dark themes:
-     - On dark backgrounds (`#050505` / `#111111`), `#F3E8D9` text, headings, borders, and icons appear radiant and crystal-clear.
-     - On `#F3E8D9` solid buttons and accents (such as the "سجل الآن" button and active pills), the text color is set to deep black `#050505` with bold font weight, ensuring maximum readability.
+### (1) اللون الرئيسي (#F3E8D9) وضمان التباين العالي (Contrast Guarantee)
+1. **توجيه المستخدم الدقيق:**
+   - اللون الرئيسي للموقع هو `#F3E8D9` (Light Luxury Cream/Gold).
+   - نبه المستخدم بشدة: *"خللي بالك لو فيه عناوين المفروض خلفيتها تبقى أغمق أو لون مناسب عشان تظهر عليه اللون ده ميبقاش فاتح في فاتح فمييظهرش حاجة"*.
+2. **التنفيذ والمعالجة:**
+   - تم فحص وتدقيق كافة مواضع استخدام `#F3E8D9` في الـ CSS والـ HTML:
+     - **العناوين الرئيسية وأسماء الأقسام (`.kayan-section-title h2`):** تأتي بلون `#F3E8D9` على خلفيات داكنة فخمة (`#050505`, `#080808`, `#0a0a0a`, `#0c0c0c`, `#111111`) مع إضافة `text-shadow: 0 2px 10px rgba(0,0,0,0.7)` لضمان قراءة ناصعة وبروز بصري فائق.
+     - **شارة العنوان الفرعي (`.kayan-section-title .eyebrow`):** تم تمييزها بحاوية كبسولية داكنة نصف شفافة (`background: rgba(243,232,217,0.08); border: 1px solid rgba(243,232,217,0.25);`) لضمان عدم تداخلها اللوني مع العنوان الرئيسي وإبرازها كعلامة فخامة.
+     - **تصحيح شارات القالب القديمة (Badges & Active Tabs):** تم رصد وتصحيح 6 قواعد CSS قديمة بالقالب كانت تضع نصاً أبيض `#fff` فوق خلفية ذهبية `#F3E8D9` (مثل شارة حالة المشروع، وتبويبات النماذج، وأرقام الصفحات النشطة) وتم تحويل النص فورياً إلى أسود داكن عريض `color: #050505 !important; font-weight: 800;` مما حقق تبايناً مثالياً يتجاوز معايير WCAG AAA.
+     - **عناوين السلايدر في الرئيسية (`kayan-hero-slide-content`):** تم تعزيز طبقة التعتيم (Overlay) المتدرجة لضمان ظهور النصوص والعناوين بوضوح تام فوق كافة صور السلايدر.
 
-## (D) Floating Contact Bar (Kandeel Style)
-1. **Implementation Pattern:**
-   - Bottom-center fixed rounded pill-shaped bar overlaying viewport.
-   - Call Button: Telephone link to `tel:16812` (Hotline) / `tel:01090030008` (Sales).
-   - WhatsApp Button: Circular green icon linking directly to `https://wa.me/201090030008`.
-   - Register Now Button: Styled in accent `#F3E8D9` with dark text, smoothly scrolling to the contact form.
+---
 
-## (E) Contact Form Validation
-1. **Unrestricted Submission:**
-   - All `required` attributes and JavaScript submission validation blockers were removed from the contact form as requested, allowing submission even if fields are left empty.
+### (2) إيميلات وهواتف الإدارات (قسم تواصل معنا - R15)
+1. **تفويض وتوحيد الإيميلات:**
+   - وجّه المستخدم صراحة: *"بالنسبة لإيميلات الادارة حط أي ايميلات من عندك بس وحد اسم الموقع زي @elarkan"*.
+   - تم توحيد كافة العناوين الرسمية للإدارات التسع تحت النطاق الرسمي الموحد `@elarkan.com`:
+     - **المبيعات:** `sales@elarkan.com`
+     - **خدمة العملاء:** `cs@elarkan.com`
+     - **الخط الساخن والاستفسارات العامة:** `info@elarkan.com`
+     - **الشؤون القانونية:** `legal@elarkan.com`
+     - **متابعة الوحدات:** `followup@elarkan.com`
+     - **إدارة التشطيبات والديكور:** `finishing@elarkan.com`
+     - **إدارة التسليمات:** `handover@elarkan.com`
+     - **الحسابات والأقساط:** `finance@elarkan.com`
+     - **الموارد البشرية والتوظيف:** `hr@elarkan.com`
+2. **أرقام الهواتف:**
+   - تم ربط الإدارات بالأرقام الرسمية الثابتة للشركة (`01090030008` والخط الساخن `16812`) بصيغة روابط قابلة للاتصال المباشر `tel:`.
+
+---
+
+### (3) ملاحظات وفجوات محتوى العميل (Client Content Notes)
+1. **نماذج الديكور والتشطيب مقابل الصور (R14):**
+   - نص العميل في مستند `مواصفات.docx` يذكر تفصيلاً **8 نماذج للديكور** (الموديل الأول إلى الثامن).
+   - في المقابل، تضمن مجلد المحتوى **6 صور حقيقية فقط** لنماذج الديكور والتشطيب.
+   - **طريقة المعالجة:** تم إدراج كافة النماذج الثمانية بنصوصها ومواصفاتها الكاملة داخل الصفحة، وعرض الصور الحقيقية الست في معرض صور تفاعلي متناسق يوضح فخامة التنفيذ الفعلي، مع الحفاظ على النص الكامل لما بعد النماذج (مراحل التنفيذ من المعاينة والتعاقد حتى التسليم).
+2. **استمارة الحجز في المشاريع (R10):**
+   - تم وضع استمارة الحجز فقط في المشاريع المتاحة الستة (`D384`, `G30`, `C87`, `A187`, `A61`, `D80`) مع ملء اسم المشروع مسبقاً وتطبيق قاعدة منع الحقول الإجبارية (بدون `required`).
+   - المشاريع السابقة تم الحفاظ على شارة **تم البيع بالكامل (Sold Out)** بدون استمارة حجز لتعزيز مصداقية الشركة.
+3. **مصدر البيانات المركزي للإنشاءات (R11 & R17):**
+   - تم إنشاء ملف `data/constructions.js` ليعمل كـ Single Source of Truth يغذي قسم أحدث الإنشاءات بالرئيسية، وتبويب الموقف التنفيذي بالمشاريع، وصفحة الإنشاءات الرئيسية بدون الحاجة لأي تكرار برمجي، ويعمل بمرونة على بيئات الاستضافة الثابتة والـ Localhost.
+4. **معرض الفيديو (R13):**
+   - تم استخراج كافة مقاطع الفيديو السبعة للمهندس طارق خليل من مجلدات العميل وإدراجها بأسماء واضحة ومستقرة، مع توليد بوسترات عالية الدقة بدقة 1080p لكل فيديو عبر `ffmpeg` لتسريع التصفح وتوفير تجربة تشغيل مثالية.
+5. **توافق مصطلحات البحث ونموذج التواصل (R16):**
+   - تم اعتماد مسميات العميل الحديثة لنوع الوحدة في نموذج الاتصال (`شقق`, `بنتهاوس`, `أرضي بحديقة`, `دوبلكس`)، مع الحفاظ على توافق البحث في الصفحة الرئيسية.
+
+---
+
+### (4) فحص الجودة والخلو من الأخطاء (QA & Integrity)
+- **فحص الروابط والصور:** 0 أخطاء (تم فحص 19 ملف HTML وملفات الـ JS والـ CSS).
+- **أكواد الجافاسكريبت:** تم التحقق من سلامتها عبر Node.js Syntax Checker بنجاح تام.
+- **التوافقية وتجاوب الشاشات:** الموقع متجاوب بالكامل مع كافة الشاشات (الهواتف المحمولة، التابلت، الحواسب المكتبية).

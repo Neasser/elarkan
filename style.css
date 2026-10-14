@@ -7,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@400;600;700&display=swap');
 
 :root{
+    --color-primary:#F3E8D9;
     --kayan-navy:#f5f5f5;
     --kayan-navy-2:#d8d8d8;
     --kayan-gold:#F3E8D9;
@@ -163,7 +164,7 @@ a:hover {
 
 .kayan-nav > ul > li > a:hover,
 .kayan-nav > ul > li.active > a{
-    color:var(--kayan-gold);
+    color:var(--color-primary) !important;
 }
 
 .kayan-nav > ul > li.active > a{
@@ -525,12 +526,12 @@ button.kayan-btn-gold {
     position:absolute;
     top:14px;
     right:14px;
-    background:var(--kayan-gold);
-    color:#fff;
+    background:var(--color-primary);
+    color:#050505 !important;
     padding:5px 13px;
     border-radius:20px;
     font-size:11px;
-    font-weight:700;
+    font-weight:800;
 }
 
 .kayan-whatsapp-project{
@@ -1676,7 +1677,8 @@ button.kayan-btn-gold {
 .kayan-page-num.active{
     background:var(--kayan-gold);
     border-color:var(--kayan-gold);
-    color:#fff;
+    color:#050505 !important;
+    font-weight:700;
 }
 
 /* --- SINGLE PROJECT DETAILS --- */
@@ -1884,7 +1886,8 @@ button.kayan-btn-gold {
 .kayan-unit-tab:hover{
     background:var(--kayan-gold);
     border-color:var(--kayan-gold);
-    color:#fff;
+    color:#050505 !important;
+    font-weight:700;
 }
 
 .kayan-unit-detail{
@@ -2046,7 +2049,8 @@ button.kayan-btn-gold {
 .kayan-calc-opt:hover{
     background:var(--kayan-gold);
     border-color:var(--kayan-gold);
-    color:#fff;
+    color:#050505 !important;
+    font-weight:700;
 }
 
 .kayan-calc-result-box{
@@ -2328,7 +2332,7 @@ button.kayan-btn-gold {
 
 .kayan-share-btn:hover{
     background:var(--kayan-gold);
-    color:#fff;
+    color:#050505 !important;
     border-color:var(--kayan-gold);
 }
 
@@ -3142,10 +3146,10 @@ button.kayan-btn-gold {
     position:absolute;
     top:-12px;
     right:24px;
-    background:var(--kayan-gold);
-    color:#fff;
+    background:var(--color-primary);
+    color:#050505 !important;
     font-size:11px;
-    font-weight:700;
+    font-weight:800;
     padding:4px 14px;
     border-radius:20px;
 }
@@ -4639,4 +4643,583 @@ input[type="submit"].kayan-btn-gold:hover {
     background: #ffffff !important;
     color: #050505 !important;
     border-color: #ffffff !important;
+}
+
+
+/* =========================================================
+   ROUND 2 REVISIONS - DAR AL ARKAN (R1 - R17)
+========================================================= */
+
+/* R1. Primary color on section titles & icons */
+.kayan-section-title h2 {
+    color: var(--color-primary) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+.kayan-section-title .eyebrow {
+    color: var(--color-primary) !important;
+    background: rgba(243, 232, 217, 0.08);
+    border: 1px solid rgba(243, 232, 217, 0.25);
+    padding: 4px 14px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 700;
+}
+.kayan-feature-icon,
+.kayan-spec-icon,
+.kayan-contact-icon,
+.kayan-model-specs span i,
+.kayan-project-details-card i {
+    color: var(--color-primary);
+}
+
+/* R3. Header hotline hover color = primary color */
+.kayan-hotline {
+    background: rgba(243, 232, 217, 0.08) !important;
+    border: 1px solid rgba(243, 232, 217, 0.35) !important;
+    color: #ffffff !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.kayan-hotline:hover,
+a.kayan-hotline:hover {
+    background: rgba(243, 232, 217, 0.16) !important;
+    color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(243, 232, 217, 0.22);
+}
+.kayan-hotline:hover span,
+.kayan-hotline:hover i {
+    color: var(--color-primary) !important;
+}
+
+/* R4. Sticky floating contact bar phone icon = primary color */
+.kayan-bar-call i {
+    color: var(--color-primary) !important;
+}
+.kayan-bar-call:hover {
+    color: var(--color-primary) !important;
+}
+.kayan-bar-call:hover i {
+    color: var(--color-primary) !important;
+}
+
+/* R5. Search icons = primary color */
+.kayan-search-btn i,
+.kayan-search-inline i,
+#homeSearchSubmit i {
+    color: var(--color-primary) !important;
+}
+
+/* R9. Footer divider line in primary color */
+.kayan-footer {
+    border-top: 1.5px solid var(--color-primary) !important;
+    position: relative;
+    box-shadow: 0 -4px 25px rgba(243, 232, 217, 0.08);
+}
+
+/* R2. Hero Slider (Autoplay, smooth RTL transition, dots, arrows) */
+.kayan-hero-slider {
+    position: relative;
+    width: 100%;
+    height: 82vh;
+    min-height: 580px;
+    max-height: 800px;
+    overflow: hidden;
+    background: #000;
+}
+.kayan-hero-slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.kayan-hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    transform: scale(1.04);
+}
+.kayan-hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 1;
+}
+.kayan-hero-slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.kayan-hero-slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(5,5,5,0.4) 0%, rgba(5,5,5,0.85) 85%, #050505 100%),
+                linear-gradient(90deg, rgba(5,5,5,0.7) 0%, rgba(5,5,5,0.2) 100%);
+}
+.kayan-hero-slide-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 850px;
+}
+.kayan-hero-slide-content .kayan-badge {
+    margin-bottom: 14px;
+}
+.kayan-hero-slide-content h1 {
+    font-size: 44px;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    color: #ffffff;
+    font-family: var(--kayan-font-title);
+}
+.kayan-hero-slide-content h1 span {
+    color: var(--color-primary);
+    display: block;
+}
+.kayan-hero-slide-content p {
+    font-size: 17px;
+    color: #d0d0d0;
+    margin-bottom: 26px;
+    line-height: 1.8;
+}
+.kayan-slider-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(17, 17, 17, 0.7);
+    border: 1px solid rgba(243, 232, 217, 0.35);
+    color: var(--color-primary);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.25s ease;
+}
+.kayan-slider-nav-btn:hover {
+    background: var(--color-primary);
+    color: #050505;
+    border-color: var(--color-primary);
+    transform: translateY(-50%) scale(1.08);
+}
+.kayan-slider-prev {
+    right: 25px;
+}
+.kayan-slider-next {
+    left: 25px;
+}
+.kayan-slider-dots {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+.kayan-slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(243, 232, 217, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.kayan-slider-dot.active {
+    width: 32px;
+    border-radius: 12px;
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+/* R10. Sidebar Location Map & Booking Form */
+.kayan-sidebar-box {
+    background: var(--kayan-card-bg);
+    border: 1px solid var(--kayan-border);
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.kayan-sidebar-box h3 {
+    font-size: 20px;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+    font-family: var(--kayan-font-title);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.kayan-sidebar-map-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: block;
+}
+.kayan-sidebar-map-img:hover {
+    transform: scale(1.02);
+}
+.kayan-booking-form .form-group {
+    margin-bottom: 14px;
+}
+.kayan-booking-form label {
+    display: block;
+    font-size: 13px;
+    color: #ccc;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+.kayan-booking-form input,
+.kayan-booking-form select,
+.kayan-booking-form textarea {
+    width: 100%;
+    background: #0d0d0d;
+    border: 1px solid #282828;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.25s ease;
+}
+.kayan-booking-form input:focus,
+.kayan-booking-form select:focus,
+.kayan-booking-form textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+.kayan-booking-form button {
+    width: 100%;
+    margin-top: 6px;
+}
+
+/* R11 & R17: Construction Progress Tabs & Stage Cards */
+.kayan-tabs-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--kayan-border);
+    padding-bottom: 15px;
+}
+.kayan-tab-btn {
+    background: #111111;
+    border: 1px solid var(--kayan-border);
+    color: #ccc;
+    padding: 10px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+.kayan-tab-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+.kayan-tab-btn.active {
+    background: var(--color-primary);
+    color: #050505 !important;
+    border-color: var(--color-primary);
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(243, 232, 217, 0.2);
+}
+.kayan-stage-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+}
+.kayan-stage-card {
+    background: var(--kayan-card-bg);
+    border: 1px solid var(--kayan-border);
+    border-radius: 14px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+.kayan-stage-card:hover {
+    border-color: rgba(243, 232, 217, 0.4);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+.kayan-stage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.kayan-stage-header h4 {
+    color: var(--color-primary);
+    font-size: 20px;
+    margin: 0;
+    font-family: var(--kayan-font-title);
+}
+.kayan-stage-date {
+    background: rgba(243, 232, 217, 0.1);
+    color: var(--color-primary);
+    border: 1px solid rgba(243, 232, 217, 0.3);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.kayan-stage-desc {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+.kayan-stage-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 14px;
+}
+.kayan-stage-thumb {
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #222;
+}
+.kayan-stage-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.kayan-stage-thumb:hover img {
+    transform: scale(1.05);
+}
+
+/* R13. Video Gallery Grid & Modal */
+.kayan-video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+.kayan-video-card {
+    background: var(--kayan-card-bg);
+    border: 1px solid var(--kayan-border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.kayan-video-card:hover {
+    border-color: rgba(243, 232, 217, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.5);
+}
+.kayan-video-cover-wrap {
+    position: relative;
+    height: 210px;
+    background: #000;
+    cursor: pointer;
+    overflow: hidden;
+}
+.kayan-video-cover-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.kayan-video-card:hover .kayan-video-cover-wrap img {
+    transform: scale(1.05);
+}
+.kayan-video-play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(17, 17, 17, 0.85);
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+.kayan-video-card:hover .kayan-video-play-overlay {
+    background: var(--color-primary);
+    color: #050505;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+.kayan-video-info {
+    padding: 18px;
+}
+.kayan-video-info h4 {
+    color: #ffffff;
+    font-size: 17px;
+    margin: 0 0 8px;
+    line-height: 1.4;
+}
+.kayan-video-info p {
+    color: #aaa;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* Video Modal */
+.kayan-video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 20px;
+}
+.kayan-video-modal.active {
+    display: flex;
+}
+.kayan-video-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.9);
+    border: 1px solid var(--kayan-border);
+}
+.kayan-video-modal-close {
+    position: absolute;
+    top: -45px;
+    left: 0;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+.kayan-video-modal-close:hover {
+    color: var(--color-primary);
+}
+
+/* R15: Department Contact Cards */
+.kayan-depts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+.kayan-dept-card {
+    background: var(--kayan-card-bg);
+    border: 1px solid var(--kayan-border);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+.kayan-dept-card:hover {
+    border-color: rgba(243, 232, 217, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+.kayan-dept-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.kayan-dept-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(243, 232, 217, 0.08);
+    border: 1px solid rgba(243, 232, 217, 0.25);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+.kayan-dept-title {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0;
+}
+.kayan-dept-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #222;
+}
+.kayan-dept-link {
+    color: #ccc;
+    font-size: 13px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s ease;
+}
+.kayan-dept-link i {
+    color: var(--color-primary);
+    font-size: 12px;
+}
+.kayan-dept-link:hover {
+    color: var(--color-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .kayan-hero-slider {
+        height: 65vh;
+        min-height: 480px;
+    }
+    .kayan-hero-slide-content h1 {
+        font-size: 28px;
+    }
+    .kayan-hero-slide-content p {
+        font-size: 14px;
+    }
+    .kayan-slider-nav-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+    .kayan-slider-prev { right: 10px; }
+    .kayan-slider-next { left: 10px; }
 }
