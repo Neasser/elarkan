@@ -5,43 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مواصفات التسليم والتشطيب | دار الأركان للتطوير العقاري</title>
     <meta name="description" content="مواصفات التسليم والتجهيز القياسية لمشروعات دار الأركان بالتجمع الخامس، أعلى معايير الأمان، العزل الحراري، المصاعد، والجراجات.">
-    <link rel="stylesheet" href="style.css?v=4">
+        <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="icon" href="images/logo-dar-arkan.png" type="image/png">
     <link rel="icon" href="images/logo-dar-arkan.png" type="image/png">
     <script src="data/constructions.js"></script>
 </head>
-<body class="kayan-page">
+<body>
 
-    <!-- ================= TOPBAR ================= -->
-    <div class="kayan-topbar">
-        <div class="kayan-container">
-            <div class="kayan-topbar-inner">
-                <div class="kayan-topbar-info">
-                    <span><i class="fa-solid fa-location-dot"></i> التجمع الخامس – مبنى كريستال عصفور</span>
-                    <span><i class="fa-regular fa-clock"></i> يومياً 9:00 ص - 6:00 م</span>
-                </div>
-                <div class="kayan-topbar-links">
-                    <a href="https://www.facebook.com/DarElArkanEG" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/dar_el_arkan" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@darelarkandevelopment" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="https://wa.me/201090030008" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ================= MAIN HEADER ================= -->
+        <!-- ================= HEADER ================= -->
     <header class="kayan-header" id="kayanHeader">
         <div class="kayan-container kayan-header-inner">
             <a href="index.html" class="kayan-logo">
-                <img src="images/logo-dar-arkan.png" alt="دار الأركان للتطوير العقاري" class="kayan-logo-img">
+                <img src="images/logo-dar-arkan.png" alt="دار الأركان للتطوير العقاري" class="kayan-brand-logo">
             </a>
 
-            <button class="kayan-mobile-toggle" id="kayanMobileToggle" aria-label="فتح القائمة">
-                <span></span><span></span><span></span>
+            <button type="button" class="kayan-mobile-toggle" id="kayanMobileToggle" aria-label="القائمة الرئيسية" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
             </button>
 
-            <nav class="kayan-nav-wrap" id="kayanNavWrap">
-                <ul class="kayan-nav">
+            <nav class="kayan-nav" id="kayanNav">
+                <ul>
                     <li><a href="index.html">الرئيسية</a></li>
                     <li><a href="about.html">من نحن</a></li>
                     <li>
@@ -55,17 +40,17 @@
                     <li>
                         <a href="gallery.html">المعرض <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i></a>
                         <div class="kayan-dropdown">
-                            <a href="events.html">الأخبار والفاعليات</a>
+                            <a href="events.html">الفعاليات والأخبار</a>
                             <a href="gallery.html">الصور والفيديوهات</a>
                             <a href="blog.html">المدونة والمقالات</a>
                             <a href="careers.html">التوظيف</a>
                         </div>
                     </li>
-                    <li>
-                        <a href="finishing-specs.html" class="active">التشطيبات <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i></a>
+                    <li class="active">
+                        <a href="finishing-specs.html">التشطيبات <i class="fa-solid fa-chevron-down" style="font-size:10px; margin-right:4px;"></i></a>
                         <div class="kayan-dropdown">
-                            <a href="finishing-specs.html" class="active">مواصفات التشطيب</a>
-                            <a href="finishing-decor.html">تشطيب وديكور الوحدات</a>
+                            <a href="finishing-specs.html">مواصفات التشطيب</a>
+                            <a href="finishing-decor.html">تشطيبات وديكورات الوحدات</a>
                         </div>
                     </li>
                     <li><a href="constructions.html">الإنشاءات</a></li>
@@ -78,29 +63,6 @@
             </a>
         </div>
     </header>
-
-    <!-- ================= MOBILE MENU DRAWER ================= -->
-    <div class="kayan-mobile-menu" id="kayanMobileMenu">
-        <div class="kayan-mobile-menu-header">
-            <img src="images/logo-dar-arkan.png" alt="دار الأركان" style="height:38px;">
-            <button class="kayan-mobile-close" id="kayanMobileClose" aria-label="إغلاق القائمة">&times;</button>
-        </div>
-        <nav class="kayan-mobile-nav">
-            <a href="index.html">الرئيسية</a>
-            <a href="about.html">من نحن</a>
-            <a href="projects.html">جميع المشروعات</a>
-            <a href="projects.html?status=current">المشروعات المتاحة</a>
-            <a href="projects.html?status=delivered">سابقة الأعمال</a>
-            <a href="events.html">الأخبار والفاعليات</a>
-            <a href="gallery.html">الصور والفيديوهات</a>
-            <a href="blog.html">المدونة والمقالات</a>
-            <a href="careers.html">التوظيف</a>
-            <a href="finishing-specs.html" class="active">مواصفات التشطيب</a>
-            <a href="finishing-decor.html">تشطيب وديكور الوحدات</a>
-            <a href="constructions.html">الإنشاءات</a>
-            <a href="contact.html">اتصل بنا</a>
-        </nav>
-    </div>
 
     <!-- ================= PAGE HEADER ================= -->
     <section class="kayan-page-header">
@@ -266,55 +228,69 @@
     <footer class="kayan-footer">
         <div class="kayan-container">
             <div class="kayan-footer-grid">
-                <div class="kayan-footer-col">
-                    <div class="kayan-footer-logo">
-                        <img src="images/logo-dar-arkan.png" alt="دار الأركان للتطوير العقاري" style="max-width:180px; margin-bottom:15px;">
-                        <p style="color:#aaa; font-size:13px; line-height:1.8;">
-                            شركة رائدة في التطوير العقاري بالتجمع الخامس، متخصصة في المشروعات السكنية الراقية بأعلى معايير الالتزام وجودة التنفيذ.
-                        </p>
+                <div class="kayan-footer-logo">
+                    <img src="images/logo-dar-arkan.png" alt="دار الأركان للتطوير العقاري" style="height:55px; margin-bottom:15px;">
+                    <p>
+                        تأسست دار الأركان للتطوير العقاري عام 2015 بقيادة رجل الأعمال المهندس طارق خليل. خبرة ممتدة لأكثر من 16 عاماً وأكثر من 100 مشروع متميز في أرقى مناطق القاهرة الجديدة قائمة على جودة التنفيذ، الالتزام، والشفافية.
+                    </p>
+                    <div class="kayan-footer-social">
+                        <a href="https://www.facebook.com/DarElArkanEG" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/dar_el_arkan" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@darelarkandevelopment" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://wa.me/201090030008" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
-                <div class="kayan-footer-col">
-                    <h4 class="kayan-footer-title">روابط سريعة</h4>
+
+                <div>
+                    <h4>روابط سريعة</h4>
                     <ul class="kayan-footer-links">
-                        <li><a href="index.html"><i class="fa-solid fa-angle-left"></i> الرئيسية</a></li>
-                        <li><a href="about.html"><i class="fa-solid fa-angle-left"></i> من نحن</a></li>
-                        <li><a href="projects.html"><i class="fa-solid fa-angle-left"></i> المشروعات المتاحة</a></li>
-                        <li><a href="constructions.html"><i class="fa-solid fa-angle-left"></i> الإنشاءات والموقف التنفيذي</a></li>
-                        <li><a href="finishing-decor.html"><i class="fa-solid fa-angle-left"></i> تشطيب وديكور الوحدات</a></li>
-                        <li><a href="contact.html"><i class="fa-solid fa-angle-left"></i> اتصل بنا</a></li>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="projects.html">المشروعات المتاحة</a></li>
+                        <li><a href="projects.html?status=delivered">سابقة الأعمال</a></li>
+                        <li><a href="finishing-specs.html">مواصفات التشطيب</a></li>
+                        <li><a href="finishing-decor.html">تشطيبات وديكورات الوحدات</a></li>
+                        <li><a href="constructions.html">الإنشاءات والموقف التنفيذي</a></li>
+                        <li><a href="careers.html">التوظيف</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
                     </ul>
                 </div>
-                <div class="kayan-footer-col">
-                    <h4 class="kayan-footer-title">معلومات التواصل</h4>
-                    <p style="color:#aaa; font-size:13px; margin-bottom:10px;">
-                        <i class="fa-solid fa-phone" style="color:var(--color-primary); margin-left:6px;"></i>
-                        الخط الساخن: <a href="tel:16812" style="color:#fff; font-weight:700;">16812</a>
-                    </p>
-                    <p style="color:#aaa; font-size:13px; margin-bottom:10px;">
-                        <i class="fa-solid fa-mobile-screen" style="color:var(--color-primary); margin-left:6px;"></i>
-                        المبيعات: <a href="tel:01090030008" style="color:#fff;">01090030008</a>
-                    </p>
-                    <p style="color:#aaa; font-size:13px; margin-bottom:10px;">
-                        <i class="fa-brands fa-whatsapp" style="color:#25D366; margin-left:6px;"></i>
-                        خدمة العملاء: <a href="tel:01099970102" style="color:#fff;">01099970102</a>
-                    </p>
-                    <p style="color:#aaa; font-size:13px; line-height:1.6;">
+
+                <div>
+                    <h4>المشروعات المتاحة</h4>
+                    <ul class="kayan-footer-links">
+                        <li><a href="project-d384.html">مشروع D384 - النرجس الجديدة</a></li>
+                        <li><a href="project-g30.html">مشروع G30 - الحي السادس بيت الوطن</a></li>
+                        <li><a href="project-c87.html">مشروع C87 - الحي الأول بيت الوطن</a></li>
+                        <li><a href="project-a187.html">مشروع A187 - الحي الثاني بيت الوطن</a></li>
+                        <li><a href="project-a61.html">مشروع A61 - الحي الرابع بيت الوطن</a></li>
+                        <li><a href="project-d80.html">مشروع D80 - الحي الثامن بيت الوطن</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>تواصل معنا</h4>
+                    <p style="color:#aaa; font-size:13px; line-height:1.8; margin-bottom:12px;">
                         <i class="fa-solid fa-location-dot" style="color:var(--color-primary); margin-left:6px;"></i>
                         ٢٢٤ القطاع الثاني - التجمع الخامس - خلف فندق الدوسيت - مبنى كريستال عصفور - الدور الثالث
                     </p>
-                </div>
-                <div class="kayan-footer-col">
-                    <h4 class="kayan-footer-title">ساعات العمل</h4>
-                    <p style="color:#aaa; font-size:13px; line-height:1.8;">
-                        السبت - الخميس: 9:00 ص - 6:00 م<br>
-                        الجمعة: إجازة أسبوعية<br>
-                        خدمة العملاء عبر الهاتف تعمل على مدار الساعة طوال أيام الأسبوع.
+                    <p style="color:#aaa; font-size:13px; margin-bottom:8px;">
+                        <i class="fa-solid fa-phone" style="color:var(--color-primary); margin-left:6px;"></i>
+                        الخط الساخن: <a href="tel:16812" style="color:#fff; font-weight:700;">16812</a>
+                    </p>
+                    <p style="color:#aaa; font-size:13px; margin-bottom:8px;">
+                        <i class="fa-solid fa-mobile-screen" style="color:var(--color-primary); margin-left:6px;"></i>
+                        المبيعات: <a href="tel:01090030008" style="color:#fff;">01090030008</a>
+                    </p>
+                    <p style="color:#aaa; font-size:13px; margin-bottom:15px;">
+                        <i class="fa-brands fa-whatsapp" style="color:#25D366; margin-left:6px;"></i>
+                        واتساب: <a href="https://wa.me/201090030008" target="_blank" style="color:#fff;">01090030008</a>
                     </p>
                 </div>
             </div>
+
             <div class="kayan-footer-bottom">
-                <p>&copy; 2026 شركة دار الأركان للتطوير العقاري. جميع الحقوق محفوظة.</p>
+                <p>© 2026 دار الأركان للتطوير العقاري - DAR AL ARKAN REAL ESTATE DEVELOPMENT. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
