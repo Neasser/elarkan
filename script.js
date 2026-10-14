@@ -555,11 +555,11 @@ window.handleSidebarRegisterSubmit = function(e, projectName) {
     var form = e ? (e.target.tagName === "FORM" ? e.target : e.target.closest("form")) : document.getElementById("sidebarBookingForm");
     if (!form) return;
 
-    var nameInput = form.querySelector("input[name="name"]");
-    var phoneInput = form.querySelector("input[name="phone"]");
-    var phoneConfirmInput = form.querySelector("input[name="phone_confirm"]");
+    var nameInput = form.querySelector('input[name="name"]');
+    var phoneInput = form.querySelector('input[name="phone"]');
+    var phoneConfirmInput = form.querySelector('input[name="phone_confirm"]');
     var mismatchMsg = form.querySelector(".kayan-field-error");
-    var submitBtn = form.querySelector("button[type="submit"]");
+    var submitBtn = form.querySelector('button[type="submit"]');
     var successMsg = form.querySelector(".kayan-modal-success");
 
     // Reset error styling
@@ -597,7 +597,7 @@ window.handleSidebarRegisterSubmit = function(e, projectName) {
 
     if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = "<span>جاري الإرسال...</span> <i class="fa-solid fa-spinner fa-spin"></i>";
+        submitBtn.innerHTML = "<span>جاري الإرسال...</span> <i class=\"fa-solid fa-spinner fa-spin\"></i>";
     }
 
     setTimeout(function() {
@@ -609,7 +609,8 @@ window.handleSidebarRegisterSubmit = function(e, projectName) {
             successMsg.style.display = "block";
         }
 
-        var proj = projectName || (form.querySelector("input[name="project_name"]") ? form.querySelector("input[name="project_name"]").value : "دار الأركان");
+        var projHidden = form.querySelector('input[name="project_name"]');
+        var proj = projectName || (projHidden ? projHidden.value : "دار الأركان");
         var toastMsg = "تم استلام طلب تسجيلك بنجاح لمشروع " + proj + "! سيتواصل معك أحد مسؤولي المبيعات قريباً.";
         if (typeof window.showToast === "function") {
             window.showToast(toastMsg);
