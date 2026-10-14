@@ -3738,7 +3738,7 @@ a.kayan-hotline:hover{
     background: #ffffff !important;
     color: #050505 !important;
     transform: scale(1.04);
-    box-shadow: 0 6px 20px rgba(243, 232, 217, 0.6), 0 0 15px rgba(243, 232, 217, 0.35);
+    box-shadow: 0 6px 20px rgba(243, 232, 217, 0.4) !important;
 }
 
 .kayan-bar-call i {
@@ -3792,7 +3792,7 @@ a.kayan-hotline:hover{
     background: #ffffff !important;
     color: #050505 !important;
     transform: scale(1.04);
-    box-shadow: 0 6px 20px rgba(243, 232, 217, 0.6), 0 0 15px rgba(243, 232, 217, 0.35);
+    box-shadow: 0 6px 20px rgba(243, 232, 217, 0.4) !important;
 }
 
 .kayan-bar-register i {
@@ -4841,15 +4841,14 @@ a.kayan-hotline:hover {
     color: var(--color-primary) !important;
 }
 
-/* R4. Sticky floating contact bar phone icon = primary color */
+/* R4. Sticky floating contact bar hotline: black text & phone icon like register button */
+.kayan-bar-call,
 .kayan-bar-call i {
-    color: var(--color-primary) !important;
+    color: #050505 !important;
 }
-.kayan-bar-call:hover {
-    color: var(--color-primary) !important;
-}
+.kayan-bar-call:hover,
 .kayan-bar-call:hover i {
-    color: var(--color-primary) !important;
+    color: #050505 !important;
 }
 
 /* R5. Search icons */

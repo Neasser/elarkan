@@ -7,7 +7,7 @@
     <meta name="description" content="يقع مشروع A61 في الحي الرابع ببيت الوطن، في واحدة من أكثر المناطق تميزاً بنسب إنشاءات تتجاوز 85% وخطوات من منطقة View Zone.">
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=6">
     <script src="data/constructions.js"></script>
 </head>
 <body>
@@ -471,7 +471,26 @@
         </div>
     </div>
 
-    
+    <a href="#" id="kayanScrollTop" class="kayan-float kayan-scroll-top" title="العودة للأعلى" aria-label="العودة للأعلى">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- ================= REGISTRATION MODAL POPUP ================= -->
+    <div class="kayan-modal-overlay" id="kayanRegisterModal" aria-hidden="true" role="dialog">
+        <div class="kayan-modal-dialog">
+            <button type="button" class="kayan-modal-close" id="closeRegisterModalBtn" aria-label="إغلاق">&times;</button>
+            <div class="kayan-modal-header">
+                <h3 class="kayan-modal-title"><i class="fa-solid fa-pen-to-square"></i> سجل الآن</h3>
+            </div>
+            <form id="kayanRegisterForm" class="kayan-modal-form" novalidate>
+                <div class="kayan-form-row">
+                    <div class="kayan-form-group">
+                        <label for="regName">اسمك <span class="req">*</span></label>
+                        <div class="kayan-input-wrap">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="regName" name="name" required placeholder="الاسم بالكامل">
+                        </div>
+                    </div>
                     <div class="kayan-form-group">
                         <label for="regPhone">هاتفك <span class="req">*</span></label>
                         <div class="kayan-input-wrap">
@@ -531,28 +550,7 @@
         </div>
     </div>
 
-    <a href="#" id="kayanScrollTop" class="kayan-float kayan-scroll-top" title="العودة للأعلى" aria-label="العودة للأعلى">
-        <i class="fa-solid fa-arrow-up"></i>
-    </a>
-
-    <!-- ================= KANDEEL REGISTRATION MODAL POPUP ================= -->
-    <div class="kayan-modal-overlay" id="kayanRegisterModal" aria-hidden="true" role="dialog">
-        <div class="kayan-modal-dialog">
-            <button type="button" class="kayan-modal-close" id="closeRegisterModalBtn" aria-label="إغلاق">&times;</button>
-            <div class="kayan-modal-header">
-                <h3 class="kayan-modal-title"><i class="fa-solid fa-pen-to-square"></i> سجل الآن</h3>
-            </div>
-            <form id="kayanRegisterForm" class="kayan-modal-form" novalidate>
-                <div class="kayan-form-row">
-                    <div class="kayan-form-group">
-                        <label for="regName">اسمك <span class="req">*</span></label>
-                        <div class="kayan-input-wrap">
-                            <i class="fa-solid fa-user"></i>
-                            <input type="text" id="regName" name="name" required placeholder="الاسم بالكامل">
-                        </div>
-                    </div>
-
-    <script src="script.js?v=5"></script>
+    <script src="script.js?v=6"></script>
 
 </body>
 </html>
