@@ -5826,58 +5826,172 @@ a.kayan-hotline:hover {
     font-weight: 700 !important;
 }
 
-/* 4 & 10. Sidebar Registration Form with white background and black text */
+/* 4 & 10. Sidebar: Complete White Background with Black Text, Black Borders & Black Icons */
 .kayan-sidebar-box {
     background: #ffffff !important;
-    border: 1px solid #ded8ce !important;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1) !important;
+    border: 1.5px solid #111111 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
 }
-.kayan-sidebar-box .kayan-modal-title {
+
+/* Headings in Sidebar */
+.kayan-sidebar-box h3,
+.kayan-sidebar-box h4,
+.kayan-sidebar-title {
+    color: #111111 !important;
+    font-weight: 700 !important;
+}
+
+/* All Icons in Sidebar */
+.kayan-sidebar-box i {
     color: #111111 !important;
 }
-.kayan-sidebar-box .kayan-modal-notice {
-    background: #f4eee3 !important;
-    border: 1px solid #e2d6c3 !important;
-    color: #4a3c2a !important;
+
+/* All Text, Paragraphs and Spans in Sidebar */
+.kayan-sidebar-box p {
+    color: #222222 !important;
 }
-.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-form-group label {
-    color: #1a1a1a !important;
+.kayan-sidebar-box span {
+    color: #222222 !important;
+}
+
+/* Links in Sidebar */
+.kayan-sidebar-box a {
+    color: #111111 !important;
+}
+
+/* Sidebar Tag / Badge */
+.kayan-sidebar-tag {
+    background: #f4eee3 !important;
+    color: #111111 !important;
+    border: 1.5px solid #111111 !important;
     font-weight: 700 !important;
+}
+.kayan-sidebar-tag i {
+    color: #111111 !important;
+}
+
+/* Sidebar Price Box */
+.kayan-sidebar-price {
+    background: #faf8f5 !important;
+    border: 1.5px solid #111111 !important;
+}
+.kayan-sidebar-price span {
+    color: #444444 !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+.kayan-sidebar-price strong {
+    color: #111111 !important;
+    font-weight: 800 !important;
+    font-size: 26px !important;
+}
+
+/* Sidebar Specs List */
+.kayan-sidebar-specs {
+    margin-bottom: 22px !important;
+}
+.kayan-sidebar-specs li {
+    border-bottom: 1px solid #dfd8cc !important;
+    padding: 10px 0 !important;
+}
+.kayan-sidebar-specs li span {
+    color: #555555 !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+}
+.kayan-sidebar-specs li strong {
+    color: #111111 !important;
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+}
+
+/* Sidebar Action Buttons (WhatsApp, Hotline, Inspection booking) */
+.kayan-sidebar-actions .kayan-btn {
+    background: #ffffff !important;
+    color: #111111 !important;
+    border: 1.5px solid #111111 !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.25s ease !important;
+}
+.kayan-sidebar-actions .kayan-btn i {
+    color: #111111 !important;
+    transition: color 0.25s ease !important;
+}
+.kayan-sidebar-actions .kayan-btn:hover {
+    background: #111111 !important;
+    color: #ffffff !important;
+    border-color: #111111 !important;
+}
+.kayan-sidebar-actions .kayan-btn:hover i {
+    color: #ffffff !important;
+}
+
+/* Location Map Box */
+.kayan-project-map-wrapper {
+    border: 1.5px solid #111111 !important;
+    border-radius: 8px !important;
+}
+
+/* Sidebar Registration Form (سجل الآن) */
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-form-group label {
+    color: #111111 !important;
+    font-weight: 700 !important;
+    font-size: 13.5px !important;
+}
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-form-group label .req {
+    color: #dc2626 !important;
 }
 .kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap input,
 .kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap select,
 .kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap textarea {
     background: #faf8f5 !important;
-    border: 1px solid #d5cdbf !important;
+    border: 1.5px solid #111111 !important;
     color: #111111 !important;
+    font-weight: 600 !important;
+    font-size: 13.5px !important;
 }
 .kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap input::placeholder,
 .kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap textarea::placeholder {
-    color: #777777 !important;
+    color: #666666 !important;
 }
 .kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap input:focus,
 .kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap select:focus,
 .kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap textarea:focus {
-    border-color: #a88d65 !important;
-    box-shadow: 0 0 10px rgba(168, 141, 101, 0.25) !important;
+    border-color: #000000 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25) !important;
     background: #ffffff !important;
     color: #111111 !important;
 }
 .kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap i {
-    color: #8c7653 !important;
+    color: #111111 !important;
 }
 .kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap select option {
     background: #ffffff !important;
     color: #111111 !important;
 }
+
+/* Registration Form Submit Button in Sidebar */
 .kayan-sidebar-box .kayan-btn-submit-modal {
-    background: #151515 !important;
-    color: var(--color-primary) !important;
-    border: 1px solid #2a2a2a !important;
+    background: #111111 !important;
+    color: #ffffff !important;
+    border: 1.5px solid #111111 !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.25s ease !important;
+}
+.kayan-sidebar-box .kayan-btn-submit-modal span {
+    color: #ffffff !important;
+}
+.kayan-sidebar-box .kayan-btn-submit-modal i {
+    color: #ffffff !important;
 }
 .kayan-sidebar-box .kayan-btn-submit-modal:hover {
-    background: #000000 !important;
+    background: #333333 !important;
     color: #ffffff !important;
+    border-color: #333333 !important;
 }
 
 /* 10. Modal Registration Form with white/beige background and black text */
