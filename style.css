@@ -4793,7 +4793,7 @@ input[type="submit"].kayan-btn-gold:hover {
 /* R1. Primary color on section titles & icons */
 .kayan-section-title h2 {
     color: var(--color-primary) !important;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    text-shadow: none !important;
 }
 .kayan-section-title .eyebrow {
     color: var(--color-primary) !important;
@@ -4931,8 +4931,8 @@ a.kayan-hotline:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(5,5,5,0.4) 0%, rgba(5,5,5,0.85) 85%, #050505 100%),
-                linear-gradient(90deg, rgba(5,5,5,0.7) 0%, rgba(5,5,5,0.2) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.4) 80%, #050505 100%),
+                linear-gradient(90deg, rgba(5,5,5,0.35) 0%, rgba(5,5,5,0) 100%);
 }
 .kayan-hero-slide-content {
     position: relative;
@@ -5767,3 +5767,253 @@ a.kayan-hotline:hover {
     top: auto !important;
 }
 
+
+
+/* =========================================================
+   CLIENT REVISIONS (OCTOBER 2026)
+   ========================================================= */
+
+/* 1. Hero text shadow removal */
+.kayan-hero-slide-content h1,
+.kayan-hero-slide-content h1 span,
+.kayan-hero-slide-content p {
+    text-shadow: none !important;
+}
+
+/* 4. Project Card Exterior Image display */
+.kayan-project-image {
+    height: 240px;
+    background: #000;
+}
+.kayan-project-image img {
+    object-position: center top;
+}
+
+/* 4. Unit Models (المتكرر، الأرضي، البنتهاوس، الدوبلكس) in white background with black text */
+.kayan-unit-detail {
+    background: #ffffff !important;
+    border: 1px solid #e2ddd4 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+}
+.kayan-unit-info h4 {
+    color: #111111 !important;
+    font-weight: 700 !important;
+}
+.kayan-unit-info p {
+    color: #444444 !important;
+    line-height: 1.7 !important;
+}
+.kayan-unit-specs {
+    background: #f8f6f2 !important;
+    border: 1px solid #eae5dc !important;
+}
+.kayan-unit-specs div {
+    color: #555555 !important;
+    border-bottom: 1px solid #ebe6dd !important;
+}
+.kayan-unit-specs div strong {
+    color: #111111 !important;
+    font-weight: 700 !important;
+}
+.kayan-unit-blueprint {
+    background: #fdfdfd !important;
+    border: 1px solid #eae5dc !important;
+}
+.kayan-unit-tab.active {
+    background: #ffffff !important;
+    color: #111111 !important;
+    border-color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* 4 & 10. Sidebar Registration Form with white background and black text */
+.kayan-sidebar-box {
+    background: #ffffff !important;
+    border: 1px solid #ded8ce !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1) !important;
+}
+.kayan-sidebar-box .kayan-modal-title {
+    color: #111111 !important;
+}
+.kayan-sidebar-box .kayan-modal-notice {
+    background: #f4eee3 !important;
+    border: 1px solid #e2d6c3 !important;
+    color: #4a3c2a !important;
+}
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-form-group label {
+    color: #1a1a1a !important;
+    font-weight: 700 !important;
+}
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap input,
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap select,
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap textarea {
+    background: #faf8f5 !important;
+    border: 1px solid #d5cdbf !important;
+    color: #111111 !important;
+}
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap input::placeholder,
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap textarea::placeholder {
+    color: #777777 !important;
+}
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap input:focus,
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap select:focus,
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap textarea:focus {
+    border-color: #a88d65 !important;
+    box-shadow: 0 0 10px rgba(168, 141, 101, 0.25) !important;
+    background: #ffffff !important;
+    color: #111111 !important;
+}
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap i {
+    color: #8c7653 !important;
+}
+.kayan-sidebar-box .kayan-sidebar-reg-form .kayan-input-wrap select option {
+    background: #ffffff !important;
+    color: #111111 !important;
+}
+.kayan-sidebar-box .kayan-btn-submit-modal {
+    background: #151515 !important;
+    color: var(--color-primary) !important;
+    border: 1px solid #2a2a2a !important;
+}
+.kayan-sidebar-box .kayan-btn-submit-modal:hover {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* 10. Modal Registration Form with white/beige background and black text */
+.kayan-modal-dialog {
+    background: #ffffff !important;
+    border: 1px solid #dfd7cb !important;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35), 0 0 25px rgba(243, 232, 217, 0.2) !important;
+}
+.kayan-modal-title {
+    color: #111111 !important;
+}
+.kayan-modal-notice {
+    background: #f5efe4 !important;
+    border: 1px solid #ded2bf !important;
+    color: #4a3c2a !important;
+}
+.kayan-modal-close {
+    background: #f0ebe2 !important;
+    border: 1px solid #ded3c2 !important;
+    color: #111111 !important;
+}
+.kayan-modal-close:hover {
+    background: #111111 !important;
+    color: #ffffff !important;
+    border-color: #111111 !important;
+}
+.kayan-modal-form .kayan-form-group label {
+    color: #1a1a1a !important;
+    font-weight: 700 !important;
+}
+.kayan-modal-form .kayan-input-wrap input,
+.kayan-modal-form .kayan-input-wrap select,
+.kayan-modal-form .kayan-input-wrap textarea {
+    background: #faf8f5 !important;
+    border: 1px solid #d8cfc0 !important;
+    color: #111111 !important;
+}
+.kayan-modal-form .kayan-input-wrap input::placeholder,
+.kayan-modal-form .kayan-input-wrap textarea::placeholder {
+    color: #777777 !important;
+}
+.kayan-modal-form .kayan-input-wrap input:focus,
+.kayan-modal-form .kayan-input-wrap select:focus,
+.kayan-modal-form .kayan-input-wrap textarea:focus {
+    border-color: #a88d65 !important;
+    box-shadow: 0 0 10px rgba(168, 141, 101, 0.25) !important;
+    background: #ffffff !important;
+    color: #111111 !important;
+}
+.kayan-modal-form .kayan-input-wrap i {
+    color: #8c7653 !important;
+}
+.kayan-modal-form .kayan-input-wrap select option {
+    background: #ffffff !important;
+    color: #111111 !important;
+}
+.kayan-modal-form .kayan-btn-submit-modal {
+    background: #151515 !important;
+    color: var(--color-primary) !important;
+    border: 1px solid #2a2a2a !important;
+}
+.kayan-modal-form .kayan-btn-submit-modal:hover {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* 6. Finishing specs elements with lighter background and highlighted icon badge */
+.kayan-spec-card-light {
+    background: #FAF7F2 !important;
+    border: 1px solid rgba(214, 199, 179, 0.55) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    border-radius: 14px;
+    padding: 24px;
+}
+.kayan-spec-card-light:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12) !important;
+    border-color: #c9bcae !important;
+}
+.kayan-spec-card-light h4 {
+    color: #111111 !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin-bottom: 8px !important;
+}
+.kayan-spec-card-light p {
+    color: #4a453e !important;
+    font-size: 13.5px !important;
+    line-height: 1.7 !important;
+    margin: 0 !important;
+}
+.kayan-spec-icon-badge {
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #1e1913 0%, #0d0a07 100%);
+    border: 1.5px solid rgba(243, 232, 217, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+.kayan-spec-icon-badge i {
+    color: var(--color-primary);
+    font-size: 24px;
+}
+
+/* 2. White Search Table variant */
+.kayan-search.kayan-search-white {
+    background: #ffffff !important;
+    border: 1px solid #ded5c7 !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12) !important;
+}
+.kayan-search.kayan-search-white .kayan-search-head h3 {
+    color: #111111 !important;
+}
+.kayan-search.kayan-search-white .kayan-search-head span {
+    color: #7d6b4f !important;
+    font-weight: 600 !important;
+}
+.kayan-search.kayan-search-white .kayan-field label {
+    color: #222222 !important;
+    font-weight: 700 !important;
+}
+.kayan-search.kayan-search-white .kayan-field select {
+    background: #faf8f5 !important;
+    border: 1px solid #d5ccbe !important;
+    color: #111111 !important;
+}
+.kayan-search.kayan-search-white .kayan-field select:focus {
+    border-color: #8c7653 !important;
+    box-shadow: 0 0 10px rgba(140, 118, 83, 0.25) !important;
+}
+.kayan-search.kayan-search-white .kayan-field select option {
+    background: #ffffff !important;
+    color: #111111 !important;
+}
