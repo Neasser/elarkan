@@ -6101,33 +6101,88 @@ a.kayan-hotline:hover {
     font-size: 24px;
 }
 
-/* 2. White Search Table variant */
-.kayan-search.kayan-search-white {
-    background: #ffffff !important;
-    border: 1px solid #ded5c7 !important;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12) !important;
+/* =========================================================
+   HOMEPAGE SEARCH BOX: PRIMARY CREAM BACKGROUND & READABLE DARK CONTENT
+   ========================================================= */
+.kayan-search {
+    background: var(--color-primary) !important;
+    border: 1.5px solid rgba(180, 160, 135, 0.4) !important;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35), 0 0 30px rgba(243, 232, 217, 0.15) !important;
 }
-.kayan-search.kayan-search-white .kayan-search-head h3 {
+
+.kayan-search-head h3 {
     color: #111111 !important;
-}
-.kayan-search.kayan-search-white .kayan-search-head span {
-    color: #7d6b4f !important;
-    font-weight: 600 !important;
-}
-.kayan-search.kayan-search-white .kayan-field label {
-    color: #222222 !important;
     font-weight: 700 !important;
 }
-.kayan-search.kayan-search-white .kayan-field select {
-    background: #faf8f5 !important;
-    border: 1px solid #d5ccbe !important;
+
+.kayan-search-head h3 i {
     color: #111111 !important;
 }
-.kayan-search.kayan-search-white .kayan-field select:focus {
-    border-color: #8c7653 !important;
-    box-shadow: 0 0 10px rgba(140, 118, 83, 0.25) !important;
+
+.kayan-search-head span {
+    color: #4a3b2c !important;
+    font-weight: 600 !important;
+    font-size: 13.5px !important;
 }
-.kayan-search.kayan-search-white .kayan-field select option {
+
+.kayan-field label {
+    color: #1a1a1a !important;
+    font-size: 12.5px !important;
+    font-weight: 700 !important;
+}
+
+.kayan-field select,
+.kayan-field input {
+    background: #ffffff !important;
+    border: 1.5px solid #111111 !important;
+    color: #111111 !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+}
+
+.kayan-field select:focus,
+.kayan-field input:focus {
+    border-color: #000000 !important;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.25) !important;
     background: #ffffff !important;
     color: #111111 !important;
+}
+
+.kayan-field select option {
+    background: #ffffff !important;
+    color: #111111 !important;
+    font-weight: 500 !important;
+}
+
+.kayan-search-btn,
+#homeSearchSubmit {
+    background: #111111 !important;
+    color: #ffffff !important;
+    border: 1.5px solid #111111 !important;
+    border-radius: 8px !important;
+    font-weight: 800 !important;
+    font-size: 14.5px !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25) !important;
+    transition: all 0.25s ease !important;
+}
+
+.kayan-search-btn i,
+#homeSearchSubmit i {
+    color: #ffffff !important;
+    transition: color 0.25s ease !important;
+}
+
+.kayan-search-btn:hover,
+#homeSearchSubmit:hover {
+    background: #2a2a2a !important;
+    color: var(--color-primary) !important;
+    border-color: #2a2a2a !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35) !important;
+    transform: translateY(-2px) !important;
+}
+
+.kayan-search-btn:hover i,
+#homeSearchSubmit:hover i {
+    color: var(--color-primary) !important;
 }
